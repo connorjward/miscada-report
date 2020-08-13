@@ -1,0 +1,2354 @@
+
+@article{kellerNumericalModellingMagma2013,
+	title = {Numerical modelling of magma dynamics coupled to tectonic deformation of lithosphere and crust},
+	volume = {195},
+	issn = {0956-540X, 1365-246X},
+	url = {http://academic.oup.com/gji/article/195/3/1406/2874184/Numerical-modelling-of-magma-dynamics-coupled-to},
+	doi = {10.1093/gji/ggt306},
+	abstract = {Many unresolved questions in geodynamics revolve around the physical behaviour of the two-phase system of a silicate melt percolating through and interacting with a tectonically deforming host rock. Well-accepted equations exist to describe the physics of such systems and several previous studies have successfully implemented various forms of these equations in numerical models. To date, most such models of magma dynamics have focused on mantle ﬂow problems and therefore employed viscous creep rheologies suitable to describe the deformation properties of mantle rock under high temperatures and pressures. However, the use of such rheologies is not appropriate to model melt extraction above the lithosphere–asthenosphere boundary, where the mode of deformation of the host rock transitions from ductile viscous to brittle elasto-plastic. Here, we introduce a novel approach to numerically model magma dynamics, focusing on the conceptual study of melt extraction from an asthenospheric source of partial melt through the overlying lithosphere and crust. To this end, we introduce an adapted set of two-phase ﬂow equations, coupled to a visco-elasto-plastic rheology for both shear and compaction deformation of the host rock in interaction with the melt phase. We describe in detail how to implement this physical model into a ﬁnite-element code, and then proceed to evaluate the functionality and potential of this methodology using a series of conceptual model setups, which demonstrate the modes of melt extraction occurring around the rheological transition from ductile to brittle host rocks. The models suggest that three principal regimes of melt extraction emerge: viscous diapirism, viscoplastic decompaction channels and elasto-plastic dyking. Thus, our model of magma dynamics interacting with active tectonics of the lithosphere and crust provides a novel framework to further investigate magmato-tectonic processes such as the formation and geometry of magma chambers and conduits, as well as the emplacement of plutonic rock complexes.},
+	pages = {1406--1442},
+	number = {3},
+	journaltitle = {Geophysical Journal International},
+	author = {Keller, Tobias and May, Dave A. and Kaus, Boris J. P.},
+	urldate = {2020-05-19},
+	date = {2013-12-01},
+	langid = {english},
+	keywords = {melt, two-phase flow}
+}
+
+@article{gassmoller_flexible_2018,
+	title = {Flexible and Scalable Particle-in-Cell Methods With Adaptive Mesh Refinement for Geodynamic Computations},
+	volume = {19},
+	issn = {15252027},
+	url = {http://doi.wiley.com/10.1029/2018GC007508},
+	doi = {10.1029/2018GC007508},
+	abstract = {Particle-in-cell ({PIC}) methods couple mesh-based methods for the solution of continuum mechanics problems with the ability to advect and evolve properties on particles. {PIC} methods have a long history and numerous applications in geodynamic modeling. However, they are historically either implemented in sequential codes or in parallel codes with structured, statically partitioned meshes. Yet today’s codes increasingly use adaptive mesh reﬁnement ({AMR}) of unstructured coarse meshes, dynamic repartitioning, and scale to thousands of processors. Optimally balancing the work per processor for a {PIC} method in these environments is a diﬃcult problem, and many existing implementations are not suﬃcient for this task. Thus, there is a need to revisit these algorithms for future applications. Here we describe challenges and solutions to implement {PIC} methods in the context of large-scale parallel geodynamic modeling codes that use dynamically changing meshes. We also provide guidance for how to address bottlenecks that impede the eﬃcient implementation of these algorithms and demonstrate with numerical tests that our algorithms can be implemented with optimal complexity and that they are suitable for large-scale, practical applications. We provide a reference implementation in the Advanced Solver for Problems in Earth’s {ConvecTion} ({ASPECT}), an open source code for geodynamic modeling built on the {DEAL}.{II} ﬁnite element library.},
+	pages = {3596--3604},
+	number = {9},
+	journaltitle = {Geochemistry, Geophysics, Geosystems},
+	shortjournal = {Geochem. Geophys. Geosyst.},
+	author = {Gassmöller, Rene and Lokavarapu, Harsha and Heien, Eric and Puckett, Elbridge Gerry and Bangerth, Wolfgang},
+	urldate = {2020-06-08},
+	date = {2018-09},
+	langid = {english},
+	keywords = {{ASPECT}, particle-in-cell methods}
+}
+
+@article{dannberg_importance_2017,
+	title = {The importance of grain size to mantle dynamics and seismological observations},
+	volume = {18},
+	issn = {1525-2027, 1525-2027},
+	url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/2017GC006944},
+	doi = {10.1002/2017GC006944},
+	abstract = {Grain size plays a key role in controlling the mechanical properties of the Earth’s mantle, affecting both long-time-scale ﬂow patterns and anelasticity on the time scales of seismic wave propagation. However, dynamic models of Earth’s convecting mantle usually implement ﬂow laws with constant grain size, stress-independent viscosity, and a limited treatment of changes in mineral assemblage. We study grain size evolution, its interplay with stress and strain rate in the convecting mantle, and its inﬂuence on seismic velocities and attenuation. Our geodynamic models include the simultaneous and competing effects of dynamic recrystallization resulting from dislocation creep, grain growth in multiphase assemblages, and recrystallization at phase transitions. They show that grain size evolution drastically affects the dynamics of mantle convection and the rheology of the mantle, leading to lateral viscosity variations of 6 orders of magnitude due to grain size alone, and controlling the shape of upwellings and downwellings. Using laboratory-derived scaling relationships, we convert model output to seismologically observable parameters (velocity and attenuation) facilitating comparison to Earth structure. Reproducing the fundamental features of the Earth’s attenuation proﬁle requires reduced activation volume and relaxed shear moduli in the lower mantle compared to the upper mantle, in agreement with geodynamic constraints. Faster lower mantle grain growth yields best ﬁt to seismic observations, consistent with our reexamination of high-pressure grain growth parameters. We also show that ignoring grain size in interpretations of seismic anomalies may underestimate the Earth’s true temperature variations.},
+	pages = {3034--3061},
+	number = {8},
+	journaltitle = {Geochemistry, Geophysics, Geosystems},
+	shortjournal = {Geochem. Geophys. Geosyst.},
+	author = {Dannberg, J. and Eilon, Z. and Faul, Ulrich and Gassmöller, Rene and Moulik, Pritwiraj and Myhill, Robert},
+	urldate = {2020-05-27},
+	date = {2017-08},
+	langid = {english}
+}
+
+@online{myhill_perplex_2018,
+	title = {{PERPLEX} {INTEGRATION} {WITH} {ASPECT}},
+	url = {https://github.com/geodynamics/aspect/tree/master/contrib/perplex},
+	titleaddon = {{GitHub}},
+	author = {Myhill, Robert},
+	urldate = {2020-05-22},
+	date = {2018},
+	note = {original-date: 2014-05-06T16:47:18Z},
+	keywords = {{ASPECT}, Perple\_X}
+}
+
+@article{holland_internally_2004,
+	title = {An internally consistent thermodynamic data set for phases of petrological interest: {AN} {INTERNALLY} {CONSISTENT} {THERMODYNAMIC} {DATA} {SET}},
+	volume = {16},
+	issn = {02634929, 15251314},
+	url = {http://doi.wiley.com/10.1111/j.1525-1314.1998.00140.x},
+	doi = {10.1111/j.1525-1314.1998.00140.x},
+	shorttitle = {An internally consistent thermodynamic data set for phases of petrological interest},
+	pages = {309--343},
+	number = {3},
+	journaltitle = {Journal of Metamorphic Geology},
+	author = {Holland, T. J. B. and Powell, R.},
+	urldate = {2020-05-22},
+	date = {2004-10-08},
+	langid = {english},
+	keywords = {thermodynamic  database}
+}
+
+@article{powell_calculating_1998,
+	title = {Calculating phase diagrams involving solid solutions via non‐linear equations, with examples using {THERMOCALC}},
+	volume = {16},
+	issn = {0263-4929, 1525-1314},
+	url = {https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1525-1314.1998.00157.x},
+	doi = {10.1111/j.1525-1314.1998.00157.x},
+	pages = {577--588},
+	number = {4},
+	journaltitle = {Journal of Metamorphic Geology},
+	shortjournal = {Journal of Metamorphic Geology},
+	author = {Powell, R and Holland, T. and Worley, B.},
+	urldate = {2020-05-22},
+	date = {1998-06},
+	langid = {english},
+	keywords = {{THERMOCALC}, petrology}
+}
+
+@article{stixrudeThermodynamicsMantleMinerals2011,
+	title = {Thermodynamics of mantle minerals - {II}. Phase equilibria},
+	volume = {184},
+	issn = {1365-246X, 0956-540X},
+	url = {https://academic.oup.com/gji/article/184/3/1180/625783},
+	doi = {10.1111/j.1365-246X.2010.04890.x},
+	abstract = {We complete the development and description of a thermodynamic method for the computation of phase equilibria and physical properties of multiphase mantle assemblages. Our previous paper focused on the computation of physical properties. In this paper, our focus shifts to the phase equilibria. We further develop our theory to specify the ideal and excess contributions to solution properties and derive properties of multiphase assemblages. We discuss our global inversion strategy for determining the values of the free parameters in our theory and compare inverted parameter values with expectations based on scaling arguments. Comparisons between our method and experimental phase equilibria data encompass the pressure–temperature regime of Earth’s mantle. Finally, we present applications of our method that illustrate how it may be used to explore the origins of mantle structure and mantle dynamics. Continuing rapid advances in experimental and theoretical petrology and mineral physics have motivated an expansion of the scope of our model via the addition of several new phases, and of the soda component: an appendix lists all parameters in our model and references to the experimental and theoretical studies that constrain them. Our algorithm for global minimization of the Gibbs free energy is embodied in a code called {HeFESTo}, and is detailed in a second appendix.},
+	pages = {1180--1213},
+	number = {3},
+	journaltitle = {Geophysical Journal International},
+	author = {Stixrude, Lars and Lithgow-Bertelloni, Carolina},
+	urldate = {2020-05-18},
+	date = {2011-03-01},
+	langid = {english},
+	keywords = {{HeFESTo}, petrology}
+}
+
+@article{connollyComputationPhaseEquilibria2005,
+	title = {Computation of phase equilibria by linear programming: A tool for geodynamic modeling and its application to subduction zone decarbonation},
+	volume = {236},
+	issn = {0012821X},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0012821X05002839},
+	doi = {10.1016/j.epsl.2005.04.033},
+	shorttitle = {Computation of phase equilibria by linear programming},
+	abstract = {An algorithm for the construction of phase diagram sections is formulated that is well suited for geodynamic problems in which it is necessary to assess the influence of phase transitions on rock properties or the evolution and migration of fluids. The basis of the algorithm is the representation of the continuous compositional variations of solution phases by series of discrete compositions. As a consequence of this approximation the classical non-linear free energy minimization problem is trivially solved by linear programming. Phase relations are then mapped as a function of the variables of interest using bisection to locate phase boundaries. Treatment of isentropic and isothermal phase relations involving felsic and mafic silicate melts by this method is illustrated. To demonstrate the tractability of more complex problems involving mass transfer, a model for infiltration driven-decarbonation in subduction zones is evaluated. As concluded from earlier closed system models, the open-system model indicates that carbonates are likely to persist in the subducted oceanic crust beyond sub-arc depths even if the upper section of the oceanic mantle is extensively hydrated. However, in contrast to more simplistic models of slab devolatilization, the open-system model suggests slab fluid production is heterogeneous and ephemeral. Computed seismic velocity profiles, together with thermodynamic constraints, imply that for typical geothermal conditions serpentinization of the subducted mantle is unlikely to extend to N 25 km depth and that the average water-content of the serpentinized mantle is b 2 wt.\%. D 2005 Elsevier B.V. All rights reserved.},
+	pages = {524--541},
+	number = {1},
+	journaltitle = {Earth and Planetary Science Letters},
+	shortjournal = {Earth and Planetary Science Letters},
+	author = {Connolly, J. A. D.},
+	urldate = {2020-04-15},
+	date = {2005-07},
+	langid = {english},
+	keywords = {Perple\_X, thermo}
+}
+
+@article{king_conman_1990,
+	title = {{ConMan}: vectorizing a finite element code for incompressible two-dimensional convection in the Earth’s mantle},
+	volume = {59},
+	journaltitle = {Physics of the Earth and Planetary Interiors},
+	author = {King, Scott D. and Raefsky, Arthur and Hager, Bradford H.},
+	date = {1990},
+	keywords = {{ConMan}, mantle convection}
+}
+
+@article{moresi_accuracy_1996,
+	title = {The accuracy of finite element solutions of Stokes' flow with strongly varying viscosity},
+	url = {http://ciei.colorado.edu/szhong/papers/Moresi_etal1997PEPI.pdf},
+	author = {Moresi, Louis and Zhong, Shijie and Gurnis, Michael},
+	urldate = {2020-05-22},
+	date = {1996},
+	keywords = {{CITCOM}, mantle convection}
+}
+
+@unpublished{martinLectureClauseLearning,
+	title = {Lecture 6 Clause Learning},
+	author = {Martin, Barnaby},
+	langid = {english}
+}
+
+@misc{Tutorialsa,
+	title = {Tutorials}
+}
+
+@misc{Tutorials,
+	title = {Tutorials}
+}
+
+@misc{XRUKSelfOrganising,
+	title = {{XR} {UK} Self-Organising System Constitution v1.pdf}
+}
+
+@online{XRUKOrganism,
+	title = {{XR} {UK} Organism},
+	url = {https://app.glassfrog.com/organizations/16070/orgnav/roles/11285365}
+}
+
+@misc{SelfOrganisingSystemExplained,
+	title = {The Self-Organising-System explained},
+	url = {https://docs.google.com/presentation/d/1QQLBbD5kzaCd4RFvRbZ0fRz9FXPpv1AuVnQDcATeuXo/edit#slide=id.p}
+}
+
+@misc{WorkingGroupRoles,
+	title = {working group roles},
+	url = {https://docs.google.com/document/d/1P0oRCNp8N-zBVbZ7t2lVL6I2biwqlxGL2vWdVIIOZ_o/mobilebasic}
+}
+
+@misc{XRUKStrategyDocument2020Pdf,
+	title = {{XRUK}-Strategy-Document-2020.pdf},
+	url = {https://rebellion.earth/wp/wp-content/uploads/2020/02/XRUK-Strategy-Document-2020.pdf},
+	urldate = {2020-03-18}
+}
+
+@online{UnderstandingSATImplementing,
+	title = {Understanding {SAT} by Implementing a Simple {SAT} Solver in Python},
+	url = {https://sahandsaba.com/understanding-sat-by-implementing-a-simple-sat-solver-in-python.html}
+}
+
+@misc{TutorialProblems,
+	title = {Tutorial Problems}
+}
+
+@online{TrefethenUNFINISHEDPDE,
+	title = {Trefethen, {THE} ({UNFINISHED}) {PDE} {COFFEE} {TABLE} {BOOK}},
+	url = {https://people.maths.ox.ac.uk/trefethen/pdectb.html},
+	urldate = {2020-02-01}
+}
+
+@online{UopsInfo,
+	title = {uops.info},
+	url = {https://uops.info/},
+	urldate = {2020-01-20},
+	keywords = {Performance Engineering}
+}
+
+@incollection{ArtComputationalSciencee,
+	title = {The Art of Computational Science - The Kali Code (volume 13)}
+}
+
+@incollection{ArtComputationalScienced,
+	title = {The Art of Computational Science - The Kali Code (volume 15)}
+}
+
+@incollection{ArtComputationalSciencec,
+	title = {The Art of Computational Science - The Kali Code (volume 11)}
+}
+
+@online{Nsphere,
+	title = {n-sphere},
+	url = {https://en.wikipedia.org/wiki/N-sphere#Spherical_coordinates},
+	titleaddon = {wikipedia.org}
+}
+
+@online{ProvingLorentzInvariance,
+	title = {Proving the Lorentz invariance of the Lorentz invariant phase space element},
+	url = {https://physics.stackexchange.com/questions/167813/proving-the-lorentz-invariance-of-the-lorentz-invariant-phase-space-element}
+}
+
+@misc{MarkedHomework,
+	title = {Marked homework}
+}
+
+@misc{GuideSOS,
+	title = {guide to {SOS}},
+	url = {https://docs.google.com/document/d/1V708TO8N96vNvG0husfFnv9aY3dVcoE8Y3Z8t7jhL_A/edit}
+}
+
+@online{HolocracyOrg,
+	title = {Holocracy.org},
+	url = {https://www.holacracy.org/}
+}
+
+@online{ModernSATSolvers,
+	title = {Modern {SAT} solvers: fast, neat and underused (part 2 of N)},
+	url = {https://codingnest.com/modern-sat-solvers-fast-neat-and-underused-part-2-of-n/}
+}
+
+@online{Reduction3SATCLIQUE,
+	title = {Reduction 3SAT and {CLIQUE}},
+	url = {https://cs.stackexchange.com/questions/70531/reduction-3sat-and-clique}
+}
+
+@misc{LectureNotes,
+	title = {Lecture Notes}
+}
+
+@misc{StatusHiggsBoson,
+	title = {Status of Higgs Boson Physics},
+	url = {http://pdg.lbl.gov/2017/reviews/rpp2017-rev-higgs-boson.pdf},
+	urldate = {2020-02-19}
+}
+
+@online{IntegrationParts,
+	title = {Integration by parts},
+	url = {https://physics.stackexchange.com/questions/142954/integration-by-parts}
+}
+
+@online{OptimalParametersBroadwell,
+	title = {Optimal parameters for Broadwell chips.},
+	url = {https://github.com/flame/blis/blob/master/docs/ConfigurationHowTo.md}
+}
+
+@online{IntelXeonProcessor,
+	title = {Intel® Xeon® Processor E5-2650 v4 (30M Cache, 2.20 {GHz}) Product Specifications},
+	url = {https://ark.intel.com/content/www/us/en/ark/products/91767/intel-xeon-processor-e5-2650-v4-30m-cache-2-20-ghz.html},
+	abstract = {Intel® Xeon® Processor E5-2650 v4 (30M Cache, 2.20 {GHz}) quick reference guide including specifications, features, pricing, compatibility, design documentation, ordering codes, spec codes and more.},
+	urldate = {2020-01-24},
+	langid = {english}
+}
+
+@misc{NumericalRecipesArt,
+	title = {Numerical Recipes - The Art of Scientific Computing},
+	keywords = {Scientific Computing}
+}
+
+@incollection{ArtComputationalScience,
+	title = {The Art of Computational Science - The Kali Code (volume 1)}
+}
+
+@incollection{ArtComputationalScienceb,
+	title = {The Art of Computational Science - The Kali Code (volume 4)}
+}
+
+@incollection{ArtComputationalSciencea,
+	title = {The Art of Computational Science - The Kali Code (volume 3)}
+}
+
+@book{ModernPhysics,
+	title = {Modern Physics},
+	note = {tex.ids: {ModernPhysicsa}}
+}
+
+@online{DimensionalRegularizationProblem,
+	title = {Dimensional Regularization Problem},
+	url = {https://www.physicsforums.com/threads/dimensional-regularization-problem.325227/}
+}
+
+@misc{AssessedHomework,
+	title = {Assessed Homework}
+}
+
+@online{EllisHiggsPdf,
+	title = {Ellis\_Higgs(5).pdf},
+	url = {https://duo.dur.ac.uk/bbcswebdav/pid-5533371-dt-content-rid-20577612_2/courses/MATH51260_2019/Ellis_Higgs%285%29.pdf},
+	urldate = {2020-04-04}
+}
+
+@misc{AdditionalNotes,
+	title = {Additional Notes}
+}
+
+@article{wetzelVertexCoverLinear,
+	title = {Vertex Cover - Linear Progamming and Approximation Algorithms},
+	pages = {52},
+	author = {Wetzel, Joshua},
+	langid = {english}
+}
+
+@online{TryThisWork,
+	title = {Do try this at work: Circle Meetings},
+	url = {https://medium.com/reinventing-work/a-different-kind-of-meeting-%E3%80%87-90e37f717ccb}
+}
+
+@online{ExtinctionRebellionUs,
+	title = {Extinction Rebellion: About Us},
+	url = {https://rebellion.earth/the-truth/about-us/}
+}
+
+@book{williamsModelBuildingMathematical,
+	title = {Model Building in Mathematical Programming},
+	author = {Williams, H Paul},
+	langid = {english}
+}
+
+@online{Broadwell,
+	title = {Broadwell},
+	url = {https://en.wikichip.org/wiki/intel/microarchitectures/broadwell_(client)}
+}
+
+@online{AdjointRepresentationSU,
+	title = {Adjoint representation of {SU}(2)},
+	url = {https://physics.stackexchange.com/questions/519173/adjoint-representation-of-su2}
+}
+
+@online{QuestionTraceTechnology,
+	title = {A question about trace technology},
+	url = {https://www.physicsforums.com/threads/a-question-about-trace-technology.234867/}
+}
+
+@online{1974CeMec10Pdf,
+	title = {1974CeMec..10..pdf},
+	url = {http://articles.adsabs.harvard.edu/pdf/1974CeMec..10..185A},
+	urldate = {2019-02-17}
+}
+
+@online{2003IAUS208Pdf,
+	title = {2003IAUS..208..pdf},
+	url = {http://articles.adsabs.harvard.edu/pdf/2003IAUS..208..295A},
+	urldate = {2019-02-17}
+}
+
+@online{2001ASPC228Pdf,
+	title = {2001ASPC..228...pdf},
+	url = {http://articles.adsabs.harvard.edu/pdf/2001ASPC..228...29H},
+	urldate = {2019-03-08}
+}
+
+@online{1971ApSS14,
+	title = {1971Ap\&{SS}..14..pdf},
+	url = {http://articles.adsabs.harvard.edu/pdf/1971Ap%26SS..14..118A},
+	urldate = {2019-02-17}
+}
+
+@misc{AQTLectureNotes,
+	title = {{AQT}\_lecture\_notes.pdf}
+}
+
+@misc{ComputationalPhysics,
+	title = {Computational Physics},
+	keywords = {Scientific Computing}
+}
+
+@misc{weigandQuantumFieldTheory,
+	title = {Quantum Field Theory I (lecture notes)},
+	url = {https://www.thphys.uni-heidelberg.de/~weigand/QFT1-13-14/SkriptQFT1.pdf},
+	author = {Weigand, Timo},
+	urldate = {2019-10-07}
+}
+
+@article{ComparisonNumericalMethods,
+	title = {A comparison of Numerical Methods for the Study {ofStar} Cluster Dynamics}
+}
+
+@article{langtangenSolvingPDEsPython,
+	title = {Solving {PDEs} in Python – The {FEniCS} Tutorial Volume I},
+	pages = {153},
+	author = {Langtangen, Hans Petter and Logg, Anders},
+	langid = {english},
+	keywords = {{FEnICS}}
+}
+
+@unpublished{martinLectureSatSolvers,
+	title = {Lecture 5 Sat Solvers: Introduction to {SAT}-solving},
+	author = {Martin, Barnaby},
+	langid = {english}
+}
+
+@unpublished{martinDataClusteringMSc,
+	title = {Data Clustering - {MSc} {MISCADA}: Advanced Algorithms},
+	author = {Martin, Barnaby},
+	langid = {english}
+}
+
+@unpublished{martinLectureMapGraph,
+	title = {Lecture 3 Map and Graph Colouring},
+	author = {Martin, Barnaby},
+	langid = {english}
+}
+
+@unpublished{martinLectureSatisfiabilityNPcompleteness,
+	title = {Lecture 4 Satisfiability and {NP}-completeness},
+	author = {Martin, Barnaby},
+	langid = {english}
+}
+
+@article{passarinoWEINBERGMODEL,
+	title = {{IN} {THE} {WEINBERG} {MODEL}},
+	pages = {57},
+	author = {Passarino, G and Veltman, M},
+	langid = {english}
+}
+
+@article{sprattUNDERSTATEMENTEXISTENTIALCLIMATE,
+	title = {{THE} {UNDERSTATEMENT} {OF} {EXISTENTIAL} {CLIMATE} {RISK}},
+	pages = {44},
+	author = {Spratt, David and Dunlop, Ian and Schellnhuber, Foreword Hans Joachim},
+	langid = {english}
+}
+
+@book{papadimitriouCombinatorialOptimizationAlgorithms,
+	title = {Combinatorial Optimization: Algorithms and Complexity},
+	author = {Papadimitriou, Christos H. and Steiglitz, Kenneth}
+}
+
+@book{ilachinskiCellularAutomataDiscrete,
+	title = {Cellular Automata: a discrete universe},
+	author = {Ilachinski, Andrew}
+}
+
+@unpublished{martinLectureAlgorithmsComplexitya,
+	title = {Lecture 2 Algorithms and Complexity {II}},
+	author = {Martin, Barnaby},
+	langid = {english}
+}
+
+@unpublished{martinLectureAlgorithmsComplexity,
+	title = {Lecture 1 Algorithms and Complexity I},
+	author = {Martin, Barnaby},
+	langid = {english}
+}
+
+@online{lehnGEMMPureSSE,
+	title = {{GEMM}: From Pure C to {SSE} Optimized Micro Kernels},
+	url = {http://apfel.mathematik.uni-ulm.de/~lehn/sghpc/gemm/},
+	author = {Lehn, Michael}
+}
+
+@book{schwartzQuantumFieldTheory,
+	title = {Quantum Field Theory and the Standard Model},
+	author = {Schwartz, M. D.}
+}
+
+@book{GRPdf,
+	title = {A General Relativity Workbook},
+	author = {Moore, Thomas A.}
+}
+
+@misc{lukePHY2404SLecture,
+	title = {{PHY} 2404S Lecture Notes},
+	url = {https://duo.dur.ac.uk/bbcswebdav/pid-5186994-dt-content-rid-19468201_2/courses/PHYS51160_2019/Michael_Luke_QFT2%281%29.pdf},
+	author = {Luke, Michael},
+	urldate = {2019-10-10}
+}
+
+@misc{ohlFeynmanDiagramsPedestrians,
+	title = {Feynman Diagrams For Pedestrians},
+	abstract = {This set of interleaved lectures and exercises will (re)introduce working experimental particle physicists to the techniques used for computing simple cross sections in the standard model and its extensions. The approach is deliberately pedestrian with an emphasis on real world applications.},
+	author = {Ohl, Thorsten},
+	langid = {english}
+}
+
+@book{srednickiQuantumFieldTheory,
+	title = {Quantum Field Theory},
+	author = {Srednicki, Mark},
+	langid = {english}
+}
+
+@misc{lukePHY2403FLectureNotes,
+	title = {{PHY}2403F Lecture Notes},
+	url = {https://www.physics.utoronto.ca/~luke/PHY2403F/References_files/lecturenotes.pdf},
+	author = {Luke, Michael},
+	urldate = {2019-10-07}
+}
+
+@misc{tongQuantumFieldTheory,
+	title = {Quantum Field Theory (lecture notes)},
+	author = {Tong, David},
+	langid = {english}
+}
+
+@article{ellisMarkedHomework20,
+	title = {Marked homework [20 marks]– due before},
+	pages = {3},
+	author = {Ellis, Keith},
+	langid = {english}
+}
+
+@article{durrettProbabilityTheoryExamples,
+	title = {Probability: Theory and Examples},
+	pages = {440},
+	author = {Durrett, Rick},
+	langid = {english}
+}
+
+@article{friedetzkyMISCADACoreIIbb,
+	title = {{MISCADA} Core {IIb} Algorithms Part 2 2019/20 - 2: Markov Chains},
+	pages = {50},
+	author = {Friedetzky, Tom},
+	langid = {english}
+}
+
+@article{friedetzkyMISCADACoreIIba,
+	title = {{MISCADA} Core {IIb} Algorithms Part 2 2019/20 - 1: Inequalities \& Concentration Bounds},
+	pages = {63},
+	author = {Friedetzky, Tom},
+	langid = {english}
+}
+
+@unpublished{gadouleauLectureIntegerProgrammingb,
+	title = {Lecture 9  Integer Programming {III}: Solving {IPs} via Branch and Bound},
+	author = {Gadouleau, Max},
+	langid = {english}
+}
+
+@unpublished{gadouleauLecture12Cellular,
+	title = {Lecture 12  Cellular Automata {III}: Theory of {CA}},
+	author = {Gadouleau, Max},
+	langid = {english}
+}
+
+@unpublished{gadouleauLecture11Cellular,
+	title = {Lecture 11  Cellular Automata {II}: Modelling systems using {CA}},
+	author = {Gadouleau, Max},
+	langid = {english}
+}
+
+@unpublished{gadouleauLecture10Cellular,
+	title = {Lecture 10  Cellular Automata I: Introduction to {CA}},
+	author = {Gadouleau, Max},
+	langid = {english}
+}
+
+@unpublished{gadouleauLectureIntegerProgramminga,
+	title = {Lecture 8  Integer Programming {II}: Solving {IPs} via Cutting Planes},
+	author = {Gadouleau, Max},
+	langid = {english}
+}
+
+@unpublished{gadouleauLectureIntegerProgramming,
+	title = {Lecture 7  Integer Programming I: Solving {IPs} through {LP} Relaxation},
+	author = {Gadouleau, Max},
+	langid = {english}
+}
+
+@unpublished{gadouleauLectureSimplexAlgorithm,
+	title = {Lecture 4: The Simplex Algorithm I: Building blocks},
+	author = {Gadouleau, Max},
+	langid = {english}
+}
+
+@unpublished{gadouleauLectureSimplexAlgorithmb,
+	title = {Lecture 6  The Simplex Algorithm {III}: Implementation and complexity},
+	author = {Gadouleau, Max},
+	langid = {english}
+}
+
+@unpublished{gadouleauLectureSimplexAlgorithma,
+	title = {Lecture 5: The Simplex Algorithm {II}: The algorithm},
+	author = {Gadouleau, Max},
+	langid = {english}
+}
+@unpublished{gadouleauLectureLinearProgrammingb,
+	title = {Lecture 3 Linear Programming {III}: Duality of Linear Programming},
+	author = {Gadouleau, Max},
+	langid = {english}
+}
+
+@unpublished{gadouleauLectureLinearProgramminga,
+	title = {Lecture 2 Linear Programming {II}: Solving {LPs} - Preliminaries},
+	author = {Gadouleau, Max}
+}
+
+@unpublished{gadouleauLectureLinearProgramming,
+	title = {Lecture 1  Linear Programming I: Introduction to Linear and Integer Programming},
+	author = {Gadouleau, Max},
+	langid = {english}
+}
+
+@book{ellisQCDColliderPhysics,
+	title = {{QCD} and Collider Physics},
+	author = {Ellis, R. K. and Stirling, W. J. and Webber, B. R.}
+}
+
+@article{hutVisionDealingDense,
+	title = {A Vision: Dealing with Dense Stellar Systems},
+	pages = {85},
+	author = {Hut, Piet and Makino, Jun},
+	langid = {english}
+}
+
+@article{heggieGravitationalMillionBodyProblem,
+	title = {The Gravitational Million-Body Problem},
+	abstract = {We review what has been learned recently using N -body simulations about the evolution of globular clusters. While simulations of star clusters have become more realistic, and now include the evolution of single and binary stars, the prospect of reaching large enough N is still a distant one. Nevertheless more restricted kinds of simulations have recently brought valuable progress for certain problems of current observational interest, including the origin and structure of tidal tails of globular clusters. In addition, such simulations have forced us to rethink some basic aspects of stellar dynamics, including, in particular, the process of escape. Finally we turn to faster, approximate methods for studying star cluster dynamics, where the role of N -body simulations is one of calibration.},
+	pages = {12},
+	author = {Heggie, Douglas C},
+	langid = {english}
+}
+
+@article{dannbergNewFormulationCoupled2019,
+	title = {A new formulation for coupled magma/mantle dynamics},
+	issn = {0956-540X, 1365-246X},
+	url = {https://academic.oup.com/gji/advance-article/doi/10.1093/gji/ggz190/5491279},
+	doi = {10.1093/gji/ggz190},
+	abstract = {Modelling the porous ﬂow of melt through a viscously deforming solid rock matrix is a useful tool for interpreting observations from the Earth’s surface, and advances our understanding of the dynamics of the Earth’s interior. However, the system of equations describing this process becomes mathematically degenerate in the limit of vanishing melt fraction. Numerical methods that do not consider this degeneracy or avoid it solely by regularizing speciﬁc material properties generally become computationally expensive as soon as the melt fraction approaches zero in some part of the domain.},
+	pages = {ggz190},
+	journaltitle = {Geophysical Journal International},
+	author = {Dannberg, Juliane and Gassmöller, Rene and Grove, Ryan and Heister, Timo},
+	urldate = {2020-05-14},
+	date = {2019-05-17},
+	langid = {english},
+	keywords = {{ASPECT}, melt, mid-ocean ridge}
+}
+
+@article{gassmollerFormulationsCompressibleMantle2020,
+	title = {On formulations of compressible mantle convection},
+	volume = {221},
+	issn = {0956-540X, 1365-246X},
+	url = {https://academic.oup.com/gji/article/221/2/1264/5735442},
+	doi = {10.1093/gji/ggaa078},
+	abstract = {Mantle convection and long-term lithosphere dynamics in the Earth and other planets can be treated as the slow deformation of a highly viscous ﬂuid, and as such can be described using the compressible Navier–Stokes equations. Since on Earth-sized planets the inﬂuence of compressibility is not a dominant effect, density deviations from a reference proﬁle are at most on the order of a few percent and using the full governing equations poses numerical challenges, most modelling studies have simpliﬁed the governing equations. Common approximations assume a temporally constant, but depth-dependent reference proﬁle for the density (the anelastic liquid approximation), or drop compressibility altogether and use a constant reference density (the Boussinesq approximation). In most previous studies of mantle convection and crustal dynamics, one can assume that the error introduced by these approximations was small compared to the errors that resulted from poorly constrained material behaviour and limited numerical accuracy. However, as model parametrizations have become more realistic, and model resolution has improved, this may no longer be the case and the error due to using simpliﬁed conservation equations might no longer be negligible: while such approximations may be reasonable for models of mantle plumes or slabs traversing the whole mantle, they may be unsatisfactory for layered materials experiencing phase transitions or materials undergoing signiﬁcant heating or cooling. For example, at boundary layers or close to dynamically changing density gradients, the error arising from the use of the aforementioned compressibility approximations can be the dominant error source, and common approximations may fail to capture the physical behaviour of interest. In this paper, we discuss new formulations of the continuity equation that include dynamic density variations due to temperature, pressure and composition without using a reference proﬁle for the density. We quantify the improvement in accuracy relative to existing formulations in a number of benchmark models and evaluate for which practical applications these effects are important. Finally, we consider numerical aspects of the new formulations. We implement and test these formulations in the freely available community software {ASPECT}, and use this code for our numerical experiments.},
+	pages = {1264--1280},
+	number = {2},
+	journaltitle = {Geophysical Journal International},
+	author = {Gassmöller, Rene and Dannberg, Juliane and Bangerth, Wolfgang and Heister, Timo and Myhill, Robert},
+	urldate = {2020-05-14},
+	date = {2020-05-01},
+	langid = {english},
+	keywords = {{ASPECT}, melt}
+}
+
+@article{kaislaniemiLithosphereDestabilizationMelt2018,
+	title = {Lithosphere Destabilization by Melt Weakening and Crust‐Mantle Interactions: Implications for Generation of Granite‐Migmatite Belts},
+	volume = {37},
+	issn = {0278-7407, 1944-9194},
+	url = {https://onlinelibrary.wiley.com/doi/abs/10.1029/2018TC005014},
+	doi = {10.1029/2018TC005014},
+	shorttitle = {Lithosphere Destabilization by Melt Weakening and Crust‐Mantle Interactions},
+	abstract = {Orogenic crustal anatexis is a still poorly understood process due to the complexity of the thermal and geodynamical interaction between mantle and crustal processes during and after continental collision. Here we present a novel conceptual model for the formation of granite-migmatite belts: we propose that convective thinning of the lithosphere results in minor amounts of partial melts within the lowermost crust that trigger further instabilities. This will lead to positive feedback eﬀects between melt weakening, mantle upwelling, and wholesale mantle lithosphere removal, causing a strong pulse of mantle and crustal melting. We test this model numerically, and results show that this process, taking between 20 and 50 Myr in total, can explain the temporal evolution of melting in granite-migmatite zones and associated mantle-derived maﬁc rocks and provides a heat source for crustal melting without the need for other processes, such as slab break-oﬀ or increased radiogenic heating. Furthermore, the generation of a refractory residue after mantle and crustal melting is also shown to control the progress of the lithospheric mantle removal, providing another feedback mechanism between melting and lithospheric reequilibration.},
+	pages = {3102--3116},
+	number = {9},
+	journaltitle = {Tectonics},
+	shortjournal = {Tectonics},
+	author = {Kaislaniemi, L. and Van Hunen, J. and Bouilhol, Pierre},
+	urldate = {2020-05-14},
+	date = {2018-09},
+	langid = {english},
+	keywords = {Citcom, Perple\_X, melt}
+}
+
+@article{farangitakisImpactObliqueInheritance2020,
+	title = {The impact of oblique inheritance and changes in relative plate motion on the development of rift-transform systems},
+	volume = {541},
+	issn = {0012821X},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0012821X2030220X},
+	doi = {10.1016/j.epsl.2020.116277},
+	abstract = {In transform margins, oblique structural inheritance and plate motion vector changes have a direct impact on the margin’s morphology and duration of transform activity. We investigate the effect of these two factors using numerical modelling. To simulate oblique inheritance in continental lithosphere, we model an initial rift-transform-rift conﬁguration oriented at a range of angles (−45o to +45o) with respect to the extension direction. In a second suite of calculations, we ﬁrst extend a rift-transform-rift system orthogonally and then vary the extension direction to simulate rotation of the far-ﬁeld stress directions, and hence the relative plate motion. We found that transpressional deformation on the transform results in increased duration of fault activity and diffuse, longer transform zones at higher angles, while the opposite is true for the transtensional case. These observations are in good agreement with natural examples such as the Ungava Transform Zone, the Gulf of California and the Gulf of Aden, indicating that relative plate rotation plays an important role in the structural evolution of transform margins. Finally, we present a metric that links current transform margin morphology to past evolution.},
+	pages = {116277},
+	journaltitle = {Earth and Planetary Science Letters},
+	shortjournal = {Earth and Planetary Science Letters},
+	author = {Farangitakis, G.P. and Heron, P.J. and {McCaffrey}, K.J.W. and van Hunen, J. and Kalnins, L.M.},
+	urldate = {2020-05-14},
+	date = {2020-07},
+	langid = {english},
+	keywords = {{ASPECT}}
+}
+
+@article{hollandMeltingPeridotitesGranites2018,
+	title = {Melting of Peridotites through to Granites: A Simple Thermodynamic Model in the System {KNCFMASHTOCr}},
+	volume = {59},
+	issn = {0022-3530, 1460-2415},
+	url = {https://academic.oup.com/petrology/article/59/5/881/4996852},
+	doi = {10.1093/petrology/egy048},
+	shorttitle = {Melting of Peridotites through to Granites},
+	abstract = {A new set of thermodynamic models is presented for calculating phase relations in bulk compositions extending from peridotite to granite, from 0Á001 to 70 kbar and from 650 C to peridotite liquidus temperatures, in the system K2O–Na2O–{CaO}–{FeO}–{MgO}–Al2O3–{SiO}2–H2O–{TiO}2–Fe2O3–Cr2O3 ({KNCFMASHTOCr}). The models may be used to calculate phase equilibria in partial melting of a large range of mantle and crustal compositions. They provide a good ﬁt to experimental phase relation topologies and melt compositions across the compositional range of the model. Compared with the preliminary model of Jennings, E. S. \& Holland, T. J. B. (2015) (A simple thermodynamic model for melting of peridotite in the system {NCFMASOCr}. Journal of Petrology 56, 869–892) for peridotite–basalt melting relations, the inclusion of K2O and {TiO}2 allows for better modelling of small melt fractions in peridotite melting, and in reproducing rutile-bearing eclogite melting at high pressures. An improved order–disorder model for spinel is now incorporated. Above 10 kbar pressure, wet partial melting relations may be signiﬁcantly affected by the dissolution of silicates in aqueous ﬂuid, so the set of models includes an aqueous low-density silicatebearing ﬂuid in addition to a high-density H2O-bearing silicate melt. Oxygen fugacity may be readily calculated for the whole range of bulk compositions investigated, and the effect of water content on melt {fO}2 is assessed.},
+	pages = {881--900},
+	number = {5},
+	journaltitle = {Journal of Petrology},
+	author = {Holland, Tim J B and Green, Eleanor C R and Powell, Roger},
+	urldate = {2020-05-07},
+	date = {2018-05-01},
+	langid = {english},
+	keywords = {melt, petrology, thermodynamic  database}
+}
+
+@misc{aspnesNotesRandomizedAlgorithms,
+	title = {Notes on Randomized Algorithms},
+	author = {Aspnes, James}
+}
+
+@book{langtangenIntroductionNumericalMethods2019,
+	location = {Cham},
+	title = {Introduction to Numerical Methods for Variational Problems},
+	volume = {21},
+	isbn = {978-3-030-23787-5 978-3-030-23788-2},
+	url = {http://link.springer.com/10.1007/978-3-030-23788-2},
+	series = {Texts in Computational Science and Engineering},
+	publisher = {Springer International Publishing},
+	author = {Langtangen, Hans Petter and Mardal, Kent-Andre},
+	urldate = {2020-03-10},
+	date = {2019},
+	langid = {english},
+	doi = {10.1007/978-3-030-23788-2}
+}
+
+@book{gibsonCompatibleFiniteElement2019,
+	location = {Cham},
+	title = {Compatible Finite Element Methods for Geophysical Flows: Automation and Implementation Using Firedrake},
+	isbn = {978-3-030-23956-5 978-3-030-23957-2},
+	url = {http://link.springer.com/10.1007/978-3-030-23957-2},
+	series = {Mathematics of Planet Earth},
+	shorttitle = {Compatible Finite Element Methods for Geophysical Flows},
+	publisher = {Springer International Publishing},
+	author = {Gibson, Thomas H. and {McRae}, Andrew T.T. and Cotter, Colin J. and Mitchell, Lawrence and Ham, David A.},
+	urldate = {2020-03-09},
+	date = {2019},
+	langid = {english},
+	doi = {10.1007/978-3-030-23957-2}
+}
+
+@article{steffenTrajectoriesEarthSystem2018,
+	title = {Trajectories of the Earth System in the Anthropocene},
+	volume = {115},
+	issn = {0027-8424, 1091-6490},
+	url = {http://www.pnas.org/lookup/doi/10.1073/pnas.1810141115},
+	doi = {10.1073/pnas.1810141115},
+	abstract = {We explore the risk that self-reinforcing feedbacks could push the Earth System toward a planetary threshold that, if crossed, could prevent stabilization of the climate at intermediate temperature rises and cause continued warming on a “Hothouse Earth” pathway even as human emissions are reduced. Crossing the threshold would lead to a much higher global average temperature than any interglacial in the past 1.2 million years and to sea levels significantly higher than at any time in the Holocene. We examine the evidence that such a threshold might exist and where it might be. If the threshold is crossed, the resulting trajectory would likely cause serious disruptions to ecosystems, society, and economies. Collective human action is required to steer the Earth System away from a potential threshold and stabilize it in a habitable interglacial-like state. Such action entails stewardship of the entire Earth System—biosphere, climate, and societies—and could include decarbonization of the global economy, enhancement of biosphere carbon sinks, behavioral changes, technological innovations, new governance arrangements, and transformed social values.},
+	pages = {8252--8259},
+	number = {33},
+	journaltitle = {Proceedings of the National Academy of Sciences},
+	shortjournal = {Proc Natl Acad Sci {USA}},
+	author = {Steffen, Will and Rockström, Johan and Richardson, Katherine and Lenton, Timothy M. and Folke, Carl and Liverman, Diana and Summerhayes, Colin P. and Barnosky, Anthony D. and Cornell, Sarah E. and Crucifix, Michel and Donges, Jonathan F. and Fetzer, Ingo and Lade, Steven J. and Scheffer, Marten and Winkelmann, Ricarda and Schellnhuber, Hans Joachim},
+	urldate = {2020-02-19},
+	date = {2018-08-14},
+	langid = {english}
+}
+
+@misc{lenzHeavyFlavourPhysics2018,
+	title = {Heavy Flavour Physics and Effective Field Theories},
+	author = {Lenz, Alexander},
+	urldate = {2020-02-19},
+	date = {2018-02-13}
+}
+
+@online{downsPerformanceSpeedLimits2019,
+	title = {Performance speed limits},
+	url = {https://travisdowns.github.io/blog/2019/06/11/speed-limits.html},
+	abstract = {How fast can it go?},
+	titleaddon = {Performance Matters},
+	author = {Downs, Travis},
+	urldate = {2020-01-20},
+	date = {2019-06-11},
+	langid = {english},
+	keywords = {Performance Engineering}
+}
+
+@book{collinsFoundationsPerturbativeQCD,
+	title = {Foundations of Perturbative {QCD}},
+	author = {Collins, J.}
+}
+
+@article{smithTightLowerBound2019,
+	title = {A Tight I/O Lower Bound for Matrix Multiplication},
+	url = {http://arxiv.org/abs/1702.02017},
+	abstract = {A tight lower bound for required I/O when computing an ordinary matrix-matrix multiplication on a processor with two layers of memory is established. Prior work obtained weaker lower bounds by reasoning about the number of segments needed to perform \$C:={AB}\$, for distinct matrices \$A\$, \$B\$, and \$C\$, where each segment is a series of operations involving \$M\$ reads and writes to and from fast memory, and \$M\$ is the size of fast memory. A lower bound on the number of segments was then determined by obtaining an upper bound on the number of elementary multiplications performed per segment. This paper follows the same high level approach, but improves the lower bound by (1) transforming algorithms for {MMM} so that they perform all computation via fused multiply-add instructions ({FMAs}) and using this to reason about only the cost associated with reading the matrices, and (2) decoupling the per-segment I/O cost from the size of fast memory. For \$n {\textbackslash}times n\$ matrices, the lower bound's leading-order term is \$2n{\textasciicircum}3/{\textbackslash}sqrt\{M\}\$. A theoretical algorithm whose leading terms attains this is introduced. To what extent the state-of-the-art Goto's Algorithm attains the lower bound is discussed.},
+	journaltitle = {{arXiv}:1702.02017 [cs]},
+	author = {Smith, Tyler Michael and Lowery, Bradley and Langou, Julien and van de Geijn, Robert A.},
+	urldate = {2020-01-20},
+	date = {2019-02-06},
+	langid = {english},
+	eprinttype = {arxiv},
+	eprint = {1702.02017},
+	keywords = {Computer Science - Computational Complexity, Performance Engineering}
+}
+
+@book{campbellBlackBookQuantum,
+	title = {The Black Book of Quantum Chromodynamics: A Primer for the {LHC} Era},
+	author = {Campbell, J. and Huston, J. and Krauss, F.}
+}
+
+@article{brueggeObjectOrientedSoftwareEngineering,
+	title = {Object-Oriented Software Engineering},
+	pages = {505},
+	author = {Bruegge, Bernd and Dutoit, Allen H},
+	langid = {english}
+}
+
+@incollection{first2BodyProblemHigherOrder,
+	title = {The 2-Body Problem: Higher-Order Integrators},
+	volume = {2},
+	booktitle = {The Art of Computational Science - The Kali Code},
+	author = {, (first)}
+}
+
+@article{zhangEarlyGeodynamicEvolution2016,
+	title = {The early geodynamic evolution of Mars-type planets},
+	volume = {265},
+	issn = {00191035},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0019103515004856},
+	doi = {10.1016/j.icarus.2015.10.019},
+	abstract = {It is not clear whether Mars once possessed active tectonics, yet the question is critical for understanding the thermal evolution of Mars, and the origin and longevity of its early dynamo. To address these issues, we have coupled mantle ﬂow simulations, together with parameterized core evolution models, to simulate the early evolution of Mars-like planets, and constrain the inﬂuence of early mobile-lid tectonics on core evolution. We have explored a wide parameter suite, encapsulating a range of uncertainties in initial conditions, rheological parameters, and surface strength. We present successful models that experience early mobile-lid behaviour, with a later transition into a stagnant-lid mode, which reproduce core dynamo histories similar to the magnetic history of early Mars.},
+	pages = {187--208},
+	journaltitle = {Icarus},
+	shortjournal = {Icarus},
+	author = {Zhang, Siqi and O’Neill, Craig},
+	urldate = {2020-05-20},
+	date = {2016-02},
+	langid = {english},
+	keywords = {{ASPECT}}
+}
+
+@article{heisterHighAccuracyMantle2017,
+	title = {High accuracy mantle convection simulation through modern numerical methods – {II}: realistic models and problems},
+	volume = {210},
+	issn = {0956-540X, 1365-246X},
+	url = {https://academic.oup.com/gji/article-lookup/doi/10.1093/gji/ggx195},
+	doi = {10.1093/gji/ggx195},
+	shorttitle = {High accuracy mantle convection simulation through modern numerical methods – {II}},
+	abstract = {Computations have helped elucidate the dynamics of Earth’s mantle for several decades already. The numerical methods that underlie these simulations have greatly evolved within this time span, and today include dynamically changing and adaptively reﬁned meshes, sophisticated and efﬁcient solvers, and parallelization to large clusters of computers. At the same time, many of the methods – discussed in detail in a previous paper in this series – were developed and tested primarily using model problems that lack many of the complexities that are common to the realistic models our community wants to solve today. With several years of experience solving complex and realistic models, we here revisit some of the algorithm designs of the earlier paper and discuss the incorporation of more complex physics. In particular, we re-consider time stepping and mesh reﬁnement algorithms, evaluate approaches to incorporate compressibility, and discuss dealing with strongly varying material coefﬁcients, latent heat, and how to track chemical compositions and heterogeneities. Taken together and implemented in a high-performance, massively parallel code, the techniques discussed in this paper then allow for high resolution, 3-D, compressible, global mantle convection simulations with phase transitions, strongly temperature dependent viscosity and realistic material properties based on mineral physics data.},
+	pages = {833--851},
+	number = {2},
+	journaltitle = {Geophysical Journal International},
+	author = {Heister, Timo and Dannberg, Juliane and Gassmöller, Rene and Bangerth, Wolfgang},
+	urldate = {2020-05-19},
+	date = {2017-08},
+	langid = {english},
+	keywords = {{ASPECT}}
+}
+
+@article{gassmollerMajorInfluencePlumeridge2016,
+	title = {Major influence of plume-ridge interaction, lithosphere thickness variations, and global mantle flow on hotspot volcanism-The example of Tristan: {PLUME}-{RIDGE} {INTERACTION} {OF} {TRISTAN}},
+	volume = {17},
+	issn = {15252027},
+	url = {http://doi.wiley.com/10.1002/2015GC006177},
+	doi = {10.1002/2015GC006177},
+	shorttitle = {Major influence of plume-ridge interaction, lithosphere thickness variations, and global mantle flow on hotspot volcanism-The example of Tristan},
+	abstract = {Hotspot tracks are thought to originate when mantle plumes impinge moving plates. However, many observed cases close to mid-ocean ridges do not form a single age-progressive line, but vary in width, are separated into several volcanic chains, or are distributed over different plates. Here we study plume-ridge interaction at the example of the Tristan plume, which features all of these complexities. Additionally, the South Atlantic formed close to where plume volcanism began, opening from the south and progressing northward with a notable decrease in magmatism across the Florianopolis Fracture Zone. We study the full evolution of the Tristan plume in a series of three-dimensional regional models created with the convection code {ASPECT}. We then compute crustal thickness maps and compare them to seismic proﬁles and the topography of the South Atlantic. We ﬁnd that the separation of volcanism into the Tristan and Gough chain can be explained by the position of the plume relative to the ridge and the inﬂuence of the global ﬂow ﬁeld. Plume material below the off-ridge track can ﬂow toward the ridge and regions of thinner lithosphere, where decompression melting leads to the development of a second volcanic chain resembling the Tristan and Gough hotspot tracks. Agreement with the observations is best for a small plume buoyancy ﬂux of 500 kg/s or a low excess temperature of 150 K. The model explains the distribution of syn-rift magmatism by hot plume material that ﬂows into the rift and increases melt generation.},
+	pages = {1454--1479},
+	number = {4},
+	journaltitle = {Geochemistry, Geophysics, Geosystems},
+	shortjournal = {Geochem. Geophys. Geosyst.},
+	author = {Gassmöller, Rene and Dannberg, Juliane and Bredow, Eva and Steinberger, Bernhard and Torsvik, Trond H.},
+	urldate = {2020-05-14},
+	date = {2016-04},
+	langid = {english},
+	keywords = {{ASPECT}, Perple\_X, mantle plume, melt}
+}
+
+@article{dannbergCompressibleMagmaMantle2016,
+	title = {Compressible magma/mantle dynamics: 3-D, adaptive simulations in {ASPECT}},
+	volume = {207},
+	issn = {0956-540X, 1365-246X},
+	url = {https://academic.oup.com/gji/article-lookup/doi/10.1093/gji/ggw329},
+	doi = {10.1093/gji/ggw329},
+	shorttitle = {Compressible magma/mantle dynamics},
+	abstract = {Melt generation and migration are an important link between surface processes and the thermal and chemical evolution of the Earth’s interior. However, their vastly different timescales make it difﬁcult to study mantle convection and melt migration in a uniﬁed framework, especially for 3-D global models. And although experiments suggest an increase in melt volume of up to 20 per cent from the depth of melt generation to the surface, previous computations have neglected the individual compressibilities of the solid and the ﬂuid phase. Here, we describe our extension of the ﬁnite element mantle convection code {ASPECT} that adds melt generation and migration. We use the original compressible formulation of the {McKenzie} equations, augmented by an equation for the conservation of energy. Applying adaptive mesh reﬁnement to this type of problems is particularly advantageous, as the resolution can be increased in areas where melt is present and viscosity gradients are high, whereas a lower resolution is sufﬁcient in regions without melt. Together with a high-performance, massively parallel implementation, this allows for high-resolution, 3-D, compressible, global mantle convection simulations coupled with melt migration. We evaluate the functionality and potential of this method using a series of benchmarks and model setups, compare results of the compressible and incompressible formulation, and show the effectiveness of adaptive mesh reﬁnement when applied to melt migration. Our model of magma dynamics provides a framework for modelling processes on different scales and investigating links between processes occurring in the deep mantle and melt generation and migration. This approach could prove particularly useful applied to modelling the generation of komatiites or other melts originating in greater depths. The implementation is available in the Open Source {ASPECT} repository.},
+	pages = {1343--1366},
+	number = {3},
+	journaltitle = {Geophysical Journal International},
+	shortjournal = {Geophys. J. Int.},
+	author = {Dannberg, Juliane and Heister, Timo},
+	urldate = {2020-05-13},
+	date = {2016-12-01},
+	langid = {english},
+	keywords = {{ASPECT}, mantle plume, melt, mid-ocean ridge, two-phase flow}
+}
+
+@article{freeburnNumericalModelsMagmatic2017,
+	title = {Numerical models of the magmatic processes induced by slab breakoff},
+	volume = {478},
+	issn = {0012821X},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0012821X17305034},
+	doi = {10.1016/j.epsl.2017.09.008},
+	abstract = {After the onset of continental collision, magmatism often persists for tens of millions of years, albeit with a different composition, in reduced volumes, and with a more episodic nature and more widespread spatial distribution, compared to normal arc magmatism. Kinematic modelling studies have suggested that slab breakoff can account for this postcollisional magmatism through the formation of a slab window and subsequent heating of the overriding plate and decompression melting of upwelling asthenosphere, particularly if breakoff occurs at depths shallower than the overriding plate.},
+	pages = {203--213},
+	journaltitle = {Earth and Planetary Science Letters},
+	shortjournal = {Earth and Planetary Science Letters},
+	author = {Freeburn, Rebecca and Bouilhol, Pierre and Maunder, Ben and Magni, Valentina and van Hunen, Jeroen},
+	urldate = {2020-05-03},
+	date = {2017-11},
+	langid = {english},
+	keywords = {Citcom, Perple\_X, dehydration, melt, slab breakoff, subduction, thermodynamic  database, tracers}
+}
+
+@article{mayneRcrustToolCalculating2016,
+	title = {Rcrust: a tool for calculating path-dependent open system processes and application to melt loss},
+	volume = {34},
+	issn = {02634929},
+	url = {http://doi.wiley.com/10.1111/jmg.12199},
+	doi = {10.1111/jmg.12199},
+	shorttitle = {Rcrust},
+	pages = {663--682},
+	number = {7},
+	journaltitle = {Journal of Metamorphic Geology},
+	shortjournal = {J. Metamorph. Geol.},
+	author = {Mayne, M. J. and Moyen, J.-F. and Stevens, G. and Kaislaniemi, L.},
+	urldate = {2020-04-23},
+	date = {2016-09},
+	langid = {english},
+	keywords = {thermo}
+}
+
+@article{connollyPrimerGibbsEnergy2017,
+	title = {A primer in gibbs energy minimization for geophysicists},
+	volume = {25},
+	issn = {0869-5911, 1556-2085},
+	url = {http://link.springer.com/10.1134/S0869591117050034},
+	doi = {10.1134/S0869591117050034},
+	abstract = {Gibbs energy minimization is the means by which the stable state of a system can be computed as a function of pressure, temperature and chemical composition from thermodynamic data. In this context, state implies knowledge of the identity, amount, and composition of the various phases of matter in heterogeneous systems. For seismic phenomena, which occur on time-scales that are short compared to the timescales of intra-phase equilibration, the Gibbs energy functions of the individual phases are equations of state that can be used to recover seismic wave speeds. Thermodynamic properties relevant to modelling of slower geodynamic processes are recovered by numeric differentiation of the Gibbs energy function of the system obtained by minimization. Gibbs energy minimization algorithms are categorized by whether they solve the non-linear optimization problem directly or solve a linearized formulation. The former express the objective function, the total Gibbs energy of the system, indirectly in terms of the partial molar Gibbs energies of phase species rather than directly in terms of the Gibbs energies of the possible phases. The indirect formulation of the objective function has the consequence that although these algorithms are capable of attaining high precision they have no generic means of treating phase separation and expertise is required to avoid local minima. In contrast, the solution of the fully linearized problem is completely robust, but offers limited resolution. Algorithms that iteratively refine linearized solutions offer a compromise between robustness and precision that is well suited to the demands of geophysical modeling.},
+	pages = {526--534},
+	number = {5},
+	journaltitle = {Petrology},
+	shortjournal = {Petrology},
+	author = {Connolly, J. A. D.},
+	urldate = {2020-04-22},
+	date = {2017-09},
+	langid = {english},
+	keywords = {Perple\_X, {THERMOCALC}, phase-diagrams, theriak}
+}
+
+@article{rathgeberFiredrakeAutomatingFinite2017,
+	title = {Firedrake: automating the finite element method by composing abstractions},
+	volume = {43},
+	issn = {0098-3500, 1557-7295},
+	url = {http://arxiv.org/abs/1501.01809},
+	doi = {10.1145/2998441},
+	shorttitle = {Firedrake},
+	abstract = {Firedrake is a new tool for automating the numerical solution of partial differential equations. Firedrake adopts the domain-specific language for the finite element method of the {FEniCS} project, but with a pure Python runtime-only implementation centred on the composition of several existing and new abstractions for particular aspects of scientific computing. The result is a more complete separation of concerns which eases the incorporation of separate contributions from computer scientists, numerical analysts and application specialists. These contributions may add functionality, or improve performance. Firedrake benefits from automatically applying new optimisations. This includes factorising mixed function spaces, transforming and vectorising inner loops, and intrinsically supporting block matrix operations. Importantly, Firedrake presents a simple public {API} for escaping the {UFL} abstraction. This allows users to implement common operations that fall outside pure variational formulations, such as flux-limiters.},
+	pages = {1--27},
+	number = {3},
+	journaltitle = {{ACM} Transactions on Mathematical Software},
+	shortjournal = {{ACM} Trans. Math. Softw.},
+	author = {Rathgeber, Florian and Ham, David A. and Mitchell, Lawrence and Lange, Michael and Luporini, Fabio and {McRae}, Andrew T. T. and Bercea, Gheorghe-Teodor and Markall, Graham R. and Kelly, Paul H. J.},
+	urldate = {2020-04-19},
+	date = {2017-01-16},
+	langid = {english},
+	eprinttype = {arxiv},
+	eprint = {1501.01809},
+	keywords = {Computer Science - Mathematical Software, G.1.8, G.4, Mathematics - Numerical Analysis}
+}
+
+@article{xuWellMitigationStrategies2017,
+	title = {Well below 2 °C: Mitigation strategies for avoiding dangerous to catastrophic climate changes},
+	volume = {114},
+	issn = {0027-8424, 1091-6490},
+	url = {http://www.pnas.org/lookup/doi/10.1073/pnas.1618481114},
+	doi = {10.1073/pnas.1618481114},
+	shorttitle = {Well below 2 °C},
+	abstract = {The historic Paris Agreement calls for limiting global temperature rise to “well below 2 °C.” Because of uncertainties in emission scenarios, climate, and carbon cycle feedback, we interpret the Paris Agreement in terms of three climate risk categories and bring in considerations of low-probability (5\%) high-impact ({LPHI}) warming in addition to the central (∼50\% probability) value. The current risk category of dangerous warming is extended to more categories, which are defined by us here as follows: {\textgreater}1.5 °C as dangerous; {\textgreater}3 °C as catastrophic; and {\textgreater}5 °C as unknown, implying beyond catastrophic, including existential threats. With unchecked emissions, the central warming can reach the dangerous level within three decades, with the {LPHI} warming becoming catastrophic by 2050. We outline a three-lever strategy to limit the central warming below the dangerous level and the {LPHI} below the catastrophic level, both in the near term ({\textless}2050) and in the long term (2100): the carbon neutral ({CN}) lever to achieve zero net emissions of {CO}
+              2
+              , the super pollutant ({SP}) lever to mitigate short-lived climate pollutants, and the carbon extraction and sequestration ({CES}) lever to thin the atmospheric {CO}
+              2
+              blanket. Pulling on both {CN} and {SP} levers and bending the emissions curve by 2020 can keep the central warming below dangerous levels. To limit the {LPHI} warming below dangerous levels, the {CES} lever must be pulled as well to extract as much as 1 trillion tons of {CO}
+              2
+              before 2100 to both limit the preindustrial to 2100 cumulative net {CO}
+              2
+              emissions to 2.2 trillion tons and bend the warming curve to a cooling trend.},
+	pages = {10315--10323},
+	number = {39},
+	journaltitle = {Proceedings of the National Academy of Sciences},
+	shortjournal = {Proc Natl Acad Sci {USA}},
+	author = {Xu, Yangyang and Ramanathan, Veerabhadran},
+	urldate = {2020-02-19},
+	date = {2017-09-26},
+	langid = {english}
+}
+
+@article{rafteryLessWarming21002017,
+	title = {Less than 2 °C warming by 2100 unlikely},
+	volume = {7},
+	issn = {1758-678X, 1758-6798},
+	url = {http://www.nature.com/articles/nclimate3352},
+	doi = {10.1038/nclimate3352},
+	pages = {637--641},
+	number = {9},
+	journaltitle = {Nature Climate Change},
+	shortjournal = {Nature Clim Change},
+	author = {Raftery, Adrian E. and Zimmer, Alec and Frierson, Dargan M. W. and Startz, Richard and Liu, Peiran},
+	urldate = {2020-02-19},
+	date = {2017-09},
+	langid = {english}
+}
+
+@article{loganTASI2013Lectures2017,
+	title = {{TASI} 2013 lectures on Higgs physics within and beyond the Standard Model},
+	url = {http://arxiv.org/abs/1406.1786},
+	abstract = {These lectures start with a detailed pedagogical introduction to electroweak symmetry breaking in the Standard Model, including gauge boson and fermion mass generation and the resulting predictions for Higgs boson interactions. I then survey Higgs boson decays and production mechanisms at hadron and e+e− colliders. I ﬁnish with two case studies of Higgs physics beyond the Standard Model: {twoHiggs}-doublet models, which I use to illustrate the concept of minimal ﬂavor violation, and models with isospin-triplet scalar(s), which I use to illustrate the concept of custodial symmetry.},
+	journaltitle = {{arXiv}:1406.1786 [hep-ex, physics:hep-ph]},
+	author = {Logan, Heather E.},
+	urldate = {2020-02-19},
+	date = {2017-11-28},
+	langid = {english},
+	eprinttype = {arxiv},
+	eprint = {1406.1786},
+	keywords = {High Energy Physics - Experiment, High Energy Physics - Phenomenology}
+}
+
+@article{dawsonTASI2016Lectures2018,
+	title = {{TASI} 2016 Lectures: Electroweak Symmetry Breaking and Effective Field Theory},
+	url = {http://arxiv.org/abs/1712.07232},
+	shorttitle = {{TASI} 2016 Lectures},
+	abstract = {I give a pedagogical introduction to the physics of electroweak symmetry breaking and the uses of eﬀective ﬁeld theory in the context of Higgs physics. Higgs boson production and decay at the {LHC} and the consistency of the Higgs measurements with triviality arguments, vacuum stability, and precision electroweak measurements are discussed. Eﬀective Lagrangian techniques are used to understand potential deviations from the Standard Model ({SM}) predictions. Finally, I end with a brief discussion of the future of Higgs physics.},
+	journaltitle = {{arXiv}:1712.07232 [hep-ph]},
+	author = {Dawson, S.},
+	urldate = {2020-02-19},
+	date = {2018-01-02},
+	langid = {english},
+	eprinttype = {arxiv},
+	eprint = {1712.07232},
+	keywords = {High Energy Physics - Phenomenology}
+}
+
+@article{alshammariNumericalStudyFisher2017,
+	title = {Numerical Study of Fisher’s Equation by Finite Difference Schemes},
+	volume = {08},
+	issn = {2152-7385, 2152-7393},
+	url = {http://www.scirp.org/journal/doi.aspx?DOI=10.4236/am.2017.88083},
+	doi = {10.4236/am.2017.88083},
+	abstract = {This research paper represents a numerical approximation to three interesting equations of Fisher, which are linear, non-linear and coupled linear one dimensional reaction diffusion equations from population genetics. We studied accuracy in term of L∞ error norm by random selected grids along time levels for comparison with exact results. The test example demonstrates the accuracy, efficiency and versatility of the proposed schemes. It is shown that the numerical schemes give better solutions. Moreover, the schemes can be easily applied to a wide class of higher dimension non-linear reaction diffusion equations.},
+	pages = {1100--1116},
+	number = {8},
+	journaltitle = {Applied Mathematics},
+	shortjournal = {{AM}},
+	author = {Alshammari, Bader Saad and Mashat, Daoud Suleiman},
+	urldate = {2020-02-05},
+	date = {2017},
+	langid = {english}
+}
+
+@article{huangBLISlabSandboxOptimizing2016,
+	title = {{BLISlab}: A Sandbox for Optimizing {GEMM}},
+	url = {http://arxiv.org/abs/1609.00076},
+	shorttitle = {{BLISlab}},
+	abstract = {Matrix-matrix multiplication is a fundamental operation of great importance to scientiﬁc computing and, increasingly, machine learning. It is a simple enough concept to be introduced in a typical high school algebra course yet in practice important enough that its implementation on computers continues to be an active research topic. This note describes a set of exercises that use this operation to illustrate how high performance can be attained on modern {CPUs} with hierarchical memories (multiple caches). It does so by building on the insights that underly the {BLAS}-like Library Instantiation Software ({BLIS}) framework by exposing a simpliﬁed “sandbox” that mimics the implementation in {BLIS}. As such, it also becomes a vehicle for the “crowd sourcing” of the optimization of {BLIS}. We call this set of exercises “  {BLISlab}”1.},
+	journaltitle = {{arXiv}:1609.00076 [cs]},
+	author = {Huang, Jianyu and van de Geijn, Robert A.},
+	urldate = {2020-01-30},
+	date = {2016-08-31},
+	langid = {english},
+	eprinttype = {arxiv},
+	eprint = {1609.00076},
+	keywords = {Computer Science - Mathematical Software}
+}
+
+@article{zeeBLISFrameworkExperiments2016,
+	title = {The {BLIS} Framework: Experiments in Portability},
+	volume = {42},
+	issn = {00983500},
+	url = {http://dl.acm.org/citation.cfm?doid=2936306.2755561},
+	doi = {10.1145/2755561},
+	shorttitle = {The {BLIS} Framework},
+	pages = {1--19},
+	number = {2},
+	journaltitle = {{ACM} Transactions on Mathematical Software},
+	shortjournal = {{ACM} Trans. Math. Softw.},
+	author = {Zee, Field G. Van and Austel, Vernon and Gunnels, John A. and Killough, Lee and Smith, Tyler M. and Marker, Bryan and Low, Tze Meng and Geijn, Robert A. Van De and Igual, Francisco D. and Smelyanskiy, Mikhail and Zhang, Xianyi and Kistler, Michael},
+	urldate = {2020-01-30},
+	date = {2016-06-03},
+	langid = {english}
+}
+
+@article{zeeReplicatedComputationalResults2015,
+	title = {Replicated Computational Results Certified {BLIS}: A Framework for Rapidly Instantiating {BLAS} Functionality},
+	volume = {41},
+	issn = {00983500},
+	url = {http://dl.acm.org/citation.cfm?doid=2786970.2764454},
+	doi = {10.1145/2764454},
+	shorttitle = {Replicated Computational Results Certified {BLIS}},
+	pages = {1--33},
+	number = {3},
+	journaltitle = {{ACM} Transactions on Mathematical Software},
+	shortjournal = {{ACM} Trans. Math. Softw.},
+	author = {Zee, Field G. {VAN} and Geijn, Robert A. {VAN} {DE}},
+	urldate = {2020-01-20},
+	date = {2015-06-01},
+	langid = {english},
+	keywords = {Performance Engineering}
+}
+
+@article{lowAnalyticalModelingEnough2016,
+	title = {Analytical Modeling Is Enough for High-Performance {BLIS}},
+	volume = {43},
+	issn = {00983500},
+	url = {http://dl.acm.org/citation.cfm?doid=2988256.2925987},
+	doi = {10.1145/2925987},
+	pages = {1--18},
+	number = {2},
+	journaltitle = {{ACM} Transactions on Mathematical Software},
+	shortjournal = {{ACM} Trans. Math. Softw.},
+	author = {Low, Tze Meng and Igual, Francisco D. and Smith, Tyler M. and Quintana-Orti, Enrique S.},
+	urldate = {2020-01-20},
+	date = {2016-08-16},
+	langid = {english},
+	keywords = {Performance Engineering}
+}
+
+@book{sommervilleSoftwareEngineering2016,
+	location = {Boston Columbus Indianapolis New York San Francisco Hoboken Amsterdam Cape Town Dubai London Madrid Milan Munich Paris Montreal Toronto Delhi Mexico City São Paulo Sydney Hong Kong Seoul Singapore Taipei Tokyo},
+	edition = {Tenth edition, global edition},
+	title = {Software engineering},
+	isbn = {978-1-292-09613-1 978-1-292-09614-8},
+	series = {Always learning},
+	pagetotal = {810},
+	publisher = {Pearson},
+	author = {Sommerville, Ian},
+	date = {2016},
+	langid = {english},
+	note = {{OCLC}: 934508916}
+}
+
+@article{kronbichlerHighAccuracyMantle2012,
+	title = {High accuracy mantle convection simulation through modern numerical methods: High accuracy mantle convection simulation},
+	volume = {191},
+	issn = {0956540X},
+	url = {https://academic.oup.com/gji/article-lookup/doi/10.1111/j.1365-246X.2012.05609.x},
+	doi = {10.1111/j.1365-246X.2012.05609.x},
+	shorttitle = {High accuracy mantle convection simulation through modern numerical methods},
+	abstract = {Numerical simulation of the processes in the Earth’s mantle is a key piece in understanding its dynamics, composition, history and interaction with the lithosphere and the Earth’s core. However, doing so presents many practical difﬁculties related to the numerical methods that can accurately represent these processes at relevant scales. This paper presents an overview of the state of the art in algorithms for high-Rayleigh number ﬂows such as those in the Earth’s mantle, and discusses their implementation in the Open Source code {ASPECT} (Advanced Solver for Problems in Earth’s {ConvecTion}). Speciﬁcally, we show how an interconnected set of methods for adaptive mesh reﬁnement ({AMR}), higher order spatial and temporal discretizations, advection stabilization and efﬁcient linear solvers can provide high accuracy at a numerical cost unachievable with traditional methods, and how these methods can be designed in a way so that they scale to large numbers of processors on compute clusters.},
+	pages = {12--29},
+	number = {1},
+	journaltitle = {Geophysical Journal International},
+	author = {Kronbichler, Martin and Heister, Timo and Bangerth, Wolfgang},
+	urldate = {2020-05-19},
+	date = {2012-10},
+	langid = {english},
+	keywords = {{ASPECT}}
+}
+
+@article{magniDeepWaterRecycling2014,
+	title = {Deep water recycling through time},
+	volume = {15},
+	issn = {15252027},
+	url = {http://doi.wiley.com/10.1002/2014GC005525},
+	doi = {10.1002/2014GC005525},
+	abstract = {We investigate the dehydration processes in subduction zones and their implications for the water cycle throughout Earth’s history. We use a numerical tool that combines thermo-mechanical models with a thermodynamic database to examine slab dehydration for present-day and early Earth settings and its consequences for the deep water recycling. We investigate the reactions responsible for releasing water from the crust and the hydrated lithospheric mantle and how they change with subduction velocity (vs), slab age (a) and mantle temperature (Tm). Our results show that faster slabs dehydrate over a wide area: they start dehydrating shallower and they carry water deeper into the mantle. We parameterize the amount of water that can be carried deep into the mantle, W (3105 kg/m2), as a function of vs (cm/yr), a (Myrs), and Tm ( C): W51:06vs10:14a20:023Tm117. We generally observe that a 1) 100 C increase in the mantle temperature, or 2) \$15 Myr decrease of plate age, or 3) decrease in subduction velocity of \$2 cm/yr all have the same effect on the amount of water retained in the slab at depth, corresponding to a decrease of \$2.23105 kg/m2 of H2O. We estimate that for present-day conditions \$26\% of the global inﬂux water, or 73108 Tg/Myr of H2O, is recycled into the mantle. Using a realistic distribution of subduction parameters, we illustrate that deep water recycling might still be possible in early Earth conditions, although its efﬁciency would generally decrease. Indeed, 0.5–3.7 3 108 Tg/Myr of H2O could still be recycled in the mantle at 2.8 Ga.},
+	pages = {4203--4216},
+	number = {11},
+	journaltitle = {Geochemistry, Geophysics, Geosystems},
+	shortjournal = {Geochem. Geophys. Geosyst.},
+	author = {Magni, Valentina and Bouilhol, Pierre and van Hunen, Jeroen},
+	urldate = {2020-05-14},
+	date = {2014-11},
+	langid = {english},
+	keywords = {Citcom, Perple\_X, dehydration, subduction, thermo, tracers}
+}
+
+@article{bouilholNumericalApproachMelting2015,
+	title = {A numerical approach to melting in warm subduction zones},
+	volume = {411},
+	issn = {0012821X},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0012821X14007432},
+	doi = {10.1016/j.epsl.2014.11.043},
+	abstract = {The complex feedback between dehydration and melting in hot subduction zones is quantitatively addressed in this study. We present an integrated numerical tool that combines a high-resolution thermomechanical subduction model with a thermodynamic database that allows modeling metamorphic devolatilization, and subsequent re-hydration and melting reactions. We apply this tool to quantify how the hydration state of a lithologically layered subducting slab varies during interaction with the hot mantle wedge and how this affects any melting taking place in the subducting crust or the overlying mantle wedge. Total crustal dehydration is achieved before any crustal melting can occur, even in very young subducting slabs. Signiﬁcant oceanic crust melting is only achieved if the metamorphic ﬂuids from the dehydrating underlying subducting slab mantle are ﬂuxed through the dry eclogites. But our models further demonstrate that even if the oceanic crust can melt in these speciﬁc conditions, the preceding crustal dehydration will simultaneously result in extensive mantle wedge melting at lower pressures than for colder slabs. The signiﬁcant mantle wedge melting implies that also for hot subduction zones, most of the melt feeding the overriding plate is of mantle origin.},
+	pages = {37--44},
+	journaltitle = {Earth and Planetary Science Letters},
+	shortjournal = {Earth and Planetary Science Letters},
+	author = {Bouilhol, Pierre and Magni, Valentina and van Hunen, Jeroen and Kaislaniemi, Lars},
+	urldate = {2020-05-14},
+	date = {2015-02},
+	langid = {english},
+	keywords = {Citcom, Perple\_X, melt, subduction, tracers}
+}
+
+@article{cottaarBurnManLowerMantle2014,
+	title = {{BurnMan}: A lower mantle mineral physics toolkit},
+	volume = {15},
+	issn = {15252027},
+	url = {http://doi.wiley.com/10.1002/2013GC005122},
+	doi = {10.1002/2013GC005122},
+	shorttitle = {{BurnMan}},
+	abstract = {We present {BurnMan}, an open-source mineral physics toolbox to determine elastic properties for speciﬁed compositions in the lower mantle by solving an Equation of State ({EoS}). The toolbox, written in Python, can be used to evaluate seismic velocities of new mineral physics data or geodynamic models, and as the forward model in inversions for mantle composition. The user can deﬁne the composition from a list of minerals provided for the lower mantle or easily include their own. {BurnMan} provides choices in methodology, both for the {EoS} and for the multiphase averaging scheme. The results can be visually or quantitatively compared to observed seismic models. Example user scripts show how to go through these steps. This paper includes several examples realized with {BurnMan}: First, we benchmark the computations to check for correctness. Second, we exemplify two pitfalls in {EoS} modeling: using a different {EoS} than the one used to derive the mineral physical parameters or using an incorrect averaging scheme. Both pitfalls have led to incorrect conclusions on lower mantle composition and temperature in the literature. We further illustrate that ﬁtting elastic velocities separately or jointly leads to different Mg/Si ratios for the lower mantle. However, we ﬁnd that, within mineral physical uncertainties, a pyrolitic composition can match {PREM} very well. Finally, we ﬁnd that uncertainties on speciﬁc input parameters result in a considerable amount of variation in both magnitude and gradient of the seismic velocities.},
+	pages = {1164--1179},
+	number = {4},
+	journaltitle = {Geochemistry, Geophysics, Geosystems},
+	shortjournal = {Geochem. Geophys. Geosyst.},
+	author = {Cottaar, Sanne and Heister, Timo and Rose, Ian and Unterborn, Cayman},
+	urldate = {2020-04-23},
+	date = {2014-04},
+	langid = {english},
+	keywords = {thermo}
+}
+
+@inproceedings{rathgeberPyOP2HighLevelFramework2012,
+	location = {Salt Lake City, {UT}},
+	title = {{PyOP}2: A High-Level Framework for Performance-Portable Simulations on Unstructured Meshes},
+	isbn = {978-0-7695-4956-9 978-1-4673-6218-4},
+	url = {http://ieeexplore.ieee.org/document/6495916/},
+	doi = {10.1109/SC.Companion.2012.134},
+	shorttitle = {{PyOP}2},
+	abstract = {Emerging many-core platforms are very difﬁcult to program in a performance portable manner whilst achieving high efﬁciency on a diverse range of architectures.},
+	eventtitle = {2012 {SC} Companion: High Performance Computing, Networking, Storage and Analysis ({SCC})},
+	pages = {1116--1123},
+	booktitle = {2012 {SC} Companion: High Performance Computing, Networking Storage and Analysis},
+	publisher = {{IEEE}},
+	author = {Rathgeber, Florian and Markall, Graham R. and Mitchell, Lawrence and Loriant, Nicolas and Ham, David A. and Bertolli, Carlo and Kelly, Paul H.J.},
+	urldate = {2020-04-19},
+	date = {2012-11},
+	langid = {english}
+}
+
+@incollection{AppendixFeynmanRules2013,
+	title = {Appendix B: Feynman Rules for the Electroweak Theory},
+	isbn = {978-3-527-64888-7},
+	url = {https://onlinelibrary.wiley.com/doi/abs/10.1002/9783527648887.app2},
+	shorttitle = {Appendix B},
+	pages = {507--511},
+	booktitle = {Elementary Particle Physics},
+	publisher = {John Wiley \& Sons, Ltd},
+	urldate = {2020-04-10},
+	date = {2013},
+	langid = {english},
+	doi = {10.1002/9783527648887.app2}
+}
+
+@book{larsonFiniteElementMethod2013,
+	location = {Berlin, Heidelberg},
+	title = {The Finite Element Method: Theory, Implementation, and Applications},
+	volume = {10},
+	isbn = {978-3-642-33286-9 978-3-642-33287-6},
+	url = {http://link.springer.com/10.1007/978-3-642-33287-6},
+	series = {Texts in Computational Science and Engineering},
+	shorttitle = {The Finite Element Method},
+	publisher = {Springer Berlin Heidelberg},
+	author = {Larson, Mats G. and Bengzon, Fredrik},
+	urldate = {2020-03-10},
+	date = {2013},
+	langid = {english},
+	doi = {10.1007/978-3-642-33287-6}
+}
+
+@collection{loggAutomatedSolutionDifferential2012,
+	location = {Berlin, Heidelberg},
+	title = {Automated Solution of Differential Equations by the Finite Element Method},
+	volume = {84},
+	isbn = {978-3-642-23098-1 978-3-642-23099-8},
+	url = {http://link.springer.com/10.1007/978-3-642-23099-8},
+	series = {Lecture Notes in Computational Science and Engineering},
+	publisher = {Springer Berlin Heidelberg},
+	editor = {Logg, Anders and Mardal, Kent-Andre and Wells, Garth},
+	urldate = {2020-03-09},
+	date = {2012},
+	langid = {english},
+	doi = {10.1007/978-3-642-23099-8},
+	note = {tex.ids: {loggAutomatedSolutionDifferential}2012a},
+	keywords = {{FEnICS}}
+}
+
+@article{cotterMixedFiniteElements2012,
+	title = {Mixed finite elements for numerical weather prediction},
+	volume = {231},
+	issn = {00219991},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0021999112002628},
+	doi = {10.1016/j.jcp.2012.05.020},
+	abstract = {We show how mixed ﬁnite element methods that satisfy the conditions of ﬁnite element exterior calculus can be used for the horizontal discretisation of dynamical cores for numerical weather prediction on pseudo-uniform grids. This family of mixed ﬁnite element methods can be thought of in the numerical weather prediction context as a generalisation of the popular polygonal C-grid ﬁnite diﬀerence methods. There are a few major advantages: the mixed ﬁnite element methods do not require an orthogonal grid, and they allow a degree of ﬂexibility that can be exploited to ensure an appropriate ratio between the velocity and pressure degrees of freedom so as to avoid spurious mode branches in the numerical dispersion relation. These methods preserve several properties of the C-grid method when applied to linear barotropic wave propagation, namely: a) energy conservation, b) mass conservation, c) no spurious pressure modes, and d) steady geostrophic modes on the f -plane. We explain how these properties are preserved, and describe two examples that can be used on pseudo-uniform grids: the recently-developed modiﬁed {RTk}-Q(k-1) element pairs on quadrilaterals and the {BDFM}1-P 1DG element pair on triangles. All of these mixed ﬁnite element methods have an exact 2:1 ratio of velocity degrees of freedom to pressure degrees of freedom. Finally we illustrate the properties with some numerical examples.},
+	pages = {7076--7091},
+	number = {21},
+	journaltitle = {Journal of Computational Physics},
+	shortjournal = {Journal of Computational Physics},
+	author = {Cotter, C.J. and Shipton, J.},
+	urldate = {2020-03-09},
+	date = {2012-08},
+	langid = {english}
+}
+
+@article{plehnLecturesLHCPhysics2012,
+	title = {Lectures on {LHC} Physics},
+	volume = {844},
+	url = {http://arxiv.org/abs/0910.4182},
+	doi = {10.1007/978-3-642-24040-9},
+	abstract = {With the discovery of the Higgs boson the {LHC} experiments have closed the most important gap in our understanding of fundamental interactions. We now know that the interactions between elementary particles can be described by quantum ﬁeld theory, more speciﬁcally by a renormalizable gauge theory. This theory is valid to arbitrarily high energy scales and do not require an ultraviolet completion. In these notes I cover three aspects to help understand {LHC} results in the Higgs sector and in searches for physics beyond the Standard Model: many facets of Higgs physics, {QCD} as it is relevant for {LHC} measurements, and standard phenomenological background knowledge. The lectures should put young graduate students into a position to really follow advanced writeups and ﬁrst research papers. In that sense they can serve as a starting point for a research project in {LHC} physics. With this new, signiﬁcantly expanded version I am conﬁdent that also some more senior colleagues will ﬁnd them useful and interesting.},
+	journaltitle = {{arXiv}:0910.4182 [hep-ex, physics:hep-ph]},
+	author = {Plehn, Tilman},
+	urldate = {2020-02-19},
+	date = {2012},
+	langid = {english},
+	eprinttype = {arxiv},
+	eprint = {0910.4182},
+	keywords = {High Energy Physics - Experiment, High Energy Physics - Phenomenology}
+}
+
+@book{gueninGentleIntroductionOptimization2014,
+	location = {Cambridge},
+	title = {A gentle introduction to optimization},
+	isbn = {978-1-107-05344-1 978-1-107-65879-0},
+	pagetotal = {269},
+	publisher = {Cambridge University Press},
+	author = {Guenin, B. and Könemann, J. and Tuncel, Levent},
+	date = {2014},
+	langid = {english},
+	keywords = {Mathematical optimization}
+}
+
+@article{bastaniHighlyAccurateMethod2012,
+	title = {A highly accurate method to solve Fisher’s equation},
+	volume = {78},
+	issn = {0304-4289, 0973-7111},
+	url = {http://link.springer.com/10.1007/s12043-011-0243-8},
+	doi = {10.1007/s12043-011-0243-8},
+	abstract = {In this study, we present a new and very accurate numerical method to approximate the Fisher’s-type equations. Firstly, the spatial derivative in the proposed equation is approximated by a sixth-order compact ﬁnite difference ({CFD}6) scheme. Secondly, we solve the obtained system of differential equations using a third-order total variation diminishing Runge–Kutta ({TVD}-{RK}3) scheme. Numerical examples are given to illustrate the efﬁciency of the proposed method.},
+	pages = {335--346},
+	number = {3},
+	journaltitle = {Pramana},
+	shortjournal = {Pramana - J Phys},
+	author = {Bastani, Mehdi and Salkuyeh, Davod Khojasteh},
+	urldate = {2020-02-05},
+	date = {2012-03},
+	langid = {english}
+}
+
+@inproceedings{yasinTopDownMethodPerformance2014,
+	location = {{CA}, {USA}},
+	title = {A Top-Down method for performance analysis and counters architecture},
+	isbn = {978-1-4799-3606-9 978-1-4799-3604-5},
+	url = {http://ieeexplore.ieee.org/document/6844459/},
+	doi = {10.1109/ISPASS.2014.6844459},
+	abstract = {Optimizing an application’s performance for a given microarchitecture has become painfully difficult. Increasing microarchitecture complexity, workload diversity, and the unmanageable volume of data produced by performance tools increase the optimization challenges. At the same time resource and time constraints get tougher with recently emerged segments. This further calls for accurate and prompt analysis methods.},
+	eventtitle = {2014 {IEEE} International Symposium on Performance Analysis of Systems and Software ({ISPASS})},
+	pages = {35--44},
+	booktitle = {2014 {IEEE} International Symposium on Performance Analysis of Systems and Software ({ISPASS})},
+	publisher = {{IEEE}},
+	author = {Yasin, Ahmad},
+	urldate = {2020-02-03},
+	date = {2014-03},
+	langid = {english}
+}
+
+@inproceedings{hoeflerScientificBenchmarkingParallel2015,
+	location = {Austin, Texas},
+	title = {Scientific benchmarking of parallel computing systems: twelve ways to tell the masses when reporting performance results},
+	isbn = {978-1-4503-3723-6},
+	url = {http://dl.acm.org/citation.cfm?doid=2807591.2807644},
+	doi = {10.1145/2807591.2807644},
+	shorttitle = {Scientific benchmarking of parallel computing systems},
+	abstract = {Measuring and reporting performance of parallel computers constitutes the basis for scientiﬁc advancement of high-performance computing ({HPC}). Most scientiﬁc reports show performance improvements of new techniques and are thus obliged to ensure reproducibility or at least interpretability. Our investigation of a stratiﬁed sample of 120 papers across three top conferences in the ﬁeld shows that the state of the practice is lacking. For example, it is often unclear if reported improvements are deterministic or observed by chance. In addition to distilling best practices from existing work, we propose statistically sound analysis and reporting techniques and simple guidelines for experimental design in parallel computing and codify them in a portable benchmarking library. We aim to improve the standards of reporting research results and initiate a discussion in the {HPC} ﬁeld. A wide adoption of our minimal set of rules will lead to better interpretability of performance results and improve the scientiﬁc culture in {HPC}.},
+	eventtitle = {the International Conference for High Performance Computing, Networking, Storage and Analysis},
+	pages = {1--12},
+	booktitle = {Proceedings of the International Conference for High Performance Computing, Networking, Storage and Analysis on - {SC} '15},
+	publisher = {{ACM} Press},
+	author = {Hoefler, Torsten and Belli, Roberto},
+	urldate = {2020-01-20},
+	date = {2015},
+	langid = {english},
+	keywords = {Performance Engineering}
+}
+
+@book{demarcoPeoplewareProductiveProjects2013,
+	location = {Upper Saddle River, {NJ}},
+	edition = {Third edition},
+	title = {Peopleware: productive projects and teams},
+	isbn = {978-0-321-93411-6},
+	shorttitle = {Peopleware},
+	pagetotal = {249},
+	publisher = {Addison-Wesley},
+	author = {{DeMarco}, Tom and Lister, Timothy R.},
+	date = {2013},
+	langid = {english},
+	keywords = {Management, Organizational behavior, Organizational effectiveness, Project management}
+}
+
+@book{lancasterQuantumFieldTheory2014,
+	location = {Oxford},
+	edition = {First Edition},
+	title = {Quantum field theory for the gifted amateur},
+	isbn = {978-0-19-969933-9 978-0-19-969932-2},
+	pagetotal = {485},
+	publisher = {Oxford University Press},
+	author = {Lancaster, Tom and Blundell, Stephen},
+	date = {2014},
+	langid = {english},
+	note = {{OCLC}: ocn859651399},
+	keywords = {Amateurs' manuals, Handbooks, manuals, etc, Lehrbuch, Problems, exercises, etc, Quantenfeldtheorie, Quantum field theory}
+}
+
+@article{iwasawaImplementationPerformanceFDPS2014,
+	title = {Implementation and performance of {FDPS}: A Framework Developing Parallel Particle Simulation Codes},
+	volume = {0},
+	issn = {0004-6264, 2053-051X},
+	url = {http://arxiv.org/abs/1601.03138},
+	doi = {10.1093/pasj/psw053},
+	shorttitle = {Implementation and performance of {FDPS}},
+	abstract = {We present the basic idea, implementation, measured performance and performance model of {FDPS} (Framework for developing particle simulators). {FDPS} is an application-development framework which helps the researchers to develop simulation programs using particle methods for large-scale distributed-memory parallel supercomputers. A particle-based simulation program for distributed-memory parallel computers needs to perform domain decomposition, exchange of particles which are not in the domain of each computing node, and gathering of the particle information in other nodes which are necessary for interaction calculation. Also, even if distributed-memory parallel computers are not used, in order to reduce the amount of computation, algorithms such as Barnes-Hut tree algorithm or Fast Multipole Method should be used in the case of long-range interactions. For short-range interactions, some methods to limit the calculation to neighbor particles are necessary. {FDPS} provides all of these functions which are necessary for efﬁcient parallel execution of particle-based simulations as “templates”, which are independent of the actual data structure of particles and the functional form of the particle-particle interaction. By using {FDPS}, researchers can write their programs with the amount of work necessary to write a simple, sequential and unoptimized program of O(N 2) calculation cost, and yet the program, once compiled with {FDPS}, will run efﬁciently on largescale parallel supercomputers. A simple gravitational N -body program can be written in around 120 lines. We report the actual performance of these programs and the performance model. The weak scaling performance is very good, and almost linear speedup was obtained for up to the full system of K computer. The minimum calculation time per timestep is in the range of 30 ms (N = 107) to 300 ms (N = 109). These are currently limited by the time for the calculation of the domain decomposition and communication necessary for the interaction calculation. We discuss how we can overcome these bottlenecks.},
+	pages = {1--22},
+	journaltitle = {Publications of the Astronomical Society of Japan},
+	author = {Iwasawa, Masaki and Tanikawa, Ataru and Hosono, Natsuki and Nitadori, Keigo and Muranushi, Takayuki and Makino, Junichiro},
+	urldate = {2019-03-07},
+	date = {2014},
+	langid = {english},
+	eprinttype = {arxiv},
+	eprint = {1601.03138},
+	keywords = {Astrophysics - Astrophysics of Galaxies, Astrophysics - Cosmology and Nongalactic Astrophysics, Astrophysics - Earth and Planetary Astrophysics, Astrophysics - Instrumentation and Methods for Astrophysics, Astrophysics - Solar and Stellar Astrophysics, Physics - Computational Physics}
+}
+
+@article{connollyGeodynamicEquationState2009,
+	title = {The geodynamic equation of state: What and how: {GEODYNAMIC} {EQUATION} {OF} {STATE}-{WHAT} {AND} {HOW}},
+	volume = {10},
+	issn = {15252027},
+	url = {http://doi.wiley.com/10.1029/2009GC002540},
+	doi = {10.1029/2009GC002540},
+	shorttitle = {The geodynamic equation of state},
+	pages = {n/a--n/a},
+	number = {10},
+	journaltitle = {Geochemistry, Geophysics, Geosystems},
+	shortjournal = {Geochem. Geophys. Geosyst.},
+	author = {Connolly, J. A. D.},
+	urldate = {2020-05-11},
+	date = {2009-10},
+	langid = {english},
+	keywords = {Perple\_X, thermo}
+}
+
+@article{vanhunenContinentalCollisionSlab2011,
+	title = {Continental collision and slab break-off: A comparison of 3-D numerical models with observations},
+	volume = {302},
+	issn = {0012821X},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0012821X10007429},
+	doi = {10.1016/j.epsl.2010.11.035},
+	shorttitle = {Continental collision and slab break-off},
+	abstract = {Conditions and dynamics of subduction–collision and subsequent 3-D slab break-off and slab tear propagation are quantiﬁed, for the ﬁrst time, using fully dynamic numerical models. Model results indicate that collision after the subduction of old, strong subducting oceanic slab leads to slab break-off at 20–25 Myr after the onset of continental collision, and subsequently a slab tear migrates more or less horizontally through the slab with a propagation speed of 100–150 mm/yr. In contrast, young, weak oceanic slabs show the ﬁrst break-off already 10 Myr after continental collision, and can experience tear migration rates up to 800 mm/yr. Slab strength plays a more important role in the timing of slab break-off and the speed of a propagating slab tear than (negative) slab buoyancy does. Slab break-off is viable even for slabs that are supported by the viscosity jump and phase change between the upper and lower mantle.},
+	pages = {27--37},
+	number = {1},
+	journaltitle = {Earth and Planetary Science Letters},
+	shortjournal = {Earth and Planetary Science Letters},
+	author = {van Hunen, Jeroen and Allen, Mark B.},
+	urldate = {2020-05-03},
+	date = {2011-02},
+	langid = {english},
+	keywords = {Citcom, subduction}
+}
+
+@article{cotterMixedDiscontinuousContinuous2009,
+	title = {A mixed discontinuous/continuous finite element pair for shallow-water ocean modelling},
+	volume = {26},
+	issn = {14635003},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S1463500308001479},
+	doi = {10.1016/j.ocemod.2008.09.002},
+	abstract = {We introduce a mixed discontinuous/continuous ﬁnite element pair for ocean modelling, with continuous quadratic layer thickness and discontinuous velocity. We investigate the ﬁnite element pair applied to the linear shallow-water equations on an f -plane. The element pair has the property that all geostrophically balanced states which strongly satisfy the boundary conditions have discrete divergence equal to exactly zero and hence are exactly steady states of the discretised equations. This means that the ﬁnite element pair has excellent geostrophic balance properties. We also show that the element pair applied to the non-rotating linear shallow-water equations does not have any spurious small eigenvalues. We illustrate these properties using numerical tests and provide convergence calculations which show that the numerical solutions have errors which decay quadratically with element edge length for both velocity and layer thickness.},
+	pages = {86--90},
+	number = {1},
+	journaltitle = {Ocean Modelling},
+	shortjournal = {Ocean Modelling},
+	author = {Cotter, Colin J. and Ham, David A. and Pain, Christopher C.},
+	urldate = {2020-03-09},
+	date = {2009-01},
+	langid = {english}
+}
+
+@article{hamSpudGeneralisingAutomating2009,
+	title = {Spud 1.0: generalising and automating the user interfaces of scientiﬁc computer models},
+	abstract = {The interfaces by which users specify the scenarios to be simulated by scientiﬁc computer models are frequently primitive, under-documented and ad-hoc text ﬁles which make using the model in question difﬁcult and errorprone and signiﬁcantly increase the development cost of the model. In this paper, we present a model-independent system, Spud, which formalises the speciﬁcation of model input formats in terms of formal grammars. This is combined with an automated graphical user interface which guides users to create valid model inputs based on the grammar provided, and a generic options reading module, libspud, which minimises the development cost of adding model options.},
+	pages = {10},
+	journaltitle = {Geosci. Model Dev.},
+	author = {Ham, D A and Farrell, P E and Gorman, G J and Maddison, J R and Wilson, C R and Kramer, S C and Shipton, J and Collins, G S and Cotter, C J and Piggott, M D},
+	date = {2009},
+	langid = {english}
+}
+
+@article{pandeyNoteCrankNicolsonScheme2011,
+	title = {A Note on Crank-Nicolson Scheme for Burgers’ Equation},
+	volume = {02},
+	issn = {2152-7385, 2152-7393},
+	url = {http://www.scirp.org/journal/doi.aspx?DOI=10.4236/am.2011.27118},
+	doi = {10.4236/am.2011.27118},
+	abstract = {In this work we generate the numerical solutions of the Burgers’ equation by applying the Crank-Nicolson method directly to the Burgers’ equation, i.e., we do not use Hopf-Cole transformation to reduce Burgers’ equation into the linear heat equation. Absolute error of the present method is compared to the absolute error of the two existing methods for two test problems. The method is also analyzed for a third test problem, numerical solutions as well as exact solutions for different values of viscosity are calculated and we find that the numerical solutions are very close to exact solution.},
+	pages = {883--889},
+	number = {7},
+	journaltitle = {Applied Mathematics},
+	shortjournal = {{AM}},
+	author = {Pandey, Kanti and Verma, Lajja},
+	urldate = {2020-02-05},
+	date = {2011},
+	langid = {english}
+}
+
+@incollection{henrettyDataLayoutTransformation2011,
+	location = {Berlin, Heidelberg},
+	title = {Data Layout Transformation for Stencil Computations on Short-Vector {SIMD} Architectures},
+	volume = {6601},
+	isbn = {978-3-642-19860-1 978-3-642-19861-8},
+	url = {http://link.springer.com/10.1007/978-3-642-19861-8_13},
+	abstract = {Stencil computations are at the core of applications in many domains such as computational electromagnetics, image processing, and partial differential equation solvers used in a variety of scientiﬁc and engineering applications. Short-vector {SIMD} instruction sets such as {SSE} and {VMX} provide a promising and widely available avenue for enhancing performance on modern processors. However a fundamental memory stream alignment issue limits achieved performance with stencil computations on modern short {SIMD} architectures. In this paper, we propose a novel data layout transformation that avoids the stream alignment conﬂict, along with a static analysis technique for determining where this transformation is applicable. Signiﬁcant performance increases are demonstrated for a variety of stencil codes on three modern {SIMD}-capable processors.},
+	pages = {225--245},
+	booktitle = {Compiler Construction},
+	publisher = {Springer Berlin Heidelberg},
+	author = {Henretty, Tom and Stock, Kevin and Pouchet, Louis-Noël and Franchetti, Franz and Ramanujam, J. and Sadayappan, P.},
+	editor = {Knoop, Jens},
+	urldate = {2020-01-20},
+	date = {2011},
+	langid = {english},
+	doi = {10.1007/978-3-642-19861-8_13},
+	keywords = {Performance Engineering}
+}
+
+@article{williamsRooflineInsightfulVisual2009,
+	title = {Roofline: an insightful visual performance model for multicore architectures},
+	volume = {52},
+	issn = {00010782},
+	url = {http://portal.acm.org/citation.cfm?doid=1498765.1498785},
+	doi = {10.1145/1498765.1498785},
+	shorttitle = {Roofline},
+	pages = {65},
+	number = {4},
+	journaltitle = {Communications of the {ACM}},
+	shortjournal = {Commun. {ACM}},
+	author = {Williams, Samuel and Waterman, Andrew and Patterson, David},
+	urldate = {2020-01-20},
+	date = {2009-04-01},
+	langid = {english},
+	keywords = {Performance Engineering}
+}
+
+@article{signerAbcSUSY2009,
+	title = {Abc of {SUSY}},
+	volume = {36},
+	issn = {0954-3899, 1361-6471},
+	url = {http://arxiv.org/abs/0905.4630},
+	doi = {10.1088/0954-3899/36/7/073002},
+	abstract = {This article is a very basic introduction to supersymmetry. It introduces the two kinds of superﬁelds needed for supersymmetric extensions of the Standard Model, the chiral superﬁeld and the vector superﬁeld, and discusses in detail how to construct supersymmetric, gauge invariant Lagrangians. The main ideas on how to break supersymmetry spontaneously are also covered. The article is meant to provide a platform for further reading.},
+	pages = {073002},
+	number = {7},
+	journaltitle = {Journal of Physics G: Nuclear and Particle Physics},
+	shortjournal = {J. Phys. G: Nucl. Part. Phys.},
+	author = {Signer, Adrian},
+	urldate = {2019-11-13},
+	date = {2009-07-01},
+	langid = {english},
+	eprinttype = {arxiv},
+	eprint = {0905.4630}
+}
+
+@book{haynesCRCHandbookChemistry2011,
+	edition = {92nd ed.},
+	title = {{CRC} Handbook of Chemistry and Physics},
+	isbn = {978-1-4398-5511-9},
+	publisher = {{CRC} Press},
+	author = {Haynes, William M.},
+	date = {2011},
+	keywords = {Chemistry – Tables, Physics – Tables}
+}
+
+@article{vesperiniStarClusterDynamics2010,
+	title = {Star cluster dynamics},
+	volume = {368},
+	issn = {1364-503X, 1471-2962},
+	url = {http://www.royalsocietypublishing.org/doi/10.1098/rsta.2009.0260},
+	doi = {10.1098/rsta.2009.0260},
+	pages = {829--849},
+	number = {1913},
+	journaltitle = {Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences},
+	author = {Vesperini, Enrico},
+	urldate = {2019-01-11},
+	date = {2010-02-28},
+	langid = {english},
+	keywords = {Astrophysics, Globular clusters}
+}
+
+@article{vesperiniEFFECTSPRIMORDIALMASS2009,
+	title = {{EFFECTS} {OF} {PRIMORDIAL} {MASS} {SEGREGATION} {ON} {THE} {DYNAMICAL} {EVOLUTION} {OF} {STAR} {CLUSTERS}},
+	volume = {698},
+	issn = {0004-637X, 1538-4357},
+	url = {http://stacks.iop.org/0004-637X/698/i=1/a=615?key=crossref.9ad970ff60a9ab81c0eaea454039e93c},
+	doi = {10.1088/0004-637X/698/1/615},
+	pages = {615--622},
+	number = {1},
+	journaltitle = {The Astrophysical Journal},
+	author = {Vesperini, Enrico and {McMillan}, Stephen L. W. and Zwart, Simon Portegies},
+	urldate = {2019-01-18},
+	date = {2009-06-10},
+	langid = {english}
+}
+
+@article{bruzuala.StarClustersSimple2010,
+	title = {Star clusters as simple stellar populations},
+	volume = {368},
+	issn = {1364-503X, 1471-2962},
+	url = {http://www.royalsocietypublishing.org/doi/10.1098/rsta.2009.0258},
+	doi = {10.1098/rsta.2009.0258},
+	pages = {783--799},
+	number = {1913},
+	journaltitle = {Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences},
+	author = {Bruzual A., Gustavo},
+	urldate = {2019-01-18},
+	date = {2010-02-28},
+	langid = {english}
+}
+
+@article{clarkePhysicsModesStar2010,
+	title = {The physics and modes of star cluster formation: simulations},
+	volume = {368},
+	issn = {1364-503X, 1471-2962},
+	url = {http://arxiv.org/abs/0911.0780},
+	doi = {10.1098/rsta.2009.0262},
+	shorttitle = {The physics and modes of star cluster formation},
+	abstract = {We review progress in numerical simulations of star cluster formation. These simulations involve the bottom-up assembly of clusters through hierarchical mergers, which produces a fractal stellar distribution at young ({\textasciitilde}0.5 Myr) ages. The resulting clusters are predicted to be mildly aspherical and highly mass-segregated, except in the immediate aftermath of mergers. The upper initial mass function within individual clusters is generally somewhat flatter than for the aggregate population. Recent work has begun to clarify the factors that control the mean stellar mass in a star-forming cloud and also the efficiency of star formation. The former is sensitive to the thermal properties of the gas while the latter depends both on the magnetic field and the initial degree of gravitational boundedness of the natal cloud. Unmagnetized clouds that are initially bound undergo rapid collapse, which is difficult to reverse by ionization feedback or stellar winds.},
+	pages = {733--754},
+	number = {1913},
+	journaltitle = {Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences},
+	author = {Clarke, Cathie},
+	urldate = {2019-01-18},
+	date = {2010-02-28},
+	langid = {english},
+	eprinttype = {arxiv},
+	eprint = {0911.0780},
+	keywords = {Astrophysics - Astrophysics of Galaxies, Astrophysics - Solar and Stellar Astrophysics}
+}
+
+@article{barnesGravitationalSofteningSmoothing2012,
+	title = {Gravitational softening as a smoothing operation: Softening as smoothing},
+	volume = {425},
+	issn = {00358711},
+	url = {https://academic.oup.com/mnras/article-lookup/doi/10.1111/j.1365-2966.2012.21462.x},
+	doi = {10.1111/j.1365-2966.2012.21462.x},
+	shorttitle = {Gravitational softening as a smoothing operation},
+	abstract = {In self-consistent N-body simulations of collisionless systems, gravitational interactions are modiﬁed on small scales to remove singularities and simplify the task of numerically integrating the equations of motion. This ‘gravitational softening’ is sometimes presented as an ad hoc departure from Newtonian gravity. However, softening can also be described as a smoothing operation applied to the mass distribution; the gravitational potential and the smoothed density obey Poisson’s equation precisely. While ‘softening’ and ‘smoothing’ are mathematically equivalent descriptions, the latter has some advantages. For example, the smoothing description suggests a way to set up N-body initial conditions in almost perfect dynamical equilibrium.},
+	pages = {1104--1120},
+	number = {2},
+	journaltitle = {Monthly Notices of the Royal Astronomical Society},
+	author = {Barnes, Joshua E.},
+	urldate = {2019-01-28},
+	date = {2012-09-11},
+	langid = {english}
+}
+
+@article{stixrudeThermodynamicsMantleMinerals2005,
+	title = {Thermodynamics of mantle minerals - I. Physical properties},
+	volume = {162},
+	issn = {0956540X, 1365246X},
+	url = {https://academic.oup.com/gji/article-lookup/doi/10.1111/j.1365-246X.2005.02642.x},
+	doi = {10.1111/j.1365-246X.2005.02642.x},
+	abstract = {We present a theory for the computation of phase equilibria and physical properties of multicomponent assemblages relevant to the mantle of the Earth. The theory differs from previous treatments in being thermodynamically self-consistent: the theory is based on the concept of fundamental thermodynamic relations appropriately generalized to anisotropic strain and in encompassing elasticity in addition to the usual isotropic thermodynamic properties. In this ﬁrst paper, we present the development of the theory, discuss its scope, and focus on its application to physical properties of mantle phases at elevated pressure and temperature including the equation of state, thermochemical properties and the elastic wave velocities. We ﬁnd that the Eulerian ﬁnite strain formulation captures the variation of the elastic moduli with compression. The variation of the vibrational frequencies with compression is also cast as a Taylor series expansion in the Eulerian ﬁnite strain, the appropriate volume derivative of which leads to an expression for the Gru¨neisen parameter that agrees well with results from ﬁrst principles theory. For isotropic materials, the theory contains nine material-speciﬁc parameters: the values at ambient conditions of the Helmholtz free energy, volume, bulk and shear moduli, their pressure derivatives, an effective Debye temperature, its ﬁrst and second logarithmic volume derivatives (γ 0, q 0), and the shear strain derivative of γ . We present and discuss in some detail the results of a global inversion of a wide variety of experimental data and ﬁrst principles theoretical results, supplemented by systematic relations, for the values of these parameters for 31 mantle species. Among our ﬁndings is that the value of q is likely to be signiﬁcantly greater than unity for most mantle species. We apply the theory to the computation of the shear wave velocity, and temperature and compositional (Fe content) derivatives at relevant mantle pressure temperature conditions. Among the patterns that emerge is that garnet is anomalous in being remarkably insensitive to iron content or temperature as compared with other mantle phases.},
+	pages = {610--632},
+	number = {2},
+	journaltitle = {Geophysical Journal International},
+	author = {Stixrude, Lars and Lithgow-Bertelloni, Carolina},
+	urldate = {2020-05-20},
+	date = {2005-08},
+	langid = {english}
+}
+
+@article{geryaCharacteristicsbasedMarkerincellMethod2003,
+	title = {Characteristics-based marker-in-cell method with conservative finite-differences schemes for modeling geological flows with strongly variable transport properties},
+	volume = {140},
+	issn = {00319201},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/S0031920103001900},
+	doi = {10.1016/j.pepi.2003.09.006},
+	abstract = {We have designed a 2D thermal–mechanical code, incorporating both a characteristics based marker-in-cell method and conservative ﬁnite-difference ({FD}) schemes. In this paper we will give a detailed description of this code. The temperature equation is advanced in time with the Lagrangian marker techniques based on the method of characteristics and the temperature solution is interpolated back to an Eulerian grid conﬁguration at each timestep. This marker approach allows for the accurate portrayal of very ﬁne thermal structures. For attaining a high relative accuracy in the solution of the matrix equations associated with both the momentum and temperature equations, we have employed the direct matrix inversion technique, which becomes feasible with the advent of very large shared-memory machines. Our conservative ﬁnite-difference schemes allow us to capture sharp variations of the stresses and thermal gradients in problems with a strongly variable viscosity and thermal conductivity. We have tested this code with numerous examples drawn from Rayleigh–Taylor instabilities, the descent of a stiff object into a medium with a lower viscosity, viscous heating and ﬂows with non-Netwonian rheology. We have also benchmarked successfully with variable viscosity convection for lateral viscosity contrast up to 108. We have delineated the regions in thermal problems where the diffusive nature of the temperature equation changes from its parabolic character locally to a non-linear hyperbolic-like equation due to the presence of variable thermal conductivity. Finally we discuss the applicability of this marker-based and ﬁnite-difference technique to other evolutionary equations in geophysics.},
+	pages = {293--318},
+	number = {4},
+	journaltitle = {Physics of the Earth and Planetary Interiors},
+	shortjournal = {Physics of the Earth and Planetary Interiors},
+	author = {Gerya, Taras V. and Yuen, David A.},
+	urldate = {2020-05-19},
+	date = {2003-12},
+	langid = {english}
+}
+
+@article{gangulyAdiabaticDecompressionMelting2005,
+	title = {Adiabatic decompression and melting of mantle rocks: An irreversible thermodynamic analysis},
+	volume = {32},
+	issn = {0094-8276},
+	url = {http://doi.wiley.com/10.1029/2005GL022363},
+	doi = {10.1029/2005GL022363},
+	shorttitle = {Adiabatic decompression and melting of mantle rocks},
+	pages = {L06312},
+	number = {6},
+	journaltitle = {Geophysical Research Letters},
+	shortjournal = {Geophys. Res. Lett.},
+	author = {Ganguly, Jibamitra},
+	urldate = {2020-05-07},
+	date = {2005},
+	langid = {english},
+	keywords = {adiabatic-decompression, thermo}
+}
+
+@article{gotoAnatomyHighperformanceMatrix2008,
+	title = {Anatomy of high-performance matrix multiplication},
+	volume = {34},
+	issn = {00983500},
+	url = {http://portal.acm.org/citation.cfm?doid=1356052.1356053},
+	doi = {10.1145/1356052.1356053},
+	pages = {1--25},
+	number = {3},
+	journaltitle = {{ACM} Transactions on Mathematical Software},
+	shortjournal = {{ACM} Trans. Math. Softw.},
+	author = {Goto, Kazushige and Geijn, Robert A. van de},
+	urldate = {2020-01-20},
+	date = {2008-05-01},
+	langid = {english},
+	keywords = {Performance Engineering}
+}
+
+@book{beckExtremeProgrammingRevolutionaere2005,
+	location = {München},
+	edition = {Studienausg., 2. Nachdr},
+	title = {Extreme Programming: die revolutionäre Methode für Softwareentwicklung in kleinen Teams ; [das Manifest]},
+	isbn = {978-3-8273-2139-8},
+	series = {Programmer's choice},
+	shorttitle = {Extreme Programming},
+	pagetotal = {186},
+	publisher = {Addison-Wesley},
+	author = {Beck, Kent},
+	date = {2005},
+	langid = {german},
+	note = {{OCLC}: 255766571}
+}
+
+@book{zeeQuantumFieldTheory2003,
+	location = {Princeton, N.J},
+	title = {Quantum field theory in a nutshell},
+	isbn = {978-0-691-01019-9},
+	pagetotal = {518},
+	publisher = {Princeton University Press},
+	author = {Zee, A.},
+	date = {2003},
+	langid = {english}
+}
+
+@article{ballarinoHighTemperatureSuperconducting1999,
+	title = {High temperature superconducting current leads for the large hadron collider},
+	volume = {9},
+	issn = {10518223},
+	url = {http://ieeexplore.ieee.org/document/783350/},
+	doi = {10.1109/77.783350},
+	abstract = {The Large Hadron Collider ({LHC}) will be equipped with about 8000 superconducting magnets. Some 3380 leads will feed the currents ranging from 60 to 13000 A. To reduce the heat inleak into the liquid helium, {CERN} aims to use High Temperature Superconducting material for leads having current ratings between 600 and 13000 A. Specifications have been written for 13000 A current leads, incorporating a High Temperature Superconducting section, for the main magnets of the {LHC}, and contracts have been placed with several firms for the supply of prototypes for comparative testing. The leads used for feeding locally the 60 and 120 A dipole orbit correctors will be conventional conduction cooled resistive leads. An optimized lead of variable cross section has been tested, and an integral design has been initiated. This report describes the design status of the current leads for the {LHC}, emphasizing, for the different solutions, the principle of optimization and the choice of the cooling methods.},
+	pages = {523--526},
+	number = {2},
+	journaltitle = {{IEEE} Transactions on Appiled Superconductivity},
+	author = {Ballarino, A.},
+	urldate = {2019-03-19},
+	date = {1999-06},
+	langid = {english}
+}
+
+@thesis{snearyFabricationHighTemperature2000,
+	location = {Durham, United Kingdom},
+	title = {The fabrication of a high temperature superconducting magnet and critical current characterisation of the component Bi(\_2)Sr(\_2)Ca(\_2)Cu(\_3)0(\_x), tapes and filaments in high magnetic fields},
+	institution = {University of Durham},
+	type = {phdthesis},
+	author = {Sneary, Adrian Bernard},
+	date = {2000},
+	langid = {english}
+}
+
+@article{vonhoernerHowItAll2001,
+	title = {How it All Started},
+	volume = {228},
+	url = {http://articles.adsabs.harvard.edu/pdf/2001ASPC..228...11V},
+	series = {{ASP} Conference},
+	journaltitle = {Astronomical Society of the Pacific},
+	author = {von Hoerner, Sebastian},
+	urldate = {2019-03-07},
+	date = {2001}
+}
+
+@article{aarsethNbody2DirectNBody2001,
+	title = {Nbody2: A Direct N-Body Integration Code},
+	volume = {6},
+	issn = {13841076},
+	url = {http://arxiv.org/abs/astro-ph/0105030},
+	doi = {10.1016/S1384-1076(01)00060-4},
+	shorttitle = {Nbody2},
+	abstract = {We give a full description of the code {NBODY} 2 for direct integration of the gravitational N -body problem. The method of solution is based on the neighbour scheme of Ahmad \& Cohen (1973) which speeds up the force calculation already for quite modest particle numbers. Derivations of all the relevant mathematical expressions are given, together with a detailed discussion of the algorithms. The code may be used to study a wide variety of self-consistent problems based on a small softening of the interaction potential.},
+	pages = {277--291},
+	number = {5},
+	journaltitle = {New Astronomy},
+	author = {Aarseth, Sverre J.},
+	urldate = {2019-02-15},
+	date = {2001-08},
+	langid = {english},
+	eprinttype = {arxiv},
+	eprint = {astro-ph/0105030},
+	keywords = {Astrophysics}
+}
+
+@book{binneyGalacticDynamics2008,
+	location = {41 William Street, Princeton, New Jersey 08540 {USA}},
+	edition = {2},
+	title = {Galactic Dynamics},
+	series = {Princeton Series in Astrophysics},
+	publisher = {Princeton University Press},
+	author = {Binney, James and Tremaine, Scott, Scott},
+	date = {2008}
+}
+
+@book{aarsethGravitationalNBodySimulations2003,
+	location = {The Edinburgh Building, Cambridge {CB}2 2RU, United Kingdom},
+	edition = {1},
+	title = {Gravitational N-Body Simulations},
+	isbn = {978-0-521-43272-6},
+	publisher = {Cambridge University Press},
+	author = {Aarseth, Sverre J},
+	date = {2003},
+	langid = {english}
+}
+
+@book{heggieGravitationalMillionBodyProblem2003,
+	location = {Cambridge},
+	edition = {1},
+	title = {The Gravitational Million-Body Problem},
+	publisher = {Cambridge University Press},
+	author = {Heggie, Douglas and Hut, Piet},
+	date = {2003}
+}
+
+@article{baumgardtParametersCoreCollapse2003,
+	title = {Parameters of core collapse},
+	volume = {341},
+	issn = {00358711, 13652966},
+	url = {https://academic.oup.com/mnras/article-lookup/doi/10.1046/j.1365-8711.2003.06407.x},
+	doi = {10.1046/j.1365-8711.2003.06407.x},
+	abstract = {This paper considers the phenomenon of deep core collapse in collisional stellar systems, with stars of equal mass. The collapse takes place on some multiple, §-1, of the central relaxation time, and produces a density profile in which p (xr{\textasciitilde}a, where a is a constant. The parameters a and £ have usually been determined from simplified models, such as gas and Fokker-Planck models, often with the simplification of isotropy. Here we determine the parameters directly from A/-body simulations carried out using the newly completed {GRAPE}-6.},
+	pages = {247--250},
+	number = {1},
+	journaltitle = {Monthly Notices of the Royal Astronomical Society},
+	author = {Baumgardt, Holger and Heggie, Douglas C. and Hut, Piet and Makino, Junichiro},
+	urldate = {2019-01-28},
+	date = {2003-05},
+	langid = {english}
+}
+
+@article{asimowEffectPressureinducedSolidsolid1995,
+	title = {The effect of pressure-induced solid-solid phase transitions on decompression melting of the mantle},
+	volume = {59},
+	issn = {00167037},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/001670379500252U},
+	doi = {10.1016/0016-7037(95)00252-U},
+	pages = {4489--4506},
+	number = {21},
+	journaltitle = {Geochimica et Cosmochimica Acta},
+	shortjournal = {Geochimica et Cosmochimica Acta},
+	author = {Asimow, P.D. and Hirschmann, M.M. and Ghiorso, M.S. and O'Hara, M.J. and Stolper, E.M.},
+	urldate = {2020-05-07},
+	date = {1995-11},
+	langid = {english},
+	keywords = {melts, thermo}
+}
+
+@article{ghiorsoChemicalMassTransfer1994,
+	title = {Chemical mass transfer in magmatic processes {IV}. A revised and internally consistent thermodynamic model for the interpolation and extrapolation of liquid-solid equilibria in magmatic systems at elevated temperatures and pressures},
+	pages = {16},
+	author = {Ghiorso, Mark S and Sack, Richard O},
+	date = {1994},
+	langid = {english},
+	keywords = {melts, thermo}
+}
+
+@book{kakuQuantumFieldTheory1993,
+	location = {New York},
+	title = {Quantum Field Theory: A Modern Introduction},
+	isbn = {978-0-19-507652-3},
+	shorttitle = {Quantum field theory},
+	pagetotal = {785},
+	publisher = {Oxford University Press},
+	author = {Kaku, Michio},
+	date = {1993},
+	langid = {english}
+}
+
+@book{peskinIntroductionQuantumField1995,
+	title = {An Introduction to Quantum Field Theory},
+	author = {Peskin, Michael E. and Schroeder, Daniel V.},
+	date = {1995}
+}
+
+@article{meijerKamerlinghOnnesDiscovery1994,
+	title = {Kamerlingh Onnes and the discovery of superconductivity},
+	volume = {62},
+	issn = {0002-9505, 1943-2909},
+	url = {http://aapt.scitation.org/doi/10.1119/1.17669},
+	doi = {10.1119/1.17669},
+	pages = {1105--1108},
+	number = {12},
+	journaltitle = {American Journal of Physics},
+	shortjournal = {Am. J. Phys.},
+	author = {Meijer, Paul H. E.},
+	urldate = {2019-03-19},
+	date = {1994-12},
+	langid = {english}
+}
+
+@article{gierszStatisticsNbodySimulations1996,
+	title = {Statistics of N-body simulations - {III}. Unequal masses},
+	volume = {279},
+	url = {http://articles.adsabs.harvard.edu/pdf/1996MNRAS.279.1037G},
+	journaltitle = {Royal Astronomical Society},
+	author = {Giersz, Mirek and Heggies, Douglas C.},
+	urldate = {2019-03-08},
+	date = {1996}
+}
+
+@article{gierszStatisticsNbodySimulations1994,
+	title = {Statistics of N-body simulations - I. Equal masses before core collapse},
+	volume = {268},
+	url = {http://articles.adsabs.harvard.edu/pdf/1996MNRAS.279.1037G},
+	journaltitle = {Royal Astronomical Society},
+	author = {Giersz, Mirek and Heggies, Douglas C.},
+	urldate = {2019-03-08},
+	date = {1994}
+}
+
+@article{kroupaDistributionLowmassStars1993,
+	title = {The distribution of low-mass stars in the Galactic disc},
+	volume = {262},
+	issn = {0035-8711, 1365-2966},
+	url = {https://academic.oup.com/mnras/article-lookup/doi/10.1093/mnras/262.3.545},
+	doi = {10.1093/mnras/262.3.545},
+	abstract = {We quantify the complex interdependence of stellar binarity, the stellar massluminosity relation, the mass function, the colour-magnitude relation and Galactic disc structure, all of which must be understood when analysing star-count data and stellar luminosity functions. We derive a mass-M, relation and a model for the change of stellar luminosity with changes in chemical abundance and age. Combination of this with detailed modelling of all astrophysical and observational contributions to the Malmquist scatter allows us to model star-count data without approximating Malmquist corrections. We show for the first time that a single mass function and normalization explain the stellar distribution towards both Galactic poles, as well as the distribution of stars within a distance of 5.2 pc of the Sun. The initial mass function can be approximated by {\textasciicircum}(m)« m with a3 {\textasciitilde} 2.7 for stars more massive than 1 M©, a2 a 2.2 in the mass range 0.5{\textasciicircum} 1 M0 and 0.70 {\textless} oq {\textless} 1.85 in the range 0.08 {\textless} m{\textasciicircum}0.5 M0. If the stars at a distance of about 100 pc from the Galactic mid-plane have a metallicity smaller by about 0.1 dex than do the stars near the plane used to calibrate the mass-M {\textasciicircum} and colour-magnitude relations, then both the stars within 5.2 pc of the Sun and the star-count data reaching to a photometric distance of 130 pc lead to a low-mass power-law index of al {\textasciitilde} 1.5. The change in the power index at 0.5 {MG} may indicate a characteristic mass-scale in the star formation process. Our model is most consistent with the data if the proportion of binaries among ‘stars’ is larger than 50 per cent and if the component masses are uncorrelated. The possible decline of the proportion of binaries with increasing absolute magnitude, observed in the solar neighbourhood, is in agreement with our models. Two features in the luminosity function for low-mass stars are universal, being solely the result of stellar physics. These features are a flattening at My{\textasciicircum}l and a conspicuous maximum at Mv{\textasciitilde} 12. Binary stars cause the system luminosity function derived from photographic surveys to decrease uniformly with increasing magnitude relative to the single-star luminosity function, but both show the same general features. The solar neighbourhood mass density in main-sequence stars with masses between 0.08 and 100 M0 is p = 0.05 ± 0.01 M0 pc-3, of which main-sequence stars less massive than the Sun contribute about 80 per cent. These estimates explicitly include the effects of binaries. Unresolved binaries cause the apparent disc scaleheight to decrease with decreasing mass to a value of « 150 pc for star-count data in the colour range 4{\textless} l7-/{\textless}4.5 if all ‘stars’ are unresolved binaries with uncorrelated component masses. The vertical structure of the Galactic disc is not well described by a single exponential within a few hundred pc of the plane. Neglect of this can lead to a spurious apparent correlation between stellar mass and disc scaleheight.},
+	pages = {545--587},
+	number = {3},
+	journaltitle = {Monthly Notices of the Royal Astronomical Society},
+	author = {Kroupa, P. and Tout, C. A. and Gilmore, G.},
+	urldate = {2019-03-08},
+	date = {1993-06-01},
+	langid = {english}
+}
+
+@article{itoSpecialpurposeNbodyMachine1990,
+	title = {A special-purpose N-body machine {GRAPE}-i},
+	volume = {60},
+	pages = {187--194},
+	journaltitle = {Computer Physics Communications},
+	author = {Ito, Tomoyoshi and Makino, Junichiro and Ebisuzaki, Toshikazu and Sugimoto, Daiichiro},
+	date = {1990},
+	langid = {english}
+}
+
+@article{mikkolaImplementationNBodyChain1993,
+	title = {An Implementation of N-Body Chain Regularization},
+	volume = {57},
+	url = {http://articles.adsabs.harvard.edu/pdf/1993CeMDA..57..439M},
+	pages = {439--459},
+	journaltitle = {Celestial Mechanics and Dynamical Astronomy},
+	author = {Mikkola, Seppo and Aarseth, S. J.},
+	urldate = {2019-02-17},
+	date = {1993}
+}
+
+@article{k.sohTidalDisruptionDwarf1995,
+	title = {On the Tidal Disruption of Dwarf Spheroidal Galaxies Around the Galaxy},
+	volume = {442},
+	url = {http://articles.adsabs.harvard.edu/pdf/1995ApJ...442..142O},
+	pages = {142--158},
+	journaltitle = {The Astrophysical Journal},
+	author = {{K. S Oh} and Lin, D. N. C and Aarseth, S. J.},
+	urldate = {2019-03-07},
+	date = {1995-03-20}
+}
+
+@article{kimCoreCollapseTimesTwoComponent1997,
+	title = {Core-Collapse Times of Two-Component Clusters},
+	volume = {30},
+	url = {http://arxiv.org/abs/astro-ph/9711109},
+	abstract = {We examine the corecollapse times of isolated, twomass-component star clusters using Fokker-Planck models. With initial condition of Plummer models, we ﬁnd that the corecollapse times of clusters with M1/M2 ≫ 1 are well correlated with (N1/N2)1/2(m1/m2)2trh, where M1/M2 and m1/m2 are the light to heavy component total and individual mass ratios, respectively, N1/N2 is the number ratio, and trh is the initial half-mass relaxation time scale. We also ﬁnd two-component cluster parameters that best match multi-component (thus more realistic) clusters with power-law mass functions.},
+	number = {2},
+	journaltitle = {Korean Astonomical Society},
+	author = {Kim, Sungsoo S. and Lee, Hyung Mok},
+	urldate = {2019-02-20},
+	date = {1997},
+	langid = {english},
+	eprinttype = {arxiv},
+	eprint = {astro-ph/9711109},
+	keywords = {Astrophysics}
+}
+
+@article{aarsethCollapseViolentRelaxation1988,
+	title = {On the collapse and violent relaxation of protoglobular clusters},
+	volume = {324},
+	issn = {0004-637X, 1538-4357},
+	url = {http://adsabs.harvard.edu/doi/10.1086/165895},
+	doi = {10.1086/165895},
+	abstract = {During the formation of stellar systems such as globular clusters, low-mass subcondensations which eventually form stars must retain a geometric size throughout the collapse process that is small compared to the characteristic distance separating them. If the local velocity dispersion of the subcondensations is small, the overall dimension of the system can decrease substantially before reaching a dynamical equilibrium state. We deduce the maximum collapse factor by examining the growth of the velocity dispersion and the spread in arrival times at the origin caused by local and global fluctuations. We show, analytically as well as in a series of {AT}-body simulations, that the maximum reduction in the characteristic dimension of a system of N fragments with an initial homogeneous distribution subject to N1/2 fluctuations is proportional to {iV}1/3. Direct physical collisions between low-mass subcondensations are therefore unlikely to occur in protoglobular clusters. We discuss our results in the context of fragmentation and violent relaxation.},
+	pages = {288},
+	journaltitle = {The Astrophysical Journal},
+	author = {Aarseth, S. J. and Lin, D. N. C. and Papaloizou, J. C. B.},
+	urldate = {2019-01-18},
+	date = {1988-01},
+	langid = {english}
+}
+
+@article{heggieEcologyGlobularClusters1992,
+	title = {Ecology of Globular Clusters},
+	author = {Heggie, Douglas P.},
+	date = {1992},
+	keywords = {Astronomy, Globular clusters}
+}
+
+@article{chernoffEvolutionGlobularClusters1990,
+	title = {Evolution of globular clusters in the Galaxy},
+	volume = {351},
+	issn = {0004-637X, 1538-4357},
+	url = {http://adsabs.harvard.edu/doi/10.1086/168451},
+	doi = {10.1086/168451},
+	abstract = {We study globular cluster evolution using Hénon’s Fokker-Planck equation to model relaxation and energy exchange between the stars. We include a spectrum of stellar masses, stellar evolution, and accompanying mass loss, and a tidal boundary determined by cluster mass and Galactocentric position. All these features are important for modeling cluster evolution until the onset of core collapse. We present a comprehensive survey of Galactic globular cluster evolution until core collapse.},
+	pages = {121},
+	journaltitle = {The Astrophysical Journal},
+	author = {Chernoff, David F. and Weinberg, Martin D.},
+	urldate = {2019-01-18},
+	date = {1990-03},
+	langid = {english}
+}
+@article{hutGravitationalThermodynamics1997,
+	title = {Gravitational Thermodynamics},
+	url = {http://arxiv.org/abs/astro-ph/9704286},
+	abstract = {The gravitational N -body problem, for N {\textgreater} 2, is the oldest unsolved problem in mathematical physics. Some of the most ideal examples that can be found in nature are globular star clusters, with N ∼ 106. In this overview, I discuss six types of fundamental sources of unpredictability, each of which poses a diﬀerent challenge to attempts to determine the long-term behavior of these systems, governed by a peculiar type of thermodynamics.},
+	journaltitle = {{arXiv}:astro-ph/9704286},
+	author = {Hut, Piet},
+	urldate = {2019-01-17},
+	date = {1997-04-29},
+	langid = {english},
+	eprinttype = {arxiv},
+	eprint = {astro-ph/9704286},
+	keywords = {Astrophysics, Globular clusters}
+}
+
+@article{vesperiniEffectsDynamicalEvolution1997,
+	title = {On the effects of dynamical evolution on the initial mass function of globular clusters},
+	volume = {289},
+	issn = {0035-8711, 1365-2966},
+	url = {https://academic.oup.com/mnras/article-lookup/doi/10.1093/mnras/289.4.898},
+	doi = {10.1093/mnras/289.4.898},
+	abstract = {In this paper we show the results of a large set of 7V-body simulations modelling the evolution of globular clusters driven by relaxation, stellar evolution and disc shocking, and including the effects of the tidal field of the Galaxy. We investigate the evolution of multi-mass models with a power-law initial mass function ({IMF}) starting with different initial masses, concentrations, slopes of the {IMF} and located at different galactocentric distances. We show to what extent the effects of the various evolutionary processes alter the shape of the {IMF} and to what extent these changes depend on the position of the cluster in the Galaxy. The changes in both the global and the local mass functions (measured at different distances from the cluster centre) are investigated, showing whether and where the local mass function keeps memory of the {IMF} and where it provides a good indication of the current global mass function.},
+	pages = {898--920},
+	number = {4},
+	journaltitle = {Monthly Notices of the Royal Astronomical Society},
+	author = {Vesperini, E. and Heggie, D. C.},
+	urldate = {2019-01-28},
+	date = {1997-08},
+	langid = {english}
+}
+
+@article{aarsethBasicNbodyModelling1998,
+	title = {Basic N-body modelling of the evolution of globular clusters -- I. Time scaling},
+	volume = {297},
+	issn = {0035-8711, 1365-2966},
+	url = {https://academic.oup.com/mnras/article-lookup/doi/10.1046/j.1365-8711.1998.01521.x},
+	doi = {10.1046/j.1365-8711.1998.01521.x},
+	abstract = {We consider the use of N-body simulations for studying the evolution of rich star clusters (i.e. globular clusters).The dynamical processes included in this study are restricted to gravitational (point-mass) interactions, the steady tidal ﬁeld of a galaxy, and instantaneous mass loss resulting from stellar evolution. With evolution driven by these mechanisms, it is known that clusters fall roughly into two broad classes: those that dissipate promptly in the tidal ﬁeld, as a result of mass loss; and those that survive long enough for their evolution to become dominated by two-body relaxation.},
+	pages = {794--806},
+	number = {3},
+	journaltitle = {Monthly Notices of the Royal Astronomical Society},
+	author = {Aarseth, S. J. and Heggie, D. C.},
+	urldate = {2019-01-18},
+	date = {1998-07-01},
+	langid = {english}
+}
+
+@article{mckenzieGenerationCompactionPartially1984,
+	title = {The Generation and Compaction of Partially Molten Rock},
+	volume = {25},
+	issn = {0022-3530, 1460-2415},
+	url = {https://academic.oup.com/petrology/article-lookup/doi/10.1093/petrology/25.3.713},
+	doi = {10.1093/petrology/25.3.713},
+	abstract = {The equations governing the movement of the melt and the matrix of a partially molten material are obtained from the conservation of mass, momentum, and energy using expressions from the theory of mixtures. The equations define a length scale dc called the compaction length, which depends only on the material properties of the melt and matrix. A number of simple solutions to the equations show that, if the porosity is initially constant, matrix compaction only occurs within a distance {\textasciitilde}{\textless}5C of an impermeable boundary. Elsewhere the gravitational forces are supported by the viscous stresses resulting from the movement of melt, and no compaction occurs. The velocity necessary to prevent compaction is known as the minimum fluidization velocity. In all cases the compaction rate is controlled by the.properties of the matrix. These results can only be applied to geological problems if the values of the permeability, bulk and shear viscosity of the matrix can be estimated. All three depend on the microscopic geometry of the melt, which is in turn controlled by the dihedral angle. The likely equilibrium network provides some guidance in estimating the order of magnitude of these constants, but is no substitute for good measurements, which are yet to be carried out. Partial melting by release of pressure at constant entropy is then examined as a means of produced melt within the earth.},
+	pages = {713--765},
+	number = {3},
+	journaltitle = {Journal of Petrology},
+	shortjournal = {Journal of Petrology},
+	author = {{McKenzie}, D.},
+	urldate = {2020-05-18},
+	date = {1984-08-01},
+	langid = {english},
+	keywords = {two-phase flow}
+}
+
+@article{connollyAlgorithmComputerProgram1987,
+	title = {An Algorithm and Computer Program for Calculating Composition Phase Diagrams},
+	url = {http://www.perplex.ethz.ch/papers/connolly_calphad_87.pdf},
+	author = {Connolly, J. A. D. and Kerrick, D. M.},
+	urldate = {2020-04-22},
+	date = {1987},
+	keywords = {phase-diagrams, thermo}
+}
+
+@book{halzenQuarksLeptons1984,
+	title = {Quarks and Leptons},
+	publisher = {Wiley},
+	author = {Halzen, F. and Martin, A. D.},
+	date = {1984}
+}
+
+@book{itzyksonQuantumFieldTheory1980,
+	title = {Quantum Field Theory},
+	publisher = {{McGraw}-Hill},
+	author = {Itzykson, C. and Zuber, J. B.},
+	date = {1980}
+}
+
+@book{chengGaugeTheoryElementary1984,
+	title = {Gauge Theory of Elementary Particles},
+	publisher = {Oxford University Press},
+	author = {Cheng, T. P. and Li, L. F.},
+	date = {1984}
+}
+
+@book{aitchisonGaugeTheoriesParticle1982,
+	title = {Gauge theories in particle physics: A practical introduction},
+	publisher = {{CRC} Press},
+	author = {Aitchison, I. J. R. and Hey, A. J. G.},
+	date = {1982}
+}
+
+@article{goodmanGravothermalOscillations1987,
+	title = {On Gravothermal Oscillations},
+	volume = {313},
+	abstract = {Gravothermal oscillations of postcollapse star clusters are investigated by studying an analogous system, a self-gravitating, conducting gas sphere. The gas is assumed to have a distributed energy source depending on local density and temperature. It is shown that certain functional forms for the energy term permit a new type of self-similar postcollapse solution in which both the core radius and the half-mass radius expand as the two-thirds power of time and the total mass is constant. Creation of binaries in three-body processes leads to one such functional form. Self-similar solutions are exhibited for this interesting case. The solutions are nonsingular and approximately isothermal within the half-mass radius. They are parameterized by the total number of stars, {AT}, and become more centrally condensed with increasing N. The linear stability of these solutions is studied. They are stable for N less than -7000, overstable for N between 7000 and 40,000, and unstable for larger N. For very large {iV}, the instability reduces to the familiar gravothermal instability of an infinite isothermal sphere. The amplitude of nonlinear gravothermal oscillations is estimated and found to increase with N. Implications for globular clusters and for {iV}-body simulations are discussed. It is argued that the linear instability and the nonlinear expansion phase are not directly dependent on the nature of the energy source; rather, they depend on the degree of central concentration in the slowly expanding “equilibrium.” At maximum expansion, the core engulfs {\textasciitilde}l\%-2\% of the total mass. This corresponds to King models having concentration parameters -2-3 and suggests that some very concentrated globular clusters are near the maximum expansion of a postcollapse gravothermal oscillation.},
+	pages = {576--595},
+	journaltitle = {The Astrophysical Journal},
+	author = {Goodman, Jeremy},
+	date = {1987-02-15},
+	langid = {english}
+}
+
+@book{spitzerDynamicalEvolutionGlobular1987,
+	location = {Princeton, N.J.},
+	edition = {1},
+	title = {Dynamical evolution of globular clusters},
+	publisher = {Princeton University Press},
+	author = {Spitzer, Lyman},
+	date = {1987}
+}
+
+@article{cohnLateCoreCollapse1980,
+	title = {Late core collapse in star clusters and the gravothermal instability},
+	volume = {242},
+	issn = {0004-637X, 1538-4357},
+	url = {http://adsabs.harvard.edu/doi/10.1086/158511},
+	doi = {10.1086/158511},
+	abstract = {Numerical Fokker-Planck computations of core collapse in a one-component star cluster are presented. The evolution of the cluster has been followed to the point where the central density has increased by a factor of 1020. During the late stages of the core collapse, nonisothermal self-similar structure develops in the region which lies between the rapidly shrinking isothermal core and the halo. In this region, the radial profiles of the stellar density, the gravitational potential, and the velocity dispersion are characterized by the power laws pocr-2'23,{\textless}/{\textgreater}ocr{\textasciitilde}0-23, and vm2 ocr{\textasciitilde}° 23. Late core collapse proceeds at a rate d In p(0)/dt = 3.6 x 10 {\textasciitilde}3 ir (0)-1. The central velocity dispersion increases with the central density according to t{\textgreater}m2(0) oc p(O)010. These results provide strong new evidence for the identification of the late phase of core collapse with the gravothermal instability of Lynden-Bell and Wood.},
+	pages = {765},
+	journaltitle = {The Astrophysical Journal},
+	author = {Cohn, H.},
+	urldate = {2019-02-20},
+	date = {1980-12},
+	langid = {english}
+}
+
+@inproceedings{p.hutLectureNotesPhysics1986,
+	location = {Institute for Advanced Study, Princeton, {USA}},
+	title = {Lecture Notes in Physics},
+	volume = {267},
+	booktitle = {The Use of Supercomputers in Stellar Dynamics},
+	publisher = {Springer-Verlag},
+	author = {{P. Hut} and {S. McMillan}},
+	date = {1986}
+}
+
+@article{barnesHierachicalLogForcecalculation1986,
+	title = {A hierachical O(N log N) force-calculation algorithm},
+	volume = {324},
+	journaltitle = {Nature},
+	author = {Barnes, Josh and Hut, Piet},
+	date = {1986-12-04}
+}
+
+@article{chernoffTIDALHEATINGGLOBULAR1986,
+	title = {{TIDAL} {HEATING} {OF} {GLOBULAR} {CLUSTERS}},
+	volume = {309},
+	abstract = {The influence of tidal heating on the evolution of globular clusters ({GCs}) in circular orbits about the Galactic center is studied. Giant Molecular Clouds ({GMCs}) stretch a globular cluster in a direction transverse to its orbit through the disk. The variation in acceleration with height in the disk compresses the cluster in a longitudinal direction. Numerical and analytic calculations of heating and mass loss for {GCs}, represented by King models, show that disk heating dominates. We apply the results to calculate {GC} evolution prior to core collapse or tidal disruption using a three-parameter (energy, mass, and tidal radius) sequence of King models. The changes in the parameters are calculated for tidal perturbations, relaxation, and evaporation. Clusters close to the Galactic center (less than 3 kpc) undergo core collapse in a Hubble time. The effect of tidal perturbations on energy and mass loss of the cluster is strongest between 3 and 5 kpc where it can substantially effect the evolution of the cluster. Here, depending upon their initial concentration, clusters are either tidally heated and dissolved, or forced toward a gravothermal catastrophe in times that are a fraction of a Hubble time. These inner regions of the Galaxy should be fertile territory for the search for postcollapsed clusters by the Space Telescope.},
+	pages = {27},
+	number = {1},
+	journaltitle = {{ApJ}. . .},
+	author = {Chernoff, David F and Kochanek, Christopher S and Shapiro, Stuart L},
+	date = {1986},
+	langid = {english}
+}
+
+@article{hillsEffectMassLoss1980,
+	title = {The effect of mass loss on the dynamical evolution of a stellar system - Analytic approximations},
+	volume = {235},
+	issn = {0004-637X, 1538-4357},
+	url = {http://adsabs.harvard.edu/doi/10.1086/157703},
+	doi = {10.1086/157703},
+	pages = {986},
+	journaltitle = {The Astrophysical Journal},
+	author = {Hills, J. G.},
+	urldate = {2019-01-18},
+	date = {1980-02},
+	langid = {english}
+}
+
+@article{aarsethNBODYSIMULATIONSGALAXY1979,
+	title = {N-{BODY} {SIMULATIONS} {OF} {GALAXY} {CLUSTERING}. I. {INITIAL} {CONDITIONS} {AND} {GALAXY} {COLLAPSE} {TIMES}},
+	volume = {228},
+	pages = {20},
+	journaltitle = {{ApJ}. . .},
+	author = {Aarseth, Sverre J},
+	date = {1979},
+	langid = {english}
+}
+
+@article{plummerProblemDistributionGlobular1911,
+	title = {On the Problem of Distribution in Globular Star Clusters},
+	volume = {71},
+	url = {http://articles.adsabs.harvard.edu/pdf/1911MNRAS..71..460P},
+	pages = {460--470},
+	number = {5},
+	journaltitle = {Royal Astronomical Society},
+	author = {Plummer, H. C.},
+	urldate = {2019-03-15},
+	date = {1911}
+}
+
+@article{kustaanheimoPerturbationTheoryKepler1965,
+	title = {Perturbation Theory of Kepler Motion Based on Spinor Regularization},
+	volume = {218},
+	pages = {204--219},
+	journaltitle = {Journal fur die reine und angewandte Mathematik},
+	shortjournal = {J. Reine Angew, Math},
+	author = {Kustaanheimo, P and Stiefel, E},
+	date = {1965}
+}
+
+@article{ahmadNumericalIntegrationScheme1973,
+	title = {A numerical integration scheme for the N-body gravitational problem},
+	volume = {12},
+	issn = {00219991},
+	url = {https://linkinghub.elsevier.com/retrieve/pii/0021999173901605},
+	doi = {10.1016/0021-9991(73)90160-5},
+	pages = {389--402},
+	journaltitle = {Journal of Computational Physics},
+	author = {Ahmad, A and Cohen, L},
+	urldate = {2019-02-13},
+	date = {1973},
+	langid = {english}
+}
+
+@article{lynden-bellSTATISTICALMECHANICSVIOLENT1967,
+	title = {{STATISTICAL} {MECHANICS} {OF} {VIOLENT} {RELAXATION} {IN} {STELLAR} {SYSTEMS}},
+	volume = {136},
+	abstract = {An explanation of the observed light distributions of elliptical galaxies is sought and found. The violently changing gravitational field of a newly formed galaxy is effective in changing the statistics of stellar orbits. The equilibrium distribution under this encounterless relaxation is found by use of a fourth type of statistics related to both Fermi-Dirac statistics and equipartition of energy per unit mass. In the relevant limit this becomes Maxwell’s distribution but with temperature proportional to mass.},
+	pages = {21},
+	author = {Lynden-Bell, D},
+	date = {1967},
+	langid = {english},
+	keywords = {Astrophysics, Globular clusters}
+}
+
+@book{rosenbergSolidState1978,
+	location = {Walton Street, Oxford {OX}2 6DP},
+	edition = {2},
+	title = {The Solid State},
+	series = {Oxford Physics Series},
+	number = {9},
+	publisher = {Oxford University Press},
+	author = {Rosenberg, H. M.},
+	date = {1978}
+}
+@article{1911KNAB...14..113K,
+	title = {Further experiments with Liquid Helium. D. On the change of Electrical Resistance of Pure Metals at very low Temperatures, etc. V. The Disappearance of the resistance of mercury},
+	volume = {14},
+	pages = {113--115},
+	journaltitle = {Koninklijke Nederlandse Akademie van Wetenschappen Proceedings Series B Physical Sciences},
+	author = {Kamerlingh Onnes, H.},
+	date = {1911-01},
+	note = {tex.adsnote: Provided by the {SAO}/{NASA} Astrophysics Data System
+tex.adsurl: https://ui.adsabs.harvard.edu/\#abs/1911KNAB...14..113K}
+}
+
+@article{PhysRev.108.1175,
+	title = {Theory of Superconductivity},
+	volume = {108},
+	url = {https://link.aps.org/doi/10.1103/PhysRev.108.1175},
+	doi = {10.1103/PhysRev.108.1175},
+	pages = {1175--1204},
+	number = {5},
+	journaltitle = {Physical Review},
+	shortjournal = {Phys. Rev.},
+	author = {Bardeen, J. and Cooper, L. N. and Schrieffer, J. R.},
+	date = {1957-12},
+	note = {tex.numpages: 0
+tex.publisher: American Physical Society}
+}
+
+@article{MCHENRY1994159,
+	title = {Flux pinning and dissipation in high temperature oxide superconductors},
+	volume = {38},
+	issn = {0079-6425},
+	url = {http://www.sciencedirect.com/science/article/pii/0079642594900035},
+	doi = {https://doi.org/10.1016/0079-6425(94)90003-5},
+	pages = {159--310},
+	journaltitle = {Progress in Materials Science},
+	author = {{McHenry}, Michael E. and Sutton, Roberta A.},
+	date = {1994}
+}
+
+@book{HughesIfan2010Matu,
+	edition = {1},
+	title = {Measurements and their Uncertainties},
+	isbn = {9786612732348},
+	publisher = {Oxford University Press},
+	author = {Hughes, Ifan G. and Hase, Thomas P. A.},
+	date = {2010},
+	keywords = {Error analysis (Mathematics)}
+}
+
+@article{CHU2000229,
+	title = {Critical current density in high-Tc Bi-2223 single crystals using {AC} and {DC} magnetic measurements},
+	volume = {337},
+	issn = {0921-4534},
+	url = {http://www.sciencedirect.com/science/article/pii/S0921453400001076},
+	doi = {https://doi.org/10.1016/S0921-4534(00)00107-6},
+	abstract = {Single crystals of (Bi, Pb)2Sr2Ca2Cu3Ox (Tc=110 K), prepared by fused-salt reaction technique [S.-Y. Chu, M.E. {McHenry}, J. Mater. Res. 13 (1998) 589; S.-Y. Chu, M.E. {McHenry}, {IEEE} Trans. Appl. Supercond. 7 (1997) 1150; S.-Y. Chu, M.E. {McHenry}, Electrochem. Soc. Proc. 97-2 (1997) 9.], have been characterized by both {DC} and {AC} magnetic measurements between 5 K and 108 K with a magnetic field perpendicular to the ab plane of the Bi-2223 crystal lattice. A numerical calculation indicates that the induced fields from the superconducting current loops in the separated neighboring crystals are very small and consequently can be neglected. Treating the individual crystals (73×73×1 μm3) as bar-shaped superconductors, we used a modified Bean model to determine the critical current density. For the first time, a strong temperature dependence of the current density at zero applied field is observed in these pristine single crystals with weak pinning. These then offer an excellent model system to probe the enhancements of persistent currents by means of proton irradiation.},
+	pages = {229--233},
+	number = {1},
+	journaltitle = {Physica C: Superconductivity},
+	author = {Chu, Shaoyan and {McHenry}, M.E.},
+	date = {2000}
+}
