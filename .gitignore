@@ -1,0 +1,11 @@
+# ASPECT output files
+particles/
+solution/
+log.txt
+parameters.json
+parameters.prm
+parameters.tex
+statistics
+*.pvd
+*.visit
+*.vtu
