@@ -1,0 +1,99 @@
+The processes of partial melting and depletion in the mantle and lithosphere have a significant influence on the the evolution of geodynamic systems such as mid-ocean ridges, mantle plumes and subduction zones.
+Realistic simulations of such processes require the integration of a geodynamical code, modelling the convection, with a petrological code, modelling the phase interactions.
+The aim of this project is to combine the geodynamical code ASPECT with the petrological tool MEEMUM, which is part of the Perple\_X suite of tools, and to enable analysis of melting, depletion and the composition of the melt and residue.
+
+\subsection{Geodynamical codes}
+
+Geodynamic numerical modelling simulates convection in the mantle in order to study geological phenomena. 
+They work by solving the Navier-Stokes equations for viscous fluid flow over a discrete mesh in either 2 or 3 dimensions using the finite element method.
+
+\subsubsection{ASPECT}
+
+This project will be using the modern geodynamical code ASPECT \parencite{kronbichlerHighAccuracyMantle2012}.
+It improves upon previous codes like ConMan~\parencite{king_conman_1990} and CITCOM~\parencite{moresi_accuracy_1996} by leveraging modern numerical methods, such as adaptive mesh refinement, and being designed from the outset for excellent parallel performance.
+It is also built upon powerful libraries for finite elements, adaptive meshes and linear algebra, avoiding the need to build the implementations from scratch.
+
+Importantly, ASPECT places extensibility as a core objective of the project.
+It comes with a very powerful plugin system plus a well-documented manual allowing researchers to alter almost every component of the underlying computation.
+
+Of particular interest to this work are the two components capable of tracking system properties during a simulation: compositional fields and particles (sometimes known as tracers). 
+Both components work in a fundamentally similar way.
+They are both passively advected with the system and may be either passive, in which system properties are only tracked, or active, where they can alter the parameters, and therefore dynamics, of the system.
+Compositional fields are included natively into the underlying equations of ASPECT.
+Performance with particles is poor when dealing with large numbers of particles or with a highly-adaptive mesh.
+However, a major advantage of using particles is that they permit a more fine-grained control of how often results are computed.
+Both the time between evaluations and the number of particles can be easily varied using the parameter file submitted to ASPECT.
+
+\subsubsection{Melting}
+
+The processes of melting and depletion (melt loss) of the crust or mantle are of general importance to the behaviour of geological phenomena at the top of the mantle where the reduced pressures permits the material to partially melt. 
+Examples of such phenomena are: subduction zones, mantle plumes and mid-ocean ridges. 
+Thus, it is desirable that geodynamic models of these processes include some way to monitor the melting process.
+
+Calculating melt volume is typically done by assuming a parametrised melting function~\parencite[e.g.][]{dannbergCompressibleMagmaMantle2016}.
+However, significant simplifications are involved and no information regarding the composition of the melt may be extracted.
+A composition-aware melting model requires that the geodynamic model be combined with a thermodynamic code for accurate calculations of the stables phases and compositions.
+
+So far we have only considered measuring the composition of the partially molten rock.
+However, during partial melting, the material separates into two distinct components: the liquid \textit{melt} and the solid \textit{residue}.
+These components have very disparate properties, in particular different compressibilities~\parencite{dannbergCompressibleMagmaMantle2016}, and advect over very different time scales making simulations of both processes simultaneously challenging.
+We now discuss the various approximations that may be made to adjust for this effect.
+
+The simplest approximation is called \textit{bulk melting} and involves disregarding the separate melt dynamics altogether.
+The melt components advect alongside the residue so the overall composition does not change.
+
+Another possible approach is \textit{fractional melting}, in which the melt advects with the residue until a melt percolation threshold is reached at which point the melt pockets are assumed to be connected and the melt is entirely extracted. See~\cite{kaislaniemiLithosphereDestabilizationMelt2018} for an example comparing the two methods.
+
+Finally, the most accurate solution possible is to consider the melt as a distinct material that advects separately to the solid residue.
+So called \textit{two-phase flow} is naturally more computationally intensive than the previous approximations but it has already been implemented in ASPECT~(\cite{dannbergCompressibleMagmaMantle2016}).
+
+\subsection{Thermodynamical codes}
+
+A thermodynamic code, within the context of this work, is a code that accepts pressure, temperature and chemical composition ($p$-$T$-$X$) as input conditions and calculates the stable phases of the system via a minimisation of the Gibbs (free) energy.
+Here, a \textit{phase} is either a solid mineral (e.g. Olivine, Quartz, Calcite) or the generic molten phase \textit{melt}, and \textit{chemical composition} refers to the various components (typically oxides) that may exist in a phase (e.g. \ce{CaO}, \ce{SiO2}, \ce{MgO}).
+The Gibbs energy is one of several potentials widely used in thermodynamics and it is used here because it is minimised when the system is stable.
+Inside the code, it is represented by a series of non-linear equations that are defined in thermodynamic databases~\parencite[e.g.][]{hollandMeltingPeridotitesGranites2018}.
+
+At present, the state of the software in the petrological community is rather muddled. 
+There exist a huge number of codes 
+(e.g. MELTS:~\cite{ghiorsoChemicalMassTransfer1994}; 
+THERMOCALC:~\cite{powell_calculating_1998}; 
+HeFESTo:~\cite{stixrudeThermodynamicsMantleMinerals2011}; 
+BurnMan:~\cite{cottaarBurnManLowerMantle2014}; 
+RCrust:~\cite{mayneRcrustToolCalculating2016}) 
+all specialising in some particular process or region of the mantle and lithosphere. 
+In this work we will be using the
+Perple\_X~\parencite{connollyComputationPhaseEquilibria2005,connollyGeodynamicEquationState2009} suite of tools.
+
+\subsubsection{Perple\_X}
+
+Perple\_X is unique to the other solvers because it linearises the minimisation problem by splitting the non-linear phase functions into a series of \textit{pseudocompounds}. 
+Other codes typically solve the minimisation problem using non-linear methods. 
+Such methods solve the equilibria problem exactly - for the thermodynamic database being used - but are slow and cannot guarantee convergence in all cases.
+Contrastingly, the linear formulation of the problem may be solved efficiently and has guaranteed convergence, at the expense of introducing artefacts into the final phase diagram. 
+
+Perple\_X consists of a suite of several executables written in Fortran 77.
+The executable of interest to this project is MEEMUM which computes the stable phases, and their respective compositions, at a given point in $p$-$T$-$X$ space.
+The other commonly used program is VERTEX which computes the stable phases over a range of $p$-$T$-$X$ conditions.
+For calculations involving a large number of possible phases this can take a very long time to compute.
+
+Interacting with the Perple\_X code is a complex task and one of the more difficult of this project.
+It is written in Fortran 77 and thus is lacking in many features of a modern programming language, the most obstructive being its extensive use of global variables (collected into COMMON blocks), and a particularly archaic feature where the length of function and variable names is limited to just 6 characters.
+
+In addition, the tools in Perple\_X are designed exclusively for interactive use.
+There is no clear separation between the (command line) user interface and the program logic so there are, for example, random places in the code where the user is polled for input.
+This makes it challenging to automate to code without making radical changes to the codebase which would make maintenance challenging.
+
+Finally, Perple\_X also has no official documentation, instead relying on a forum and outdated tutorials and web pages.
+These also do not cover the actual code at all, merely how to run the program.
+
+\subsection{Combining the two}
+
+Previous efforts to measure the composition have taken two approaches.
+They have either precomputed the thermodynamical properties of interest and stored them in a lookup table~\parencite[e.g.][]{magniDeepWaterRecycling2014,bouilholNumericalApproachMelting2015,freeburnNumericalModelsMagmatic2017}, or they have made direct calls to MEEMUM, performing the calculations during the simulation~\parencite[e.g.][]{kaislaniemiLithosphereDestabilizationMelt2018}.
+The former method is fast to run during the simulation but preparation of the lookup table can take a long time. 
+It also will only work for a fixed composition so is unsuitable for modelling melt transport where the composition will necessarily change.
+By contrast, the latter approach produces very accurate results and it will work with a varying composition, but until recently this has been prohibitively expensive to calculate.
+
+A previous attempt to combine MEEMUM and ASPECT using live calls was made by R. Myhill~\parencite*{myhill_perplex_2018} but the code has not been altered since 2018 and appears to have been abandoned. It also suffered from poor performance, was difficult to build and test, and had minimal documentation.
+These are all areas that this project will seek to improve.
