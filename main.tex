@@ -1,8 +1,17 @@
 \documentclass[a4paper]{article}
 
-\usepackage[maxbibnames=3]{biblatex}
+\usepackage[ 
+    style=authoryear, 
+    sorting=nyt, 
+    url=false, 
+    isbn=false, 
+    date=year, 
+    maxnames=2
+]{biblatex}
+\usepackage{caption,subcaption}
 \usepackage{graphicx}
 \usepackage{listing}
+\usepackage[version=4]{mhchem}
 \usepackage{tikz}
 \usepackage{times}
 
@@ -10,7 +19,7 @@
 
 \addbibresource{references.bib}
 
-\title{A Tool for Combined Geodynamical and Petrological Analysis}
+\title{A Tool for Combined Geodynamical and Thermodynamical Analysis}
 \student{Connor J. Ward}
 \supervisors{Jeroen van Hunen and Marion Weinzierl}
 \degree{M.Sc. MISCADA}
@@ -22,14 +31,16 @@
 \maketitle
 
 \begin{abstract}
-...
+\input{sections/0-abstract}
 \end{abstract}
 
 \begin{keywords}
-Put a few keywords here.
+phase equilibria; geodynamics; magma migration; numerical modelling
 \end{keywords}
 
 \section{Introduction}
+\label{sec:introduction}
+\input{sections/1-introduction}
 
 \section{Solution}
 \label{sec:solution}
@@ -39,7 +50,13 @@ Put a few keywords here.
 \label{sec:results}
 \input{sections/3-results}
 
+\section{Discussion}
+\label{sec:discussion}
+\input{sections/4-discussion}
+
 \section{Conclusions}
+\label{sec:conclusions}
+\input{sections/5-conclusions}
 
 \printbibliography
 

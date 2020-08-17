@@ -103,3 +103,84 @@ In contrast, the code is entirely suitable for parallel use in a distributed mem
 MPI is the primary parallelisation method used within ASPECT and so thread-safety was not considered a necessary feature of the library.
 
 \subsection{ASPECT plugins}
+
+The Perple\_X wrapper code was integrated into ASPECT using ASPECT's powerful plugin system.
+Plugins are compiled into shared libraries with CMake.
+These are libraries that are linked to at runtime, rather than compile time which is for static libraries.
+Although care must be taken to use the same compiler for the plugin as for the main ASPECT binary this approach has significant advantage that it does not require recompilation of the main ASPECT binary every time.
+
+The decision was taken to implement the code using the plugin system rather than forking the main ASPECT repository for the following reasons: 
+(a) updating ASPECT does not require either rebasing or merging the git repositories 
+(b) not having the new code mixed in with the original code makes things clearer 
+(c) the code is rather specialist and may not ultimately be added to the ASPECT codebase.
+
+The plugins expose to the user a set of options that may be included in the parameter file that is submitted to ASPECT.
+Given the small number of source files that are written, no automatic method of generating the documentation has been written and we recommend reading the source code for parameter details.
+
+Some example parameter files are included in the \texttt{cookbooks} component of the repository.
+These provide examples of the various functionality of the plugins.
+
+Regarding the actual plugins that were written, two different approaches were taken to track the Perple\_X composition in ASPECT: compositional fields (via a material model) and particles.
+The details of their implementation will be discussed next.
+
+\subsubsection{Particle plugin}
+
+As discussed in Section~\ref{sec:introduction}, the basic idea of particles in a geodynamical simulation is that they are point objects passively advected around the medium with the velocity field.
+At set timesteps they are then `evaluated' using the state of the different fields present at their current position.
+In this work, a \textit{particle property} plugin was written that returns phase information from Perple\_X using the pressure, temperature, and, at least initially, bulk composition from the specified Perple\_X problem file.
+
+The precise information that the plugin reports depends upon the options specified in the parameter file.
+At present the possible properties that may be reported by the plugin for each endmember phase are the: composition, molar amount (in moles), molar fraction, volume fraction, and weight fraction.
+This list would be straightforward to extend to any of the properties reported as output from MEEMUM and serves mainly as a proof-of-concept.
+
+One particularly noteworthy set of options permitted by the plugin are \texttt{Extract melt} and \texttt{Melt extraction threshold}.
+These permit an investigation of fractional melting of the material (see Section~\ref{sec:introduction} for a discussion of this).
+If \texttt{Extract melt} is set to \texttt{true} then the particle will automatically report on the amount of moles of the melt that is extracted and on its composition.
+Fractional properties (e.g. weight fraction) of the extracted melt are not tracked due to being non-physical.
+
+\subsubsection{Material model plugin}
+
+The ability to easily control the number of particles and evaluation rate is extremely useful for investigations with MEEMUM because each evaluation can take a considerable amount of time to complete.
+The approach additionally permits the use of any material model.
+
+However, it was found that the particle-based approach was incompatible with a study of two-phase flow.
+This is because two-phase flow requires that the composition of the melt be advected separately to the composition of the residue.
+In ASPECT particles can be set to \textit{either} advect with the melt field or with the solid material, but not both.
+The underlying implementation of particles in ASPECT does not permit them to be differentiated into different classes.
+Therefore there would be no way to use particles in a study of two-phase flow without a radical change to the ASPECT source code.
+
+In this work we avoided this problem by pivoting to a compositional field-based approach and implementing a material model plugin.
+In the simulation there are compositional fields for each component in the composition for both the melt and residue and these fields advect with either the solid or melt.
+
+An unfortunate downside to this approach is that the parameter files become significantly more complex as the compositional fields must be specified by name and must correspond exactly to the compounds specified in the Perple\_X problem file.
+
+The first material model plugin to be implemented used the ASPECT model \texttt{melt simple} as the underlying base model with some logic for calling MEEMUM and updating the relevant compositional fields on top.
+This simplified development and ensured that any results from the simulation would be physically reasonable but had a significant downside in that the actual fraction of melt that was reported came from a simple parametrisation rather than from the composition-aware MEEMUM computation.
+This not only makes the results less accurate, but it causes inconsistencies in the results such as when, for example, the ASPECT function reports the presence of melt but Perple\_X does not. 
+In this situation the melt is reported as having no composition.
+
+In an effort to mitigate the amount of disparity between the two models, the temperature being passed to Perple\_X is increased by $200 \mathrm{K}$.
+This obviously impacts upon how reasonable the results can be considered to be.
+
+To try and fix these issues, a material model that calculates the melt fraction using Perple\_X was also created.
+However, the code experienced serious convergence issues and we ran out of time.
+The code (\texttt{perplex\_melt.cc}) is included in the repository should anyone wish to get it working in future.
+
+\subsubsection{Additional plugins}
+
+In addition to the plugins discussed above, \textit{postprocessor} and \textit{initial composition} plugins were also written.
+The postprocessor plugin is called \texttt{perplex cache statistics} and it permits analysis of the cache in the Perple\_X wrapper.
+The initial composition plugin is called \texttt{perplex composition} and it makes sure that the compositional fields representing the melt and residue compositions (for two-phase flow) are initialised correctly.
+
+\subsubsection{Testing}
+
+Unit testing is difficult to do in ASPECT, as evidenced by the fact that very few actually exist in the main repository, due to the fact that plugins are tightly integrated with the rest of the simulation.
+Most plugins inherit from the \texttt{SimulatorAccess} class in order to access information from the rest of the simulation such as time step number or to interact with other plugins.
+Such complex interactions make typical unit testing of single pieces of functionality practically impossible.
+
+Instead of using unit tests, ASPECT relies upon \textit{benchmarks} for evidence of its accuracy.
+These involve running simulations with a known answer, for example the temperature change over a phase transition, and verifying that the ASPECT code converges to the correct answer.
+The decision was made to not include any benchmarks with the code because they require detailed domain-specific knowledge and we were running out of time.
+
+The other form of tests used in ASPECT simply compares the output of a simulation with a previous run to ensure that the results are unchanged.
+Tests of this nature were not included in the code because the CMake script necessary to perform such a test is complex and we were limited by time.
