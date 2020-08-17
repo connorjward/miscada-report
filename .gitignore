@@ -9,3 +9,6 @@ statistics
 *.pvd
 *.visit
 *.vtu
+
+# Paraview files
+*.pvsm
