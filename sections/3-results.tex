@@ -75,3 +75,54 @@
         \label{fig:my_label}
     \end{subfigure}
 \end{figure}
+
+\subsection{Performance}
+
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.49\columnwidth}
+        \centering
+        \begin{tikzpicture}
+            \pie[hide number, radius=1.3, rotate=45, text=legend] {
+                83/ \footnotesize{Update particle properties},
+                5.2/ \footnotesize{Assemble temperature system},
+                2.8/ \footnotesize{Assemble Stokes system},
+                2.3/ \footnotesize{Postprocessing},
+                6.7/ \footnotesize{Other}
+            }
+        \end{tikzpicture}
+        \caption{A breakdown of the runtime for the particle property plugin.}
+        \label{fig:perf_batch_pie}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.49\columnwidth}
+        \centering
+        \begin{tikzpicture}
+            \pie[hide number, radius=1.3, rotate=45, text=legend] {
+                65/ \footnotesize{Assemble composition system},
+                6.6/ \footnotesize{Assemble temperature system},
+                4.8/ \footnotesize{Solve Stokes system},
+                3.9/ \footnotesize{Solve composition reactions},
+                19.7/ \footnotesize{Other}
+            }
+        \end{tikzpicture}
+        \caption{A breakdown of the runtime for the material model plugin.}
+        \label{fig:perf_2pp_pie}
+    \end{subfigure}
+    %
+    \caption{
+        A comparison of the breakdown of runtime spent in the different elements of ASPECT between the particle property and material model approaches to tracking the composition.
+        In both cases the \texttt{simple.dat} data set for Perple\_X has been used and the analysis has been drawn from the closed box experiments.
+        The actual runtime comparison between the two approaches is discussed in Section~\ref{sec:???}.
+    }
+    \label{fig:perf_pie}
+\end{figure}
+
+\subsubsection{Load balancing}
+
+\begin{figure}
+    \centering
+    \input{figures/load_balancing.pgf}
+    \caption{Caption}
+    \label{fig:load_balancing}
+\end{figure}
