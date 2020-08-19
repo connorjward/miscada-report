@@ -17,6 +17,13 @@ set Max nonlinear iterations   = 10
 set Nonlinear solver tolerance = 1e-3
 set Use operator splitting     = true
 
+# subsection Discretization
+#   subsection Stabilization parameters
+#     set beta = 0.5
+#     set cR = 1
+#   end
+# end
+
 subsection Solver parameters
   subsection Operator splitting parameters
     set Reaction time step                     = 2e2
@@ -69,7 +76,7 @@ subsection Geometry model
 
   subsection Box
     set X extent      = 300000
-    set X repetitions = 2
+    set X repetitions = 1
     set Y extent      = 120000
   end
 end

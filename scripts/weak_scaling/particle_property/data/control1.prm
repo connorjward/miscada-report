@@ -1,13 +1,9 @@
-# ...
-
 #################### General settings #################### 
 
-set Additional shared libraries            = ./libperplexaspect.so
 set Adiabatic surface temperature          = 2000
 set Dimension                              = 2
 set End time                               = 1e6
 set Maximum time step                      = 1e5
-set Output directory                       = output-box_batch
 set Use years in output instead of seconds = true
 
 
@@ -22,25 +18,12 @@ subsection Boundary velocity model
   set Tangential velocity boundary indicators = top, bottom, left, right
 end
 
-subsection Compositional fields
-  set Number of fields            = 5
-  set Names of fields             = melt_amount, melt_SiO2, melt_CaO, melt_MgO, melt_FeO
-
-  set Compositional field methods = particles, particles, particles, particles, particles
-  set Mapped particle properties  = \
-    melt_amount: liquid volume fraction, \
-    melt_SiO2: liquid composition SiO2, \
-    melt_CaO: liquid composition CaO, \
-    melt_MgO: liquid composition MgO, \
-    melt_FeO: liquid composition FeO
-end
-
 subsection Geometry model
   set Model name = box
 
   subsection Box
     set X extent      = 300000
-    set X repetitions = 2
+    set X repetitions = 3
     set Y extent      = 120000
   end
 end
@@ -82,34 +65,18 @@ end
 
 subsection Mesh refinement
   set Initial adaptive refinement        = 0
-  set Initial global refinement          = 3
+  set Initial global refinement          = 4
   set Time steps between mesh refinement = 0
 end
 
-subsection Perple_X settings
-  set Data directory   = ../../data/perplex/simple
-  set Problem filename = simple.dat
-  set Cache capacity   = 1000
-  set Cache tolerance  = 1e-3
-end
-
 subsection Postprocess
-  set List of postprocessors = \
-    composition statistics, perplex cache statistics, particles, visualization
+  set List of postprocessors = particles
 
   subsection Particles
-    set Data output format            = vtu
-    set List of particle properties   = perplex composition, pT path
+    set Number of particles           = 400
+    set Allow cells without particles = true
+    set Data output format            = ascii
     set Time between data output      = 1e3
-
-    subsection Perple_X composition
-      set Extract melt              = false
-      set List of phase properties  = composition, molar amount, molar fraction, volume fraction
-    end
-  end
-
-  subsection Visualization
-    set Time between graphical output = 1e3
   end
 end
 

@@ -40,17 +40,17 @@ df = read_statistics(FIN_BATCH)
 xs = df["Time (years)"]
 ys = ((df["Maximal particles per process"] 
      - df["Minimal particles per process"])
-     / df["Number of advected particles"])
+     / df["Average particles per process"])
 ax.plot(xs, ys, label="Particle plugin")
 
 df = read_statistics(FIN_2PP)
 xs = df["Time (years)"]
 ys = ((df["Maximal cells per process"] - df["Minimal cells per process"])
-        / df["Number of mesh cells"])
+        / df["Average cells per process"])
 ax.plot(xs, ys, label="Material model")
 
 ax.set_xlabel("Time (years)")
-ax.set_ylabel("Normalised range")
+ax.set_ylabel("???")
 ax.legend(frameon=False)
 
 plt.savefig(FOUT_PDF, bbox_inches="tight")

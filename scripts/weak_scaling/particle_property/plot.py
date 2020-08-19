@@ -2,22 +2,22 @@ import re
 
 import matplotlib as mpl
 import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
 
 import myutils.mpl
 
 
-# FINS_BATCH = ???
-# FINS_2PP = ???
+FIN_CONTROL = ["data/control{}.txt".format(n) for n in range(1, 13)]
+FIN_TEST = ["data/test{}.txt".format(n) for n in range(1, 13)]
 
-FOUT_PDF = "../../figures/weak_scaling/figure.pdf"
-FOUT_PGF = "../../figures/weak_scaling/figure.pgf"
+FOUT_PDF = "../../../figures/weak_scaling/batch.pdf"
+FOUT_PGF = "../../../figures/weak_scaling/batch.pgf"
 
 FIG_WIDTH = 0.45 * 681.159  # in pts
 
 
 def parse_file(fname):
-    print(fname)
     with open(fname) as f:
         s = f.read()
 
@@ -43,24 +43,20 @@ mpl.rcParams.update({
 fig,ax = plt.subplots(figsize=myutils.mpl.figsize_from_width(FIG_WIDTH),
                       dpi=200)
 
-xs = []
-ys = []
-for nproc in range(1, 13):
-    x,y = parse_file("out/batch{}.txt".format(nproc))
-    xs.append(x)
-    ys.append(y)
-ax.plot(xs, ys, label="Particle property")
+xs = np.empty(12)
+ys = np.empty(12)
+for i,fname in enumerate(FIN_CONTROL):
+    xs[i],ys[i] = parse_file(fname)
+ax.plot(xs, ys[0]/ys, label="Control")
 
-xs = []
-ys = []
-for nproc in range(1, 13):
-    x,y = parse_file("out/2pp{}.txt".format(nproc))
-    xs.append(x)
-    ys.append(y)
-ax.plot(xs, ys, label="Material model")
+xs = np.empty(12)
+ys = np.empty(12)
+for i,fname in enumerate(FIN_TEST):
+    xs[i],ys[i] = parse_file(fname)
+ax.plot(xs, ys[0]/ys, label="Test")
 
 ax.set_xlabel("Number of processors")
-ax.set_ylabel("Runtime (s)")
+ax.set_ylabel("Speedup")
 ax.legend(frameon=False)
 
 plt.savefig(FOUT_PDF, bbox_inches="tight")
