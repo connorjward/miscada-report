@@ -1,0 +1,26 @@
+# 1: Time step number
+# 2: Time (years)
+# 3: Time step size (years)
+# 4: Number of mesh cells
+# 5: Number of Stokes degrees of freedom
+# 6: Number of temperature degrees of freedom
+# 7: Number of degrees of freedom for all compositions
+# 8: Number of nonlinear iterations
+# 9: Iterations for temperature solver
+# 10: Iterations for composition solver 1
+# 11: Iterations for composition solver 2
+# 12: Iterations for composition solver 3
+# 13: Iterations for composition solver 4
+# 14: Iterations for composition solver 5
+# 15: Iterations for composition solver 6
+# 16: Iterations for composition solver 7
+# 17: Iterations for composition solver 8
+# 18: Iterations for composition solver 9
+# 19: Iterations for composition solver 10
+# 20: Iterations for Stokes solver
+# 21: Velocity iterations in Stokes preconditioner
+# 22: Schur complement iterations in Stokes preconditioner
+0 0.000000000000e+00 0.000000000000e+00 192 1891 833 8330  2  0 0   0 0 0 0 0 0 0 0 0 16  20 129 
+1 1.000000000000e+05 1.000000000000e+05 192 1891 833 8330 10 45 0  95 0 0 0 0 0 0 0 0 93 113 692 
+2 2.000000000000e+05 1.000000000000e+05 192 1891 833 8330 10 51 0  97 0 0 0 0 0 0 0 0 81 101 611 
+3 3.000000000000e+05 1.000000000000e+05 192 1891 833 8330 10 64 0 123 0 0 0 0 0 0 0 0 86 106 636 
