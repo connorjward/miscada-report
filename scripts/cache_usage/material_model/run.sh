@@ -1,4 +1,4 @@
-#!/bin/csh
+#!/bin/bash
 
 #############################################################################
 
@@ -15,14 +15,13 @@ module load gsl/gcc/64/1.15 # required to avoid dynamic library error
 rm data/*.txt
 
 # Avoid cold start effects.
-./aspect test.prm > /dev/null
+mpirun -np 12 ./aspect inputs/test1.prm > /dev/null
 
-set n = 1
-while ($n <= 12)
-  mpirun -np $n ./aspect test.prm | tee data/test$n.txt
-  mpirun -np $n ./aspect control.prm | tee data/control$n.txt
-  @ n++
-end
+# Execute.
+for n in {1..12}; do
+  mpirun -np $n ./aspect inputs/test$n.prm | tee data/test$n.txt
+  mpirun -np $n ./aspect inputs/ctrl$n.prm | tee data/ctrl$n.txt
+done
 
 # Clean up.
 rm -r output
