@@ -2,7 +2,7 @@
 
 set Adiabatic surface temperature          = 2000
 set Dimension                              = 2
-set End time                               = 1e6
+set End time                               = 3e6
 set Maximum time step                      = 1e5
 set Use years in output instead of seconds = true
 
@@ -18,6 +18,9 @@ subsection Boundary velocity model
   set Tangential velocity boundary indicators = top, bottom, left, right
 end
 
+
+#################### Model geometry ####################
+
 subsection Geometry model
   set Model name = box
 
@@ -28,17 +31,8 @@ subsection Geometry model
   end
 end
 
-subsection Gravity model
-  set Model name = vertical
 
-  subsection Vertical
-    set Magnitude = 10.0
-  end
-end
-
-subsection Heating model
-  set List of model names = adiabatic heating
-end
+#################### Initial conditions ####################
 
 subsection Initial temperature model
   set Model name = function
@@ -49,6 +43,17 @@ subsection Initial temperature model
       T_bottom - (T_bottom-T_top) * y / h \
       + if((x-40000)*(x-40000) + y*y < r*r, dT, 0) \
       + if((x-220000)*(x-220000) + y*y < r*r, dT, 0)
+  end
+end
+
+
+#################### Gravity and material properties ####################
+
+subsection Gravity model
+  set Model name = vertical
+
+  subsection Vertical
+    set Magnitude = 10.0
   end
 end
 
@@ -65,15 +70,22 @@ end
 
 subsection Mesh refinement
   set Initial adaptive refinement        = 0
-  set Initial global refinement          = 4
+  set Initial global refinement          = 5
   set Time steps between mesh refinement = 0
 end
+
+subsection Heating model
+  set List of model names = adiabatic heating
+end
+
+
+#################### Postprocessing ####################
 
 subsection Postprocess
   set List of postprocessors = particles
 
   subsection Particles
-    set Number of particles           = 400
+    set Number of particles           = ${N_PARTICLES}
     set Allow cells without particles = true
     set Data output format            = ascii
     set Time between data output      = 1e3

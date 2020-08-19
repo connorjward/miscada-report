@@ -1,28 +1,18 @@
-# ...
-
 #################### General settings #################### 
 
 set Additional shared libraries            = ./libperplexaspect.so
 set Adiabatic surface temperature          = 2000
 set Dimension                              = 2
-set End time                               = 1e6
+set End time                               = 3e6
 set Maximum time step                      = 1e5
-set Output directory                       = output-box_2pp
 
 
 #################### Solver parameters #################### 
 
 set Nonlinear solver scheme    = iterated Advection and Stokes
 set Max nonlinear iterations   = 10
-set Nonlinear solver tolerance = 1e-3
+set Nonlinear solver tolerance = 1e-5
 set Use operator splitting     = true
-
-# subsection Discretization
-#   subsection Stabilization parameters
-#     set beta = 0.5
-#     set cR = 1
-#   end
-# end
 
 subsection Solver parameters
   subsection Operator splitting parameters
@@ -61,6 +51,9 @@ subsection Boundary velocity model
   set Tangential velocity boundary indicators = top, bottom, left, right
 end
 
+
+#################### Melt settings ####################
+
 subsection Compositional fields
   set Compositional field methods = \
     melt field, field, melt field, melt field, melt field, melt field, \
@@ -71,27 +64,25 @@ subsection Compositional fields
   set Number of fields = 10
 end
 
+subsection Melt settings
+  set Include melt transport = true
+end
+
+
+#################### Geometry model ####################
+
 subsection Geometry model
   set Model name = box
 
   subsection Box
     set X extent      = 300000
-    set X repetitions = 1
+    set X repetitions = ${N_REPS}
     set Y extent      = 120000
   end
 end
 
-subsection Gravity model
-  set Model name = vertical
 
-  subsection Vertical
-    set Magnitude = 10.0
-  end
-end
-
-subsection Heating model
-  set List of model names = adiabatic heating
-end
+#################### Initial conditions ####################
 
 subsection Initial composition model
   set List of model names = porosity, perplex composition
@@ -109,6 +100,17 @@ subsection Initial temperature model
   end
 end
 
+
+#################### Gravity and material model ####################
+
+subsection Gravity model
+  set Model name = vertical
+
+  subsection Vertical
+    set Magnitude = 10.0
+  end
+end
+
 subsection Material model
   set Model name = perplex melt simple
 
@@ -120,16 +122,11 @@ subsection Material model
   end
 end
 
-subsection Melt settings
-  set Include melt transport = true
-end
-
 
 #################### Mesh refinement ####################
 
 subsection Mesh refinement
-  set Initial adaptive refinement = 0
-  set Initial global refinement   = 3
+  set Initial global refinement   = 4
   set Strategy                    = composition threshold, minimum refinement function
 
   subsection Minimum refinement function
@@ -137,23 +134,28 @@ subsection Mesh refinement
   end
 
   subsection Composition threshold
-    set Compositional field thresholds = 1e-2, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0
+    set Compositional field thresholds = 1e-4, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0
   end
 end
+
+subsection Heating model
+  set List of model names = adiabatic heating
+end
+
+
+#################### Perple_X settings ####################
 
 subsection Perple_X settings
-  set Data directory   = ../../data/perplex/simple
+  set Data directory   = ../../../data/perplex/simple
   set Problem filename = simple.dat
   set Cache capacity   = 1000
-  set Cache tolerance  = 1e-3
+  set Cache tolerance  = ${CACHE_TOL}
 end
 
-subsection Postprocess
-  set List of postprocessors = \
-    composition statistics, melt statistics, perplex cache statistics, visualization
 
-  subsection Visualization
-    set Time between graphical output = 1e3
-  end
+#################### Postprocessing ####################
+
+subsection Postprocess
+  set List of postprocessors = perplex cache statistics
 end
 

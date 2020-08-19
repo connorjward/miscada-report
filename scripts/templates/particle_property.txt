@@ -93,7 +93,7 @@ end
 #################### Postprocessing ####################
 
 subsection Postprocess
-  set List of postprocessors = load balancing statistics, perplex cache statistics, particles
+  set List of postprocessors = load balance statistics, perplex cache statistics, particles
 
   subsection Particles
     set Number of particles           = ${N_PARTICLES}
