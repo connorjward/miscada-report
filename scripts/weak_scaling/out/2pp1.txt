@@ -1,0 +1,2726 @@
+-----------------------------------------------------------------------------
+-- This is ASPECT, the Advanced Solver for Problems in Earth's ConvecTion.
+--     . version 2.2.0-pre (master, 04ad7b5)
+--     . using deal.II 9.2.0
+--     .       with 32 bit indices and vectorization level 1 (128 bits)
+--     . using Trilinos 12.18.1
+--     . using p4est 2.2.0
+--     . running in OPTIMIZED mode
+--     . running with 1 MPI process
+-----------------------------------------------------------------------------
+
+Loading shared library <./libperplexaspect.so>
+
+-----------------------------------------------------------------------------
+-- For information on how to cite ASPECT, see:
+--   https://aspect.geodynamics.org/citing.html?ver=2.2.0-pre&melt=1&sha=04ad7b5&src=code
+-----------------------------------------------------------------------------
+Number of active cells: 64 (on 4 levels)
+Number of degrees of freedom: 4,689 (578+273+578+81+289+289+289+289+289+289+289+289+289+289+289)
+
+*** Timestep 0:  t=0 years
+   Solving temperature system... 0 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Skipping peridotite composition solve because RHS is zero.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 9+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 2.64004e-16, 0, 0, 0, 0, 0, 0, 1.16057e-16, 2.9142e-16, 3.77135e-16, 7.80013e-17, 1
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 1
+
+   Solving temperature system... 0 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Skipping peridotite composition solve because RHS is zero.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 8+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 2.64004e-16, 0, 0, 0, 0, 0, 0, 1.16057e-16, 2.9142e-16, 3.77135e-16, 7.80013e-17, 8.25721e-06
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 8.25721e-06
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  46405, 955, 0.9798
+     Writing graphical output:        output-box_2pp/solution/solution-00000
+
+*** Timestep 1:  t=100000 years
+   Solving composition reactions... in 500 substep(s).
+   Solving temperature system... 7 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 12 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 12+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.0014103, 0, 1, 0, 0, 0, 0, 1.51095e-16, 1.99364e-16, 2.25706e-16, 2.01089e-16, 0.459213
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 1
+
+   Solving temperature system... 6 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 11+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000139823, 0, 0.00642556, 0, 0, 0, 0, 1.65201e-16, 2.12163e-16, 2.12694e-16, 2.18587e-16, 0.12883
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.12883
+
+   Solving temperature system... 6 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 11+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000118894, 0, 0.0034461, 0, 0, 0, 0, 1.62533e-16, 2.01128e-16, 2.28949e-16, 2.10147e-16, 0.110029
+      Relative nonlinear residual (total system) after nonlinear iteration 3: 0.110029
+
+   Solving temperature system... 6 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 11+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000108435, 0, 0.00246216, 0, 0, 0, 0, 1.60267e-16, 2.07024e-16, 2.16948e-16, 2.09373e-16, 0.100467
+      Relative nonlinear residual (total system) after nonlinear iteration 4: 0.100467
+
+   Solving temperature system... 6 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 10+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00010127, 0, 0.00204472, 0, 0, 0, 0, 1.61523e-16, 2.08276e-16, 2.10927e-16, 1.98931e-16, 0.09387
+      Relative nonlinear residual (total system) after nonlinear iteration 5: 0.09387
+
+   Solving temperature system... 6 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 10+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 9.56181e-05, 0, 0.00182931, 0, 0, 0, 0, 1.63694e-16, 2.11888e-16, 2.11331e-16, 2.06533e-16, 0.0886534
+      Relative nonlinear residual (total system) after nonlinear iteration 6: 0.0886534
+
+   Solving temperature system... 6 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 10+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 9.08711e-05, 0, 0.00169736, 0, 0, 0, 0, 1.55862e-16, 1.89094e-16, 1.93793e-16, 1.9929e-16, 0.0842653
+      Relative nonlinear residual (total system) after nonlinear iteration 7: 0.0842653
+
+   Solving temperature system... 6 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 10+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 8.67476e-05, 0, 0.0016045, 0, 0, 0, 0, 1.48869e-16, 1.92789e-16, 1.95346e-16, 2.12259e-16, 0.0804495
+      Relative nonlinear residual (total system) after nonlinear iteration 8: 0.0804495
+
+   Solving temperature system... 6 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 10+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 8.30915e-05, 0, 0.00153256, 0, 0, 0, 0, 1.6241e-16, 2.11722e-16, 2.18319e-16, 2.01809e-16, 0.0770637
+      Relative nonlinear residual (total system) after nonlinear iteration 9: 0.0770637
+
+   Solving temperature system... 6 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 9+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 7.98053e-05, 0, 0.00147311, 0, 0, 0, 0, 1.61717e-16, 2.06128e-16, 2.02377e-16, 2.09006e-16, 0.0740189
+      Relative nonlinear residual (total system) after nonlinear iteration 10: 0.0740189
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.008419/0.007764/1.137e+06 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  301877, 27, 0.9999
+     Writing graphical output:        output-box_2pp/solution/solution-00001
+
+*** Timestep 2:  t=200000 years
+   Solving composition reactions... in 500 substep(s).
+   Solving temperature system... 7 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 11 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 11+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000789494, 0, 0.0437255, 0, 0, 0, 0, 2.10492e-16, 9.76457e-17, 1.84479e-16, 1.18604e-16, 0.252288
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.252288
+
+   Solving temperature system... 7 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 10 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 10+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000436947, 0, 0.00840835, 0, 0, 0, 0, 1.97953e-16, 9.50626e-17, 1.824e-16, 1.1812e-16, 0.153023
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.153023
+
+   Solving temperature system... 7 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 10 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 10+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000278782, 0, 0.00521741, 0, 0, 0, 0, 2.19277e-16, 1.13266e-16, 1.84438e-16, 1.31526e-16, 0.0976428
+      Relative nonlinear residual (total system) after nonlinear iteration 3: 0.0976428
+
+   Solving temperature system... 6 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 10 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 9+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000178609, 0, 0.00329316, 0, 0, 0, 0, 2.16468e-16, 1.03899e-16, 1.8818e-16, 1.1891e-16, 0.0625595
+      Relative nonlinear residual (total system) after nonlinear iteration 4: 0.0625595
+
+   Solving temperature system... 6 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 9+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000114769, 0, 0.00210716, 0, 0, 0, 0, 2.27309e-16, 1.00785e-16, 1.82764e-16, 1.19102e-16, 0.0401995
+      Relative nonlinear residual (total system) after nonlinear iteration 5: 0.0401995
+
+   Solving temperature system... 6 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 9+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 7.39192e-05, 0, 0.00135776, 0, 0, 0, 0, 2.17665e-16, 1.12024e-16, 1.91295e-16, 1.29513e-16, 0.0258912
+      Relative nonlinear residual (total system) after nonlinear iteration 6: 0.0258912
+
+   Solving temperature system... 6 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 8+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 4.77024e-05, 0, 0.000879015, 0, 0, 0, 0, 2.23509e-16, 9.94236e-17, 1.89444e-16, 1.15412e-16, 0.0167083
+      Relative nonlinear residual (total system) after nonlinear iteration 7: 0.0167083
+
+   Solving temperature system... 6 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 8+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 3.08357e-05, 0, 0.000570807, 0, 0, 0, 0, 2.14045e-16, 1.04308e-16, 1.92586e-16, 1.24082e-16, 0.0108004
+      Relative nonlinear residual (total system) after nonlinear iteration 8: 0.0108004
+
+   Solving temperature system... 6 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 8+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 1.99626e-05, 0, 0.000371108, 0, 0, 0, 0, 2.11821e-16, 1.01891e-16, 1.84784e-16, 1.18998e-16, 0.00699192
+      Relative nonlinear residual (total system) after nonlinear iteration 9: 0.00699192
+
+   Solving temperature system... 6 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 7+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 1.29406e-05, 0, 0.000241765, 0, 0, 0, 0, 2.10338e-16, 1.1513e-16, 1.86858e-16, 1.23689e-16, 0.00453239
+      Relative nonlinear residual (total system) after nonlinear iteration 10: 0.00453239
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.01561/0.01548/2.28e+06 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  301834, 70, 0.9998
+     Writing graphical output:        output-box_2pp/solution/solution-00002
+
+*** Timestep 3:  t=300000 years
+   Solving composition reactions... in 500 substep(s).
+   Solving temperature system... 7 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 11 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 11+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00247912, 0, 0.113721, 0, 0, 0, 0, 2.34446e-16, 1.11247e-16, 1.87238e-16, 1.21735e-16, 0.290422
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.290422
+
+   Solving temperature system... 7 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 11 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 11+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00156825, 0, 0.0269711, 0, 0, 0, 0, 2.19473e-16, 1.05403e-16, 1.82221e-16, 1.21413e-16, 0.184803
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.184803
+
+   Solving temperature system... 7 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 11 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 11+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00100489, 0, 0.0170116, 0, 0, 0, 0, 2.06289e-16, 1.09569e-16, 1.92231e-16, 1.21977e-16, 0.118436
+      Relative nonlinear residual (total system) after nonlinear iteration 3: 0.118436
+
+   Solving temperature system... 7 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 11 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 10+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000645034, 0, 0.0108728, 0, 0, 0, 0, 2.26815e-16, 1.30497e-16, 1.98027e-16, 1.25041e-16, 0.0760311
+      Relative nonlinear residual (total system) after nonlinear iteration 4: 0.0760311
+
+   Solving temperature system... 7 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 11 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 10+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000414684, 0, 0.00700482, 0, 0, 0, 0, 2.04976e-16, 1.21776e-16, 1.8596e-16, 1.31977e-16, 0.0488827
+      Relative nonlinear residual (total system) after nonlinear iteration 5: 0.0488827
+
+   Solving temperature system... 7 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 11 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 9+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000266986, 0, 0.00453336, 0, 0, 0, 0, 2.17988e-16, 1.15279e-16, 1.85466e-16, 1.22725e-16, 0.0314735
+      Relative nonlinear residual (total system) after nonlinear iteration 6: 0.0314735
+
+   Solving temperature system... 7 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 11 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 9+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000172137, 0, 0.00294412, 0, 0, 0, 0, 2.24467e-16, 1.13e-16, 1.80629e-16, 1.30086e-16, 0.0202927
+      Relative nonlinear residual (total system) after nonlinear iteration 7: 0.0202927
+
+   Solving temperature system... 7 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 11 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 8+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000111125, 0, 0.00191323, 0, 0, 0, 0, 2.22984e-16, 1.04462e-16, 1.883e-16, 1.31434e-16, 0.0131003
+      Relative nonlinear residual (total system) after nonlinear iteration 8: 0.0131003
+
+   Solving temperature system... 7 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 10 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 8+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 7.18258e-05, 0, 0.00124642, 0, 0, 0, 0, 2.30584e-16, 1.00223e-16, 1.92244e-16, 1.29174e-16, 0.00846741
+      Relative nonlinear residual (total system) after nonlinear iteration 9: 0.00846741
+
+   Solving temperature system... 6 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 10 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 7+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 4.64746e-05, 0, 0.000811622, 0, 0, 0, 0, 2.24301e-16, 1.11654e-16, 1.94009e-16, 1.37357e-16, 0.00547868
+      Relative nonlinear residual (total system) after nonlinear iteration 10: 0.00547868
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.0182/0.02225/3.368e+06 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  301758, 146, 0.9995
+     Writing graphical output:        output-box_2pp/solution/solution-00003
+
+*** Timestep 4:  t=400000 years
+   Solving composition reactions... in 500 substep(s).
+   Solving temperature system... 9 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 14 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 12+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.0083944, 0, 0.27493, 0, 0, 0, 0, 2.49654e-16, 1.15625e-16, 2.01516e-16, 1.45831e-16, 0.301867
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.301867
+
+   Solving temperature system... 10 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 15 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 11+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00528939, 0, 0.0704863, 0, 0, 0, 0, 2.28383e-16, 1.38445e-16, 1.94185e-16, 1.34676e-16, 0.189295
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.189295
+
+   Solving temperature system... 11 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 16 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 11+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00331373, 0, 0.0432664, 0, 0, 0, 0, 2.267e-16, 1.16814e-16, 2.00293e-16, 1.44997e-16, 0.118765
+      Relative nonlinear residual (total system) after nonlinear iteration 3: 0.118765
+
+   Solving temperature system... 11 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 16 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 11+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00206147, 0, 0.0267489, 0, 0, 0, 0, 2.33879e-16, 1.25267e-16, 1.95489e-16, 1.41486e-16, 0.0739718
+      Relative nonlinear residual (total system) after nonlinear iteration 4: 0.0739718
+
+   Solving temperature system... 12 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 16 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 10+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00127784, 0, 0.0166566, 0, 0, 0, 0, 2.46582e-16, 1.32036e-16, 2.04337e-16, 1.44218e-16, 0.0458932
+      Relative nonlinear residual (total system) after nonlinear iteration 5: 0.0458932
+
+   Solving temperature system... 12 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 16 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 10+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000791138, 0, 0.0104283, 0, 0, 0, 0, 2.44439e-16, 1.22771e-16, 1.98921e-16, 1.47715e-16, 0.0284303
+      Relative nonlinear residual (total system) after nonlinear iteration 6: 0.0284303
+
+   Solving temperature system... 11 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 16 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 9+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000489926, 0, 0.00655073, 0, 0, 0, 0, 2.41334e-16, 1.29629e-16, 1.97014e-16, 1.52367e-16, 0.0176123
+      Relative nonlinear residual (total system) after nonlinear iteration 7: 0.0176123
+
+   Solving temperature system... 11 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 16 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 8+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000303725, 0, 0.00412729, 0, 0, 0, 0, 2.44403e-16, 1.30539e-16, 1.9739e-16, 1.4429e-16, 0.0109205
+      Relative nonlinear residual (total system) after nonlinear iteration 8: 0.0109205
+
+   Solving temperature system... 11 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 15 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 8+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000188549, 0, 0.00260191, 0, 0, 0, 0, 2.47013e-16, 1.20082e-16, 2.01891e-16, 1.50817e-16, 0.00677996
+      Relative nonlinear residual (total system) after nonlinear iteration 9: 0.00677996
+
+   Solving temperature system... 11 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 15 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 7+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000117205, 0, 0.00164134, 0, 0, 0, 0, 2.40304e-16, 1.2515e-16, 2.05988e-16, 1.55632e-16, 0.00421432
+      Relative nonlinear residual (total system) after nonlinear iteration 10: 0.00421432
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.0113/0.0228/4.145e+06 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  301666, 238, 0.9992
+     Writing graphical output:        output-box_2pp/solution/solution-00004
+
+*** Timestep 5:  t=458415 years
+   Solving composition reactions... in 292 substep(s).
+   Solving temperature system... 13 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 17 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 12+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.0123695, 0, 0.263381, 0, 0, 0, 0, 2.3576e-16, 1.55353e-16, 1.87665e-16, 1.46147e-16, 0.193449
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.263381
+
+   Solving temperature system... 14 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 17 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 11+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.0045516, 0, 0.045911, 0, 0, 0, 0, 2.32952e-16, 1.51985e-16, 1.98772e-16, 1.42426e-16, 0.0688656
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.0688656
+
+   Solving temperature system... 14 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 17 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 10+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00171186, 0, 0.0175421, 0, 0, 0, 0, 2.40381e-16, 1.44596e-16, 1.95095e-16, 1.62912e-16, 0.0260062
+      Relative nonlinear residual (total system) after nonlinear iteration 3: 0.0260062
+
+   Solving temperature system... 13 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 17 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 9+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000642119, 0, 0.00674021, 0, 0, 0, 0, 2.28795e-16, 1.58085e-16, 2.07049e-16, 1.47624e-16, 0.00977151
+      Relative nonlinear residual (total system) after nonlinear iteration 4: 0.00977151
+
+   Solving temperature system... 13 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 16 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 8+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000241565, 0, 0.00260912, 0, 0, 0, 0, 2.29815e-16, 1.50409e-16, 1.99554e-16, 1.53453e-16, 0.00367748
+      Relative nonlinear residual (total system) after nonlinear iteration 5: 0.00367748
+
+   Solving temperature system... 12 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 15 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 6+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 9.12744e-05, 0, 0.00101498, 0, 0, 0, 0, 2.14864e-16, 1.60471e-16, 2.03343e-16, 1.65341e-16, 0.00138919
+      Relative nonlinear residual (total system) after nonlinear iteration 6: 0.00138919
+
+   Solving temperature system... 12 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 14 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 5+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 3.46504e-05, 0, 0.000397531, 0, 0, 0, 0, 2.39532e-16, 1.56288e-16, 2.07837e-16, 1.51289e-16, 0.000527119
+      Relative nonlinear residual (total system) after nonlinear iteration 7: 0.000527119
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.006715/0.01851/4.553e+06 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  181814, 282, 0.9985
+     Writing graphical output:        output-box_2pp/solution/solution-00005
+
+*** Timestep 6:  t=491055 years
+   Solving composition reactions... in 163 substep(s).
+   Solving temperature system... 13 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 16 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 11+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00791815, 0, 0.184576, 0, 0, 0, 0, 1.9366e-16, 2.08637e-16, 1.85625e-16, 2.79759e-16, 0.0938381
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.184576
+
+   Solving temperature system... 12 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 14 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 10+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00143303, 0, 0.0121141, 0, 0, 0, 0, 1.95451e-16, 2.0094e-16, 1.79347e-16, 2.89058e-16, 0.0151616
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.0151616
+
+   Solving temperature system... 11 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 14 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 7+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000294992, 0, 0.0026878, 0, 0, 0, 0, 2.06268e-16, 2.11639e-16, 1.85933e-16, 2.69402e-16, 0.00312365
+      Relative nonlinear residual (total system) after nonlinear iteration 3: 0.00312365
+
+   Solving temperature system... 10 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 13 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 5+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 6.13121e-05, 0, 0.000586808, 0, 0, 0, 0, 2.21656e-16, 2.08939e-16, 1.75889e-16, 2.69693e-16, 0.000648708
+      Relative nonlinear residual (total system) after nonlinear iteration 4: 0.000648708
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.005818/0.0153/4.826e+06 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  107521, 271, 0.9975
+     Writing graphical output:        output-box_2pp/solution/solution-00006
+
+*** Timestep 7:  t=515660 years
+   Solving composition reactions... in 123 substep(s).
+   Solving temperature system... 13 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 15 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 11+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00578224, 0, 0.112558, 0, 0, 0, 0, 3.29591e-16, 2.33321e-16, 4.06084e-16, 5.00179e-16, 0.0595269
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.112558
+
+   Solving temperature system... 11 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 14 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 8+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000625522, 0, 0.00459311, 0, 0, 0, 0, 3.18163e-16, 2.15298e-16, 3.8748e-16, 4.87e-16, 0.00545002
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.00545002
+
+   Solving temperature system... 10 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 13 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 6+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 8.94045e-05, 0, 0.00074704, 0, 0, 0, 0, 3.21988e-16, 2.14111e-16, 3.70413e-16, 5.00782e-16, 0.000777149
+      Relative nonlinear residual (total system) after nonlinear iteration 3: 0.000777149
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.005304/0.01301/5.053e+06 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  84459, 293, 0.9965
+     Writing graphical output:        output-box_2pp/solution/solution-00007
+
+*** Timestep 8:  t=535989 years
+   Solving composition reactions... in 101 substep(s).
+   Solving temperature system... 12 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 15 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 10+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00500621, 0, 0.0929556, 0, 0, 0, 0, 1.86429e-16, 1.87857e-16, 2.00849e-16, 1.8934e-16, 0.0461154
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.0929556
+
+   Solving temperature system... 11 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 13 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 7+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000360205, 0, 0.00219832, 0, 0, 0, 0, 2.00364e-16, 1.68588e-16, 1.93255e-16, 1.99662e-16, 0.0027333
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.0027333
+
+   Solving temperature system... 10 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 12 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 5+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 3.99337e-05, 0, 0.000301358, 0, 0, 0, 0, 2.06454e-16, 1.79038e-16, 1.92146e-16, 1.91963e-16, 0.000302056
+      Relative nonlinear residual (total system) after nonlinear iteration 3: 0.000302056
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.006424/0.01319/5.571e+06 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  71762, 318, 0.9956
+     Writing graphical output:        output-box_2pp/solution/solution-00008
+
+*** Timestep 9:  t=553667 years
+   Solving composition reactions... in 88 substep(s).
+   Solving temperature system... 12 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 15 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 10+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00456108, 0, 0.123772, 0, 0, 0, 0, 4.17492e-16, 4.27417e-16, 2.65338e-16, 4.24252e-16, 0.0384248
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.123772
+
+   Solving temperature system... 11 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 12 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 7+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00023435, 0, 0.00101581, 0, 0, 0, 0, 4.19177e-16, 4.36316e-16, 2.86079e-16, 4.55321e-16, 0.00157983
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.00157983
+
+   Solving temperature system... 9 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 11 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 4+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 2.0323e-05, 0, 0.00012605, 0, 0, 0, 0, 4.14549e-16, 4.33752e-16, 2.69807e-16, 4.46303e-16, 0.000137992
+      Relative nonlinear residual (total system) after nonlinear iteration 3: 0.000137992
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.006958/0.01659/7.788e+06 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  64281, 311, 0.9952
+     Writing graphical output:        output-box_2pp/solution/solution-00009
+
+*** Timestep 10:  t=569583 years
+   Solving composition reactions... in 79 substep(s).
+   Solving temperature system... 12 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 13 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 9+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00430726, 0, 0.261092, 0, 0, 0, 0, 4.85368e-16, 2.10031e-16, 3.35844e-16, 1.98843e-16, 0.0334072
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.261092
+
+   Solving temperature system... 10 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 10 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 7+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000177639, 0, 0.00108937, 0, 0, 0, 0, 4.69114e-16, 1.91788e-16, 3.24899e-16, 1.86829e-16, 0.00105573
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.00108937
+
+   Solving temperature system... 9 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 3+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 1.11826e-05, 0, 7.36584e-05, 0, 0, 0, 0, 4.54336e-16, 1.78234e-16, 3.40498e-16, 1.79471e-16, 6.93748e-05
+      Relative nonlinear residual (total system) after nonlinear iteration 3: 7.36584e-05
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.005648/0.02607/1.608e+07 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  59084, 324, 0.9945
+     Writing graphical output:        output-box_2pp/solution/solution-00010
+
+Number of active cells: 64 (on 4 levels)
+Number of degrees of freedom: 4,689 (578+273+578+81+289+289+289+289+289+289+289+289+289+289+289)
+
+*** Timestep 11:  t=584239 years
+   Solving composition reactions... in 73 substep(s).
+   Solving temperature system... 12 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 12 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 10+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00414709, 0, 0.267051, 0, 0, 0, 0, 4.43818e-16, 2.03704e-16, 3.01338e-16, 2.48202e-16, 0.0297245
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.267051
+
+   Solving temperature system... 10 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 6+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00016057, 0, 0.00179812, 0, 0, 0, 0, 4.31809e-16, 1.89935e-16, 2.98438e-16, 2.72686e-16, 0.000842094
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.00179812
+
+   Solving temperature system... 8 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 8 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 3+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 6.51642e-06, 0, 3.94902e-05, 0, 0, 0, 0, 4.36128e-16, 1.85533e-16, 2.92429e-16, 2.47793e-16, 3.8314e-05
+      Relative nonlinear residual (total system) after nonlinear iteration 3: 3.94902e-05
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.004502/0.0494/3.074e+07 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  55620, 332, 0.9941
+     Writing graphical output:        output-box_2pp/solution/solution-00011
+
+*** Timestep 12:  t=597894 years
+   Solving composition reactions... in 68 substep(s).
+   Solving temperature system... 12 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 12 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 10+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00400563, 0, 0.232876, 0, 0, 0, 0, 5.03373e-16, 3.47328e-16, 3.48433e-16, 3.43497e-16, 0.0267737
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.232876
+
+   Solving temperature system... 10 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 10 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 6+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000159889, 0, 0.00210407, 0, 0, 0, 0, 4.97457e-16, 3.35215e-16, 3.62135e-16, 3.76096e-16, 0.000766067
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.00210407
+
+   Solving temperature system... 8 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 8 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 3+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 4.00787e-06, 0, 1.90216e-05, 0, 0, 0, 0, 5.07924e-16, 3.48948e-16, 3.61559e-16, 3.67437e-16, 2.28939e-05
+      Relative nonlinear residual (total system) after nonlinear iteration 3: 2.28939e-05
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.004483/0.08063/5.17e+07 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  52722, 350, 0.9934
+     Writing graphical output:        output-box_2pp/solution/solution-00012
+
+*** Timestep 13:  t=610837 years
+   Solving composition reactions... in 64 substep(s).
+   Solving temperature system... 12 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 12 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 10+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00392897, 0, 0.19517, 0, 0, 0, 0, 5.94448e-16, 3.64786e-16, 4.00927e-16, 4.83138e-16, 0.024951
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.19517
+
+   Solving temperature system... 10 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 10 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 6+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000164992, 0, 0.00229119, 0, 0, 0, 0, 5.89503e-16, 3.54897e-16, 3.94427e-16, 4.86748e-16, 0.000751248
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.00229119
+
+   Solving temperature system... 8 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 8 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 2+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 2.80791e-06, 0, 1.21253e-05, 0, 0, 0, 0, 5.97794e-16, 3.46075e-16, 3.89209e-16, 4.96579e-16, 1.59098e-05
+      Relative nonlinear residual (total system) after nonlinear iteration 3: 1.59098e-05
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.007828/0.1152/8.331e+07 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  50421, 347, 0.9932
+     Writing graphical output:        output-box_2pp/solution/solution-00013
+
+*** Timestep 14:  t=623283 years
+   Solving composition reactions... in 62 substep(s).
+   Solving temperature system... 12 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 12 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 9+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00390152, 0, 0.190975, 0, 0, 0, 0, 7.12033e-16, 4.80143e-16, 4.18434e-16, 5.21148e-16, 0.0239747
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.190975
+
+   Solving temperature system... 10 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 10 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 6+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00017063, 0, 0.0022839, 0, 0, 0, 0, 6.85631e-16, 4.97189e-16, 4.0353e-16, 5.1859e-16, 0.000755048
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.0022839
+
+   Solving temperature system... 8 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 8 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 1+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 2.45933e-06, 0, 2.01627e-05, 0, 0, 0, 0, 7.07572e-16, 4.82478e-16, 4.02225e-16, 5.24412e-16, 1.24484e-05
+      Relative nonlinear residual (total system) after nonlinear iteration 3: 2.01627e-05
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.01089/0.1487/1.291e+08 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  49258, 358, 0.9928
+     Writing graphical output:        output-box_2pp/solution/solution-00014
+
+*** Timestep 15:  t=635403 years
+   Solving composition reactions... in 60 substep(s).
+   Solving temperature system... 12 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 13 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 9+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00392979, 0, 0.167781, 0, 0, 0, 0, 7.62702e-16, 4.62497e-16, 5.24937e-16, 5.46962e-16, 0.0229747
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.167781
+
+   Solving temperature system... 10 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 11 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 5+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000174563, 0, 0.00235001, 0, 0, 0, 0, 7.70801e-16, 4.70022e-16, 5.41021e-16, 5.49334e-16, 0.000752566
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.00235001
+
+   Solving temperature system... 8 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 8 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 1+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 2.78931e-06, 0, 2.62023e-05, 0, 0, 0, 0, 7.75959e-16, 4.43917e-16, 5.14726e-16, 5.57596e-16, 1.47714e-05
+      Relative nonlinear residual (total system) after nonlinear iteration 3: 2.62023e-05
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.01324/0.1856/1.821e+08 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  48101, 363, 0.9925
+     Writing graphical output:        output-box_2pp/solution/solution-00015
+
+*** Timestep 16:  t=646921 years
+   Solving composition reactions... in 57 substep(s).
+   Solving temperature system... 11 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 12 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 9+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.0037319, 0, 0.137569, 0, 0, 0, 0, 8.22991e-16, 4.39589e-16, 5.27396e-16, 5.03062e-16, 0.0213936
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.137569
+
+   Solving temperature system... 10 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 11 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 5+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000161093, 0, 0.00200491, 0, 0, 0, 0, 8.50398e-16, 4.33549e-16, 5.33458e-16, 4.96833e-16, 0.000665496
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.00200491
+
+   Solving temperature system... 7 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 8 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 1+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 2.788e-06, 0, 2.30822e-05, 0, 0, 0, 0, 8.40914e-16, 4.28642e-16, 5.26238e-16, 5.00085e-16, 1.35491e-05
+      Relative nonlinear residual (total system) after nonlinear iteration 3: 2.30822e-05
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.01471/0.209/2.565e+08 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  46370, 366, 0.9922
+     Writing graphical output:        output-box_2pp/solution/solution-00016
+
+*** Timestep 17:  t=657864 years
+   Solving composition reactions... in 54 substep(s).
+   Solving temperature system... 11 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 12 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 9+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00341141, 0, 0.124658, 0, 0, 0, 0, 9.23917e-16, 4.01121e-16, 5.15795e-16, 3.86436e-16, 0.0188526
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.124658
+
+   Solving temperature system... 9 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 10 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 5+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000139552, 0, 0.00170217, 0, 0, 0, 0, 8.94331e-16, 3.79024e-16, 5.26377e-16, 3.93296e-16, 0.000557088
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.00170217
+
+   Solving temperature system... 7 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 8 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 1+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 2.68146e-06, 0, 1.7449e-05, 0, 0, 0, 0, 9.01734e-16, 3.97099e-16, 5.22096e-16, 4.03987e-16, 1.22761e-05
+      Relative nonlinear residual (total system) after nonlinear iteration 3: 1.7449e-05
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.01574/0.2368/3.31e+08 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  44629, 379, 0.9916
+     Writing graphical output:        output-box_2pp/solution/solution-00017
+
+*** Timestep 18:  t=668441 years
+   Solving composition reactions... in 52 substep(s).
+   Solving temperature system... 11 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 12 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 9+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00313378, 0, 0.109115, 0, 0, 0, 0, 1.05537e-15, 3.24897e-16, 5.50404e-16, 3.52973e-16, 0.0161585
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.109115
+
+   Solving temperature system... 9 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 10 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 5+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000121848, 0, 0.00140801, 0, 0, 0, 0, 1.05653e-15, 3.03568e-16, 5.66265e-16, 3.46741e-16, 0.000481846
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.00140801
+
+   Solving temperature system... 7 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 8 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 1+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 2.58952e-06, 0, 1.44566e-05, 0, 0, 0, 0, 1.07828e-15, 3.2821e-16, 5.53633e-16, 3.35271e-16, 1.16037e-05
+      Relative nonlinear residual (total system) after nonlinear iteration 3: 1.44566e-05
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.01848/0.2342/3.996e+08 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  43492, 364, 0.9917
+     Writing graphical output:        output-box_2pp/solution/solution-00018
+
+*** Timestep 19:  t=678817 years
+   Solving composition reactions... in 51 substep(s).
+   Solving temperature system... 11 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 11 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 9+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00357667, 0, 0.090041, 0, 0, 0, 0, 1.1619e-15, 5.36452e-16, 5.82143e-16, 4.1651e-16, 0.0168515
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.090041
+
+   Solving temperature system... 9 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 10 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 5+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000104702, 0, 0.00121972, 0, 0, 0, 0, 1.15548e-15, 5.40943e-16, 5.82299e-16, 4.20225e-16, 0.000390381
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.00121972
+
+   Solving temperature system... 7 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 8 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 1+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 2.56e-06, 0, 1.56684e-05, 0, 0, 0, 0, 1.16776e-15, 5.35303e-16, 5.88814e-16, 4.27361e-16, 1.19764e-05
+      Relative nonlinear residual (total system) after nonlinear iteration 3: 1.56684e-05
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.01995/0.2569/4.702e+08 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  42912, 368, 0.9915
+     Writing graphical output:        output-box_2pp/solution/solution-00019
+
+*** Timestep 20:  t=689126 years
+   Solving composition reactions... in 51 substep(s).
+   Solving temperature system... 10 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 11 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 9+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00374754, 0, 0.0824759, 0, 0, 0, 0, 1.30137e-15, 4.71936e-16, 5.42496e-16, 3.97105e-16, 0.0175888
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.0824759
+
+   Solving temperature system... 9 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 10 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 5+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 9.38853e-05, 0, 0.00100106, 0, 0, 0, 0, 1.30412e-15, 4.6993e-16, 5.37388e-16, 3.73709e-16, 0.000348378
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.00100106
+
+   Solving temperature system... 7 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 8 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 1+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 2.40363e-06, 0, 1.47345e-05, 0, 0, 0, 0, 1.31701e-15, 4.4898e-16, 5.29189e-16, 3.90928e-16, 1.14061e-05
+      Relative nonlinear residual (total system) after nonlinear iteration 3: 1.47345e-05
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.02035/0.2545/5.368e+08 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  42900, 380, 0.9912
+     Writing graphical output:        output-box_2pp/solution/solution-00020
+
+Number of active cells: 64 (on 4 levels)
+Number of degrees of freedom: 4,689 (578+273+578+81+289+289+289+289+289+289+289+289+289+289+289)
+
+*** Timestep 21:  t=699485 years
+   Solving composition reactions... in 51 substep(s).
+   Solving temperature system... 10 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 11 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 9+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00413569, 0, 0.0748141, 0, 0, 0, 0, 1.35074e-15, 6.78396e-16, 6.2701e-16, 5.02418e-16, 0.0189403
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.0748141
+
+   Solving temperature system... 9 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 5+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 8.46692e-05, 0, 0.000923879, 0, 0, 0, 0, 1.35214e-15, 6.80303e-16, 6.19801e-16, 4.98381e-16, 0.000307007
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.000923879
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.02001/0.2657/6.062e+08 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  42894, 386, 0.9911
+     Writing graphical output:        output-box_2pp/solution/solution-00021
+
+*** Timestep 22:  t=709996 years
+   Solving composition reactions... in 52 substep(s).
+   Solving temperature system... 10 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 11 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 8+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.0032502, 0, 0.0651469, 0, 0, 0, 0, 1.66756e-15, 5.98754e-16, 5.44852e-16, 3.81431e-16, 0.0167953
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.0651469
+
+   Solving temperature system... 8 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 5+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 7.59788e-05, 0, 0.000816466, 0, 0, 0, 0, 1.6551e-15, 5.6465e-16, 5.19496e-16, 3.73157e-16, 0.000272142
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.000816466
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.01898/0.2771/6.658e+08 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  43470, 386, 0.9912
+     Writing graphical output:        output-box_2pp/solution/solution-00022
+
+*** Timestep 23:  t=720748 years
+   Solving composition reactions... in 53 substep(s).
+   Solving temperature system... 10 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 11 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 8+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.0031912, 0, 0.0558204, 0, 0, 0, 0, 1.85513e-15, 6.66756e-16, 6.19115e-16, 4.84504e-16, 0.0163343
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.0558204
+
+   Solving temperature system... 8 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 5+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 7.35156e-05, 0, 0.000751527, 0, 0, 0, 0, 1.83113e-15, 6.82466e-16, 6.08053e-16, 5.07696e-16, 0.000275193
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.000751527
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.01712/0.2844/7.145e+08 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  44041, 391, 0.9912
+     Writing graphical output:        output-box_2pp/solution/solution-00023
+
+*** Timestep 24:  t=731823 years
+   Solving composition reactions... in 55 substep(s).
+   Solving temperature system... 10 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 11 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 8+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00316826, 0, 0.0549987, 0, 0, 0, 0, 2.00568e-15, 7.06449e-16, 5.40666e-16, 5.19338e-16, 0.0158374
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.0549987
+
+   Solving temperature system... 8 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 5+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 7.28746e-05, 0, 0.000701062, 0, 0, 0, 0, 1.98301e-15, 7.23326e-16, 5.35094e-16, 4.87964e-16, 0.00027704
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.000701062
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.01454/0.2896/7.609e+08 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  45202, 382, 0.9916
+     Writing graphical output:        output-box_2pp/solution/solution-00024
+
+*** Timestep 25:  t=743295 years
+   Solving composition reactions... in 57 substep(s).
+   Solving temperature system... 10 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 11 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 8+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00294749, 0, 0.0508818, 0, 0, 0, 0, 2.15234e-15, 6.15995e-16, 4.62675e-16, 4.21397e-16, 0.0153899
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.0508818
+
+   Solving temperature system... 9 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 5+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 7.49858e-05, 0, 0.000655577, 0, 0, 0, 0, 2.15924e-15, 6.31071e-16, 4.97472e-16, 4.17633e-16, 0.000291679
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.000655577
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.01192/0.2851/7.875e+08 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  46364, 372, 0.992
+     Writing graphical output:        output-box_2pp/solution/solution-00025
+
+*** Timestep 26:  t=755236 years
+   Solving composition reactions... in 59 substep(s).
+   Solving temperature system... 10 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 11 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 8+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00285785, 0, 0.0521316, 0, 0, 0, 0, 2.37629e-15, 7.01146e-16, 5.64241e-16, 4.62694e-16, 0.0153193
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.0521316
+
+   Solving temperature system... 9 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 5+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 7.57068e-05, 0, 0.000616421, 0, 0, 0, 0, 2.36125e-15, 7.02289e-16, 5.6184e-16, 4.59316e-16, 0.000294278
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.000616421
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.0097/0.2829/8.118e+08 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  47495, 393, 0.9918
+     Writing graphical output:        output-box_2pp/solution/solution-00026
+
+*** Timestep 27:  t=767718 years
+   Solving composition reactions... in 62 substep(s).
+   Solving temperature system... 10 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 11 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 8+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00280002, 0, 0.04683, 0, 0, 0, 0, 2.41155e-15, 9.71858e-16, 7.18209e-16, 6.92499e-16, 0.0160275
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.04683
+
+   Solving temperature system... 9 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 5+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 7.47952e-05, 0, 0.000571876, 0, 0, 0, 0, 2.40052e-15, 9.55833e-16, 7.05353e-16, 6.8927e-16, 0.000287083
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.000571876
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.007962/0.2849/8.398e+08 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  49231, 385, 0.9922
+     Writing graphical output:        output-box_2pp/solution/solution-00027
+
+*** Timestep 28:  t=780817 years
+   Solving composition reactions... in 65 substep(s).
+   Solving temperature system... 10 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 11 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 8+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00284478, 0, 0.0432276, 0, 0, 0, 0, 2.5472e-15, 9.34465e-16, 5.69901e-16, 6.35021e-16, 0.0179926
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.0432276
+
+   Solving temperature system... 8 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 5+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 7.41222e-05, 0, 0.000534033, 0, 0, 0, 0, 2.53793e-15, 9.3526e-16, 5.78915e-16, 6.18712e-16, 0.000286809
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.000534033
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.006699/0.2833/8.719e+08 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  50976, 368, 0.9928
+     Writing graphical output:        output-box_2pp/solution/solution-00028
+
+*** Timestep 29:  t=794610 years
+   Solving composition reactions... in 68 substep(s).
+   Solving temperature system... 10 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 11 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 8+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00305111, 0, 0.0425571, 0, 0, 0, 0, 2.74912e-15, 1.22485e-15, 8.00788e-16, 7.97281e-16, 0.0175506
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.0425571
+
+   Solving temperature system... 9 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 4+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 7.49006e-05, 0, 0.000495516, 0, 0, 0, 0, 2.73361e-15, 1.23094e-15, 8.22379e-16, 7.92282e-16, 0.000291466
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.000495516
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.005767/0.2774/8.968e+08 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  52683, 389, 0.9927
+     Writing graphical output:        output-box_2pp/solution/solution-00029
+
+*** Timestep 30:  t=809183 years
+   Solving composition reactions... in 72 substep(s).
+   Solving temperature system... 10 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 11 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 8+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.0031194, 0, 0.0410409, 0, 0, 0, 0, 2.98292e-15, 1.33245e-15, 9.01062e-16, 9.57024e-16, 0.0186274
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.0410409
+
+   Solving temperature system... 9 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 4+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 7.52649e-05, 0, 0.000432955, 0, 0, 0, 0, 3.00609e-15, 1.3294e-15, 9.08317e-16, 9.71263e-16, 0.000304294
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.000432955
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.006264/0.2687/9.172e+08 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  55008, 368, 0.9934
+     Writing graphical output:        output-box_2pp/solution/solution-00030
+
+Number of active cells: 64 (on 4 levels)
+Number of degrees of freedom: 4,689 (578+273+578+81+289+289+289+289+289+289+289+289+289+289+289)
+
+*** Timestep 31:  t=824626 years
+   Solving composition reactions... in 77 substep(s).
+   Solving temperature system... 10 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 11 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 8+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00339739, 0, 0.0378012, 0, 0, 0, 0, 3.28298e-15, 1.16359e-15, 6.73975e-16, 7.42377e-16, 0.0200068
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.0378012
+
+   Solving temperature system... 9 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 4+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 8.03304e-05, 0, 0.000379524, 0, 0, 0, 0, 3.27442e-15, 1.16966e-15, 6.88683e-16, 7.22924e-16, 0.000341095
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.000379524
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.008155/0.2671/9.396e+08 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  57877, 379, 0.9935
+     Writing graphical output:        output-box_2pp/solution/solution-00031
+
+*** Timestep 32:  t=841031 years
+   Solving composition reactions... in 82 substep(s).
+   Solving temperature system... 10 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 11 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 8+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00348637, 0, 0.035688, 0, 0, 0, 0, 3.65772e-15, 1.35193e-15, 9.77965e-16, 9.23035e-16, 0.020285
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.035688
+
+   Solving temperature system... 9 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 4+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 9.22014e-05, 0, 0.000366975, 0, 0, 0, 0, 3.65759e-15, 1.36124e-15, 9.8233e-16, 9.58187e-16, 0.000404533
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.000404533
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.01015/0.2701/9.568e+08 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  60771, 365, 0.994
+     Writing graphical output:        output-box_2pp/solution/solution-00032
+
+*** Timestep 33:  t=858491 years
+   Solving composition reactions... in 87 substep(s).
+   Solving temperature system... 10 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 11 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 8+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00365578, 0, 0.0347187, 0, 0, 0, 0, 3.90234e-15, 1.50552e-15, 1.03435e-15, 1.04711e-15, 0.0207143
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.0347187
+
+   Solving temperature system... 9 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 5+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000115459, 0, 0.00039525, 0, 0, 0, 0, 3.88905e-15, 1.52765e-15, 1.05911e-15, 1.0597e-15, 0.000523542
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.000523542
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.01288/0.2668/9.697e+08 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  63654, 362, 0.9943
+     Writing graphical output:        output-box_2pp/solution/solution-00033
+
+*** Timestep 34:  t=877094 years
+   Solving composition reactions... in 93 substep(s).
+   Solving temperature system... 10 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 12 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 8+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.0038486, 0, 0.0350956, 0, 0, 0, 0, 4.09408e-15, 1.63432e-15, 1.15589e-15, 1.17468e-15, 0.0215639
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.0350956
+
+   Solving temperature system... 9 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 5+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000149054, 0, 0.000450093, 0, 0, 0, 0, 4.07276e-15, 1.65377e-15, 1.15606e-15, 1.18774e-15, 0.000684413
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.000684413
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.01532/0.2593/9.795e+08 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  67111, 361, 0.9946
+     Writing graphical output:        output-box_2pp/solution/solution-00034
+
+*** Timestep 35:  t=896948 years
+   Solving composition reactions... in 99 substep(s).
+   Solving temperature system... 10 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 11 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 8+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00397021, 0, 0.036355, 0, 0, 0, 0, 4.1917e-15, 2.03613e-15, 1.42915e-15, 1.49891e-15, 0.0221749
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.036355
+
+   Solving temperature system... 9 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 5+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000167414, 0, 0.000549433, 0, 0, 0, 0, 4.19193e-15, 2.03774e-15, 1.45588e-15, 1.51203e-15, 0.0007981
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.0007981
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.01786/0.2407/9.908e+08 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  70560, 368, 0.9948
+     Writing graphical output:        output-box_2pp/solution/solution-00035
+
+*** Timestep 36:  t=918186 years
+   Solving composition reactions... in 106 substep(s).
+   Solving temperature system... 10 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 11 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 8+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00398016, 0, 0.0332678, 0, 0, 0, 0, 4.5362e-15, 1.97876e-15, 1.35754e-15, 1.48354e-15, 0.0220467
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.0332678
+
+   Solving temperature system... 9 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 5+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00016444, 0, 0.000576456, 0, 0, 0, 0, 4.55687e-15, 1.97606e-15, 1.37056e-15, 1.48668e-15, 0.000839537
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.000839537
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.01936/0.2217/9.993e+08 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  74619, 341, 0.9955
+     Writing graphical output:        output-box_2pp/solution/solution-00036
+
+*** Timestep 37:  t=940178 years
+   Solving composition reactions... in 109 substep(s).
+   Solving temperature system... 10 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 11 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 8+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00373697, 0, 0.0274553, 0, 0, 0, 0, 4.29606e-15, 2.26473e-15, 1.64085e-15, 1.6925e-15, 0.0209332
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.0274553
+
+   Solving temperature system... 8 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 5+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00015557, 0, 0.000526871, 0, 0, 0, 0, 4.29446e-15, 2.24428e-15, 1.64758e-15, 1.67842e-15, 0.00084657
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.00084657
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.01887/0.2138/1.006e+09 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  76356, 332, 0.9957
+     Writing graphical output:        output-box_2pp/solution/solution-00037
+
+*** Timestep 38:  t=963013 years
+   Solving composition reactions... in 114 substep(s).
+   Solving temperature system... 10 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 11 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 9+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00326241, 0, 0.0241784, 0, 0, 0, 0, 4.32352e-15, 2.34267e-15, 1.58108e-15, 1.67791e-15, 0.0199188
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.0241784
+
+   Solving temperature system... 8 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 5+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000139866, 0, 0.000439279, 0, 0, 0, 0, 4.34523e-15, 2.34518e-15, 1.61788e-15, 1.67175e-15, 0.000804003
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.000804003
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.01468/0.21/1.01e+09 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  79228, 340, 0.9957
+     Writing graphical output:        output-box_2pp/solution/solution-00038
+
+*** Timestep 39:  t=987196 years
+   Solving composition reactions... in 120 substep(s).
+   Solving temperature system... 10 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 10 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 9+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.00321758, 0, 0.0230495, 0, 0, 0, 0, 4.54049e-15, 2.4759e-15, 1.7532e-15, 1.79833e-15, 0.0205335
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.0230495
+
+   Solving temperature system... 8 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 9 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 5+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.000142725, 0, 0.000413208, 0, 0, 0, 0, 4.53912e-15, 2.4894e-15, 1.76455e-15, 1.7853e-15, 0.000864885
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.000864885
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.008921/0.204/1.012e+09 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  82687, 337, 0.9959
+     Writing graphical output:        output-box_2pp/solution/solution-00039
+
+*** Timestep 40:  t=1e+06 years
+   Solving composition reactions... in 64 substep(s).
+   Solving temperature system... 9 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 10 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 8+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 0.0013113, 0, 0.00942568, 0, 0, 0, 0, 2.45649e-15, 1.47687e-15, 1.04528e-15, 1.03473e-15, 0.00905121
+      Relative nonlinear residual (total system) after nonlinear iteration 1: 0.00942568
+
+   Solving temperature system... 7 iterations.
+   Skipping porosity composition solve because RHS is zero.
+   Solving peridotite system ... 8 iterations.
+   Skipping melt_SiO2 composition solve because RHS is zero.
+   Skipping melt_CaO composition solve because RHS is zero.
+   Skipping melt_MgO composition solve because RHS is zero.
+   Skipping melt_FeO composition solve because RHS is zero.
+   Solving residue_SiO2 system ... 0 iterations.
+   Solving residue_CaO system ... 0 iterations.
+   Solving residue_MgO system ... 0 iterations.
+   Solving residue_FeO system ... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 4+0 iterations.
+   Solving fluid velocity system... 1 iterations.
+      Relative nonlinear residuals (temperature, compositional fields, Stokes system): 3.37829e-05, 0, 9.80615e-05, 0, 0, 0, 0, 2.46673e-15, 1.47891e-15, 1.0465e-15, 1.03466e-15, 0.000217402
+      Relative nonlinear residual (total system) after nonlinear iteration 2: 0.000217402
+
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // -0.00813/0.2008/1.016e+09 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 38.5/38.5/1.386e+12 // 2.82/2.82/1.015e+11 // 50.5/50.5/1.818e+12 // 5.88/5.88/2.117e+11
+     Melt fraction min/total/max:     0, 0, 0
+     Cache hits / misses / hit rate:  50448, 320, 0.9937
+     Writing graphical output:        output-box_2pp/solution/solution-00040
+
+Number of active cells: 64 (on 4 levels)
+Number of degrees of freedom: 4,689 (578+273+578+81+289+289+289+289+289+289+289+289+289+289+289)
+
+Termination requested by criterion: end time
+
+
++----------------------------------------------+------------+------------+
+| Total wallclock time elapsed since start     |      75.8s |            |
+|                                              |            |            |
+| Section                          | no. calls |  wall time | % of total |
++----------------------------------+-----------+------------+------------+
+| Assemble Stokes system           |       135 |      1.77s |       2.3% |
+| Assemble composition system      |      1350 |      23.3s |        31% |
+| Assemble temperature system      |       135 |      2.28s |         3% |
+| Build Stokes preconditioner      |       135 |      1.83s |       2.4% |
+| Build composition preconditioner |       673 |      0.27s |      0.36% |
+| Build temperature preconditioner |       135 |    0.0551s |         0% |
+| Initialization                   |         1 |      2.51s |       3.3% |
+| Postprocessing                   |        41 |      20.6s |        27% |
+| Refine mesh structure, part 1    |         4 |    0.0301s |         0% |
+| Refine mesh structure, part 2    |         4 |   0.00373s |         0% |
+| Setup dof systems                |         5 |    0.0142s |         0% |
+| Setup initial conditions         |         1 |     0.113s |      0.15% |
+| Setup matrices                   |         4 |    0.0794s |       0.1% |
+| Solve Stokes system              |       135 |      2.26s |         3% |
+| Solve composition reactions      |        40 |      17.6s |        23% |
+| Solve composition system         |       673 |     0.359s |      0.47% |
+| Solve temperature system         |       135 |    0.0821s |      0.11% |
++----------------------------------+-----------+------------+------------+
+
+-----------------------------------------------------------------------------
+-- For information on how to cite ASPECT, see:
+--   https://aspect.geodynamics.org/citing.html?ver=2.2.0-pre&melt=1&sha=04ad7b5&src=code
+-----------------------------------------------------------------------------

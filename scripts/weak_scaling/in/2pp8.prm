@@ -5,7 +5,7 @@
 set Additional shared libraries            = ./libperplexaspect.so
 set Adiabatic surface temperature          = 2000
 set Dimension                              = 2
-set End time                               = 3e6
+set End time                               = 1e6
 set Maximum time step                      = 1e5
 set Output directory                       = output-box_2pp
 
@@ -16,6 +16,13 @@ set Nonlinear solver scheme    = iterated Advection and Stokes
 set Max nonlinear iterations   = 10
 set Nonlinear solver tolerance = 1e-3
 set Use operator splitting     = true
+
+# subsection Discretization
+#   subsection Stabilization parameters
+#     set beta = 0.5
+#     set cR = 1
+#   end
+# end
 
 subsection Solver parameters
   subsection Operator splitting parameters
@@ -69,8 +76,9 @@ subsection Geometry model
 
   subsection Box
     set X extent      = 300000
-    set X repetitions = 1
+    set X repetitions = 4
     set Y extent      = 120000
+    set Y repetitions = 2
   end
 end
 
@@ -121,7 +129,7 @@ end
 #################### Mesh refinement ####################
 
 subsection Mesh refinement
-  set Initial adaptive refinement = 1
+  set Initial adaptive refinement = 0
   set Initial global refinement   = 3
   set Strategy                    = composition threshold, minimum refinement function
 
@@ -130,7 +138,7 @@ subsection Mesh refinement
   end
 
   subsection Composition threshold
-    set Compositional field thresholds = 1e-4, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0
+    set Compositional field thresholds = 1e-2, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0
   end
 end
 
@@ -138,12 +146,12 @@ subsection Perple_X settings
   set Data directory   = ../../data/perplex/simple
   set Problem filename = simple.dat
   set Cache capacity   = 1000
-  set Cache tolerance  = 1e-4
+  set Cache tolerance  = 1e-3
 end
 
 subsection Postprocess
   set List of postprocessors = \
-    composition statistics, load balance statistics, melt statistics, perplex cache statistics, visualization
+    composition statistics, melt statistics, perplex cache statistics, visualization
 
   subsection Visualization
     set Time between graphical output = 1e3

@@ -1,0 +1,404 @@
+-----------------------------------------------------------------------------
+-- This is ASPECT, the Advanced Solver for Problems in Earth's ConvecTion.
+--     . version 2.2.0-pre (master, 04ad7b5)
+--     . using deal.II 9.2.0
+--     .       with 32 bit indices and vectorization level 1 (128 bits)
+--     . using Trilinos 12.18.1
+--     . using p4est 2.2.0
+--     . running in OPTIMIZED mode
+--     . running with 7 MPI processes
+-----------------------------------------------------------------------------
+
+Loading shared library <./libperplexaspect.so>
+
+-----------------------------------------------------------------------------
+-- For information on how to cite ASPECT, see:
+--   https://aspect.geodynamics.org/citing.html?ver=2.2.0-pre&particles=1&sha=04ad7b5&src=code
+-----------------------------------------------------------------------------
+Number of active cells: 128 (on 4 levels)
+Number of degrees of freedom: 4,641 (1,122+153+561+561+561+561+561+561)
+
+*** Timestep 0:  t=0 years
+   Solving temperature system... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 17+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0
+     Cache hits / misses / hit rate:  108, 892, 0.108
+     Writing particle output:         output-box_batch/particles/particles-00000
+     Writing graphical output:        output-box_batch/solution/solution-00000
+
+*** Timestep 1:  t=100000 years
+   Solving temperature system... 10 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 20+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0
+     Cache hits / misses / hit rate:  956, 44, 0.956
+     Writing particle output:         output-box_batch/particles/particles-00001
+     Writing graphical output:        output-box_batch/solution/solution-00001
+
+*** Timestep 2:  t=200000 years
+   Solving temperature system... 11 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 20+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0
+     Cache hits / misses / hit rate:  688, 312, 0.688
+     Writing particle output:         output-box_batch/particles/particles-00002
+     Writing graphical output:        output-box_batch/solution/solution-00002
+
+*** Timestep 3:  t=300000 years
+   Solving temperature system... 11 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 20+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0
+     Cache hits / misses / hit rate:  342, 658, 0.342
+     Writing particle output:         output-box_batch/particles/particles-00003
+     Writing graphical output:        output-box_batch/solution/solution-00003
+
+*** Timestep 4:  t=400000 years
+   Solving temperature system... 11 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 20+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0
+     Cache hits / misses / hit rate:  278, 722, 0.278
+     Writing particle output:         output-box_batch/particles/particles-00004
+     Writing graphical output:        output-box_batch/solution/solution-00004
+
+*** Timestep 5:  t=500000 years
+   Solving temperature system... 12 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 20+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0
+     Cache hits / misses / hit rate:  266, 734, 0.266
+     Writing particle output:         output-box_batch/particles/particles-00005
+     Writing graphical output:        output-box_batch/solution/solution-00005
+
+*** Timestep 6:  t=600000 years
+   Solving temperature system... 14 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 21+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0
+     Cache hits / misses / hit rate:  238, 762, 0.238
+     Writing particle output:         output-box_batch/particles/particles-00006
+     Writing graphical output:        output-box_batch/solution/solution-00006
+
+*** Timestep 7:  t=677115 years
+   Solving temperature system... 18 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 20+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0
+     Cache hits / misses / hit rate:  246, 754, 0.246
+     Writing particle output:         output-box_batch/particles/particles-00007
+     Writing graphical output:        output-box_batch/solution/solution-00007
+
+*** Timestep 8:  t=717973 years
+   Solving temperature system... 19 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 20+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0
+     Cache hits / misses / hit rate:  267, 733, 0.267
+     Writing particle output:         output-box_batch/particles/particles-00008
+     Writing graphical output:        output-box_batch/solution/solution-00008
+
+*** Timestep 9:  t=746774 years
+   Solving temperature system... 19 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 19+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0
+     Cache hits / misses / hit rate:  288, 712, 0.288
+     Writing particle output:         output-box_batch/particles/particles-00009
+     Writing graphical output:        output-box_batch/solution/solution-00009
+
+*** Timestep 10:  t=768421 years
+   Solving temperature system... 19 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 19+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0
+     Cache hits / misses / hit rate:  291, 709, 0.291
+     Writing particle output:         output-box_batch/particles/particles-00010
+     Writing graphical output:        output-box_batch/solution/solution-00010
+
+*** Timestep 11:  t=785990 years
+   Solving temperature system... 19 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 19+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0
+     Cache hits / misses / hit rate:  270, 730, 0.27
+     Writing particle output:         output-box_batch/particles/particles-00011
+     Writing graphical output:        output-box_batch/solution/solution-00011
+
+*** Timestep 12:  t=800992 years
+   Solving temperature system... 18 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 18+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0
+     Cache hits / misses / hit rate:  290, 710, 0.29
+     Writing particle output:         output-box_batch/particles/particles-00012
+     Writing graphical output:        output-box_batch/solution/solution-00012
+
+*** Timestep 13:  t=814284 years
+   Solving temperature system... 18 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 18+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0
+     Cache hits / misses / hit rate:  296, 704, 0.296
+     Writing particle output:         output-box_batch/particles/particles-00013
+     Writing graphical output:        output-box_batch/solution/solution-00013
+
+*** Timestep 14:  t=826391 years
+   Solving temperature system... 18 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 18+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0
+     Cache hits / misses / hit rate:  294, 706, 0.294
+     Writing particle output:         output-box_batch/particles/particles-00014
+     Writing graphical output:        output-box_batch/solution/solution-00014
+
+*** Timestep 15:  t=837615 years
+   Solving temperature system... 18 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 18+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0
+     Cache hits / misses / hit rate:  299, 701, 0.299
+     Writing particle output:         output-box_batch/particles/particles-00015
+     Writing graphical output:        output-box_batch/solution/solution-00015
+
+*** Timestep 16:  t=848195 years
+   Solving temperature system... 18 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 18+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0
+     Cache hits / misses / hit rate:  276, 724, 0.276
+     Writing particle output:         output-box_batch/particles/particles-00016
+     Writing graphical output:        output-box_batch/solution/solution-00016
+
+*** Timestep 17:  t=858328 years
+   Solving temperature system... 18 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 18+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0
+     Cache hits / misses / hit rate:  306, 694, 0.306
+     Writing particle output:         output-box_batch/particles/particles-00017
+     Writing graphical output:        output-box_batch/solution/solution-00017
+
+*** Timestep 18:  t=868164 years
+   Solving temperature system... 18 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 18+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0/0 // 0/0/0 // 0/0/0 // 0/0/0 // 0/0/0
+     Cache hits / misses / hit rate:  302, 698, 0.302
+     Writing particle output:         output-box_batch/particles/particles-00018
+     Writing graphical output:        output-box_batch/solution/solution-00018
+
+*** Timestep 19:  t=877821 years
+   Solving temperature system... 18 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 18+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0.007849/2.208e+06 // 0/0.2028/5.704e+07 // 0/0.06449/1.814e+07 // 0/0.1088/3.059e+07 // 0/0.03983/1.12e+07
+     Cache hits / misses / hit rate:  282, 718, 0.282
+     Writing particle output:         output-box_batch/particles/particles-00019
+     Writing graphical output:        output-box_batch/solution/solution-00019
+
+*** Timestep 20:  t=887398 years
+   Solving temperature system... 18 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 18+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0.02318/8.074e+06 // 0/0.6685/2.253e+08 // 0/0.2108/7.114e+07 // 0/0.3468/1.176e+08 // 0/0.1282/4.338e+07
+     Cache hits / misses / hit rate:  283, 717, 0.283
+     Writing particle output:         output-box_batch/particles/particles-00020
+     Writing graphical output:        output-box_batch/solution/solution-00020
+
+*** Timestep 21:  t=896985 years
+   Solving temperature system... 18 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 18+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0.07677/2.607e+07 // 0/1.31/5.552e+08 // 0/0.3862/1.663e+08 // 0/0.651/2.731e+08 // 0/0.2308/9.907e+07
+     Cache hits / misses / hit rate:  289, 711, 0.289
+     Writing particle output:         output-box_batch/particles/particles-00021
+     Writing graphical output:        output-box_batch/solution/solution-00021
+
+*** Timestep 22:  t=906661 years
+   Solving temperature system... 17 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 18+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0.06893/2.838e+07 // 0/1.046/4.487e+08 // 0/0.2961/1.278e+08 // 0/0.5216/2.195e+08 // 0/0.1813/7.693e+07
+     Cache hits / misses / hit rate:  294, 706, 0.294
+     Writing particle output:         output-box_batch/particles/particles-00022
+     Writing graphical output:        output-box_batch/solution/solution-00022
+
+*** Timestep 23:  t=916498 years
+   Solving temperature system... 17 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 18+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0.1023/5.112e+07 // 0/1.253/5.892e+08 // 0/0.3345/1.535e+08 // 0/0.6139/2.839e+08 // 0/0.2068/9.467e+07
+     Cache hits / misses / hit rate:  269, 731, 0.269
+     Writing particle output:         output-box_batch/particles/particles-00023
+     Writing graphical output:        output-box_batch/solution/solution-00023
+
+*** Timestep 24:  t=926564 years
+   Solving temperature system... 17 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 18+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0.1204/6.671e+07 // 0/1.335/7.688e+08 // 0/0.3445/1.986e+08 // 0/0.6479/3.592e+08 // 0/0.2145/1.203e+08
+     Cache hits / misses / hit rate:  281, 719, 0.281
+     Writing particle output:         output-box_batch/particles/particles-00024
+     Writing graphical output:        output-box_batch/solution/solution-00024
+
+*** Timestep 25:  t=936924 years
+   Solving temperature system... 17 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 18+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0.09431/4.749e+07 // 0/0.9845/5.977e+08 // 0/0.2404/1.555e+08 // 0/0.4434/2.772e+08 // 0/0.1455/9.42e+07
+     Cache hits / misses / hit rate:  270, 730, 0.27
+     Writing particle output:         output-box_batch/particles/particles-00025
+     Writing graphical output:        output-box_batch/solution/solution-00025
+
+*** Timestep 26:  t=947645 years
+   Solving temperature system... 17 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 18+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0.09402/6.749e+07 // 0/1.218/8.356e+08 // 0/0.312/2.168e+08 // 0/0.5153/3.687e+08 // 0/0.1772/1.256e+08
+     Cache hits / misses / hit rate:  269, 731, 0.269
+     Writing particle output:         output-box_batch/particles/particles-00026
+     Writing graphical output:        output-box_batch/solution/solution-00026
+
+*** Timestep 27:  t=958796 years
+   Solving temperature system... 17 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 18+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0.1997/1.103e+08 // 0/2.02/1.313e+09 // 0/0.4783/3.26e+08 // 0/0.8178/5.308e+08 // 0/0.2722/1.823e+08
+     Cache hits / misses / hit rate:  288, 712, 0.288
+     Writing particle output:         output-box_batch/particles/particles-00027
+     Writing graphical output:        output-box_batch/solution/solution-00027
+
+*** Timestep 28:  t=970460 years
+   Solving temperature system... 17 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 18+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0.2361/1.072e+08 // 0/2.076/1.229e+09 // 0/0.4537/2.957e+08 // 0/0.8522/5.028e+08 // 0/0.2735/1.711e+08
+     Cache hits / misses / hit rate:  278, 722, 0.278
+     Writing particle output:         output-box_batch/particles/particles-00028
+     Writing graphical output:        output-box_batch/solution/solution-00028
+
+*** Timestep 29:  t=982067 years
+   Solving temperature system... 17 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 18+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0.2192/1.128e+08 // 0/2.06/1.196e+09 // 0/0.4557/2.753e+08 // 0/0.8632/4.822e+08 // 0/0.2819/1.619e+08
+     Cache hits / misses / hit rate:  282, 718, 0.282
+     Writing particle output:         output-box_batch/particles/particles-00029
+     Writing graphical output:        output-box_batch/solution/solution-00029
+
+*** Timestep 30:  t=993711 years
+   Solving temperature system... 17 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 18+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0.2453/1.219e+08 // 0/2.086/1.173e+09 // 0/0.4456/2.621e+08 // 0/0.8743/4.697e+08 // 0/0.2792/1.547e+08
+     Cache hits / misses / hit rate:  284, 716, 0.284
+     Writing particle output:         output-box_batch/particles/particles-00030
+     Writing graphical output:        output-box_batch/solution/solution-00030
+
+*** Timestep 31:  t=1e+06 years
+   Solving temperature system... 15 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 17+0 iterations.
+
+   Postprocessing:
+     Compositions min/max/mass:       0/0.1647/1.059e+08 // 0/1.325/9.754e+08 // 0/0.2708/2.121e+08 // 0/0.5509/3.814e+08 // 0/0.1734/1.246e+08
+     Cache hits / misses / hit rate:  299, 701, 0.299
+     Writing particle output:         output-box_batch/particles/particles-00031
+     Writing graphical output:        output-box_batch/solution/solution-00031
+
+Termination requested by criterion: end time
+
+
++----------------------------------------------+------------+------------+
+| Total wallclock time elapsed since start     |      13.2s |            |
+|                                              |            |            |
+| Section                          | no. calls |  wall time | % of total |
++----------------------------------+-----------+------------+------------+
+| Assemble Stokes system           |        32 |     0.195s |       1.5% |
+| Assemble temperature system      |        32 |     0.232s |       1.8% |
+| Build Stokes preconditioner      |        32 |     0.427s |       3.2% |
+| Build temperature preconditioner |        32 |    0.0129s |         0% |
+| Initialization                   |         1 |     0.694s |       5.3% |
+| Particles: Advect                |        64 |    0.0101s |         0% |
+| Particles: Generate              |         1 |  0.000234s |         0% |
+| Particles: Initialization        |         1 |     0.526s |         4% |
+| Particles: Initialize properties |         1 |  0.000152s |         0% |
+| Particles: Interpolate           |       160 |    0.0905s |      0.69% |
+| Particles: Sort                  |        64 |   0.00796s |         0% |
+| Particles: Update properties     |        32 |      10.5s |        79% |
+| Postprocessing                   |        32 |     0.323s |       2.4% |
+| Setup dof systems                |         1 |   0.00941s |         0% |
+| Setup initial conditions         |         1 |    0.0172s |      0.13% |
+| Setup matrices                   |         1 |     0.045s |      0.34% |
+| Solve Stokes system              |        32 |     0.476s |       3.6% |
+| Solve temperature system         |        32 |    0.0834s |      0.63% |
++----------------------------------+-----------+------------+------------+
+
+-----------------------------------------------------------------------------
+-- For information on how to cite ASPECT, see:
+--   https://aspect.geodynamics.org/citing.html?ver=2.2.0-pre&particles=1&sha=04ad7b5&src=code
+-----------------------------------------------------------------------------

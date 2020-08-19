@@ -1,0 +1,22 @@
+-----------------------------------------------------------------------------
+-- This is ASPECT, the Advanced Solver for Problems in Earth's ConvecTion.
+--     . version 2.2.0-pre (master, 04ad7b5)
+--     . using deal.II 9.2.0
+--     .       with 32 bit indices and vectorization level 1 (128 bits)
+--     . using Trilinos 12.18.1
+--     . using p4est 2.2.0
+--     . running in OPTIMIZED mode
+--     . running with 12 MPI processes
+-----------------------------------------------------------------------------
+
+Loading shared library <./libperplexaspect.so>
+
+-----------------------------------------------------------------------------
+-- For information on how to cite ASPECT, see:
+--   https://aspect.geodynamics.org/citing.html?ver=2.2.0-pre&particles=1&sha=04ad7b5&src=code
+-----------------------------------------------------------------------------
+Number of active cells: 768 (on 4 levels)
+Number of degrees of freedom: 26,305 (6,370+825+3,185+3,185+3,185+3,185+3,185+3,185)
+
+*** Timestep 0:  t=0 years
+   Solving temperature system... 0 iterations.

@@ -1,3 +1,0 @@
-# Uses the KLB-1 dataset
-# Plots melt composition proportions and melt amount (on other side of plot) against time
-# Uses pie charts or similar for melt composition because changes are discrete.
