@@ -94,7 +94,7 @@ subsection Initial temperature model
   set Model name = function
 
   subsection Function
-    set Function constants  = h=120000, T_bottom=1773, T_top=293, dT=30, r=10000
+    set Function constants  = h=120000, T_bottom=1823, T_top=323, dT=30, r=10000
     set Function expression = \
       T_bottom - (T_bottom-T_top) * y / h \
       + if((x-40000)*(x-40000) + y*y < r*r, dT, 0) \
@@ -121,7 +121,6 @@ end
 #################### Mesh refinement ####################
 
 subsection Mesh refinement
-  set Initial adaptive refinement = 1
   set Initial global refinement   = 3
   set Strategy                    = composition threshold, minimum refinement function
 
@@ -130,7 +129,7 @@ subsection Mesh refinement
   end
 
   subsection Composition threshold
-    set Compositional field thresholds = 1e-4, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0
+    set Compositional field thresholds = 1e-6, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0
   end
 end
 
@@ -142,11 +141,6 @@ subsection Perple_X settings
 end
 
 subsection Postprocess
-  set List of postprocessors = \
-    composition statistics, load balance statistics, melt statistics, perplex cache statistics, visualization
-
-  subsection Visualization
-    set Time between graphical output = 1e3
-  end
+  set List of postprocessors = load balance statistics
 end
 

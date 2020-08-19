@@ -1,5 +1,6 @@
 # ASPECT output files
-output-*/
+*.gnuplot
+*.pvd
 
 # Paraview files
 *.pvsm

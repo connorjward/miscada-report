@@ -1,0 +1,491 @@
+-----------------------------------------------------------------------------
+-- This is ASPECT, the Advanced Solver for Problems in Earth's ConvecTion.
+--     . version 2.2.0-pre (master, 04ad7b5)
+--     . using deal.II 9.2.0
+--     .       with 32 bit indices and vectorization level 1 (128 bits)
+--     . using Trilinos 12.18.1
+--     . using p4est 2.2.0
+--     . running in OPTIMIZED mode
+--     . running with 7 MPI processes
+-----------------------------------------------------------------------------
+
+Loading shared library <./libperplexaspect.so>
+
+-----------------------------------------------------------------------------
+-- For information on how to cite ASPECT, see:
+--   https://aspect.geodynamics.org/citing.html?ver=2.2.0-pre&particles=1&sha=04ad7b5&src=code
+-----------------------------------------------------------------------------
+Number of active cells: 768 (on 5 levels)
+Number of degrees of freedom: 10,436 (6,402+833+3,201)
+
+*** Timestep 0:  t=0 years
+   Solving temperature system... 0 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 39+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00000
+
+*** Timestep 1:  t=100000 years
+   Solving temperature system... 11 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 38+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00001
+
+*** Timestep 2:  t=200000 years
+   Solving temperature system... 9 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 38+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00002
+
+*** Timestep 3:  t=300000 years
+   Solving temperature system... 9 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 39+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00003
+
+*** Timestep 4:  t=400000 years
+   Solving temperature system... 9 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 40+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00004
+
+*** Timestep 5:  t=500000 years
+   Solving temperature system... 10 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 40+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00005
+
+*** Timestep 6:  t=600000 years
+   Solving temperature system... 12 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 41+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00006
+
+*** Timestep 7:  t=669571 years
+   Solving temperature system... 14 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 40+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00007
+
+*** Timestep 8:  t=707454 years
+   Solving temperature system... 15 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 39+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00008
+
+*** Timestep 9:  t=733757 years
+   Solving temperature system... 15 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 37+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00009
+
+*** Timestep 10:  t=753913 years
+   Solving temperature system... 16 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 36+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00010
+
+*** Timestep 11:  t=770274 years
+   Solving temperature system... 16 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 36+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00011
+
+*** Timestep 12:  t=784087 years
+   Solving temperature system... 16 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 35+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00012
+
+*** Timestep 13:  t=796075 years
+   Solving temperature system... 16 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 35+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00013
+
+*** Timestep 14:  t=806697 years
+   Solving temperature system... 16 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 34+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00014
+
+*** Timestep 15:  t=816260 years
+   Solving temperature system... 16 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 34+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00015
+
+*** Timestep 16:  t=824957 years
+   Solving temperature system... 16 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 33+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00016
+
+*** Timestep 17:  t=832887 years
+   Solving temperature system... 16 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 33+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00017
+
+*** Timestep 18:  t=840197 years
+   Solving temperature system... 16 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 33+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00018
+
+*** Timestep 19:  t=846994 years
+   Solving temperature system... 16 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 32+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00019
+
+*** Timestep 20:  t=853366 years
+   Solving temperature system... 16 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 32+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00020
+
+*** Timestep 21:  t=859378 years
+   Solving temperature system... 16 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 31+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00021
+
+*** Timestep 22:  t=865079 years
+   Solving temperature system... 16 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 31+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00022
+
+*** Timestep 23:  t=870511 years
+   Solving temperature system... 16 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 30+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00023
+
+*** Timestep 24:  t=875710 years
+   Solving temperature system... 16 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 30+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00024
+
+*** Timestep 25:  t=880710 years
+   Solving temperature system... 16 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 30+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00025
+
+*** Timestep 26:  t=885537 years
+   Solving temperature system... 16 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 30+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00026
+
+*** Timestep 27:  t=890215 years
+   Solving temperature system... 16 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 30+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00027
+
+*** Timestep 28:  t=894762 years
+   Solving temperature system... 16 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 30+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00028
+
+*** Timestep 29:  t=899196 years
+   Solving temperature system... 16 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 30+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00029
+
+*** Timestep 30:  t=903531 years
+   Solving temperature system... 16 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 30+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00030
+
+*** Timestep 31:  t=907781 years
+   Solving temperature system... 16 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 30+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00031
+
+*** Timestep 32:  t=911957 years
+   Solving temperature system... 16 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 30+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00032
+
+*** Timestep 33:  t=916071 years
+   Solving temperature system... 16 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 30+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00033
+
+*** Timestep 34:  t=920130 years
+   Solving temperature system... 16 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 30+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00034
+
+*** Timestep 35:  t=924145 years
+   Solving temperature system... 16 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 30+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00035
+
+*** Timestep 36:  t=928124 years
+   Solving temperature system... 16 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 30+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00036
+
+*** Timestep 37:  t=932073 years
+   Solving temperature system... 15 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 30+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00037
+
+*** Timestep 38:  t=936001 years
+   Solving temperature system... 15 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 30+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00038
+
+*** Timestep 39:  t=939913 years
+   Solving temperature system... 15 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 29+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00039
+
+*** Timestep 40:  t=943817 years
+   Solving temperature system... 15 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 29+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00040
+
+*** Timestep 41:  t=947718 years
+   Solving temperature system... 15 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 29+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00041
+
+*** Timestep 42:  t=951620 years
+   Solving temperature system... 15 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 29+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00042
+
+*** Timestep 43:  t=955532 years
+   Solving temperature system... 15 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 29+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00043
+
+*** Timestep 44:  t=959457 years
+   Solving temperature system... 15 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 29+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00044
+
+*** Timestep 45:  t=963403 years
+   Solving temperature system... 15 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 28+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00045
+
+*** Timestep 46:  t=967374 years
+   Solving temperature system... 15 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 28+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00046
+
+*** Timestep 47:  t=971377 years
+   Solving temperature system... 15 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 28+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00047
+
+*** Timestep 48:  t=975416 years
+   Solving temperature system... 15 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 29+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00048
+
+*** Timestep 49:  t=979499 years
+   Solving temperature system... 15 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 29+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00049
+
+*** Timestep 50:  t=983629 years
+   Solving temperature system... 15 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 29+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00050
+
+*** Timestep 51:  t=987808 years
+   Solving temperature system... 15 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 29+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00051
+
+*** Timestep 52:  t=992040 years
+   Solving temperature system... 15 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 29+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00052
+
+*** Timestep 53:  t=996333 years
+   Solving temperature system... 15 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 29+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00053
+
+*** Timestep 54:  t=1e+06 years
+   Solving temperature system... 14 iterations.
+   Rebuilding Stokes preconditioner...
+   Solving Stokes system... 29+0 iterations.
+
+   Postprocessing:
+     Writing particle output: output/particles/particles-00054
+
+Termination requested by criterion: end time
+
+
++----------------------------------------------+------------+------------+
+| Total wallclock time elapsed since start     |        57s |            |
+|                                              |            |            |
+| Section                          | no. calls |  wall time | % of total |
++----------------------------------+-----------+------------+------------+
+| Assemble Stokes system           |        55 |     0.361s |      0.63% |
+| Assemble temperature system      |        55 |     0.433s |      0.76% |
+| Build Stokes preconditioner      |        55 |     0.776s |       1.4% |
+| Build temperature preconditioner |        55 |     0.062s |      0.11% |
+| Initialization                   |         1 |     0.697s |       1.2% |
+| Particles: Advect                |       110 |    0.0536s |         0% |
+| Particles: Generate              |         1 |  0.000385s |         0% |
+| Particles: Initialization        |         1 |     0.523s |      0.92% |
+| Particles: Initialize properties |         1 |  0.000199s |         0% |
+| Particles: Sort                  |       110 |    0.0291s |         0% |
+| Particles: Update properties     |        55 |      52.1s |        92% |
+| Postprocessing                   |        55 |     0.439s |      0.77% |
+| Setup dof systems                |         1 |   0.00895s |         0% |
+| Setup initial conditions         |         1 |   0.00707s |         0% |
+| Setup matrices                   |         1 |    0.0139s |         0% |
+| Solve Stokes system              |        55 |      1.73s |         3% |
+| Solve temperature system         |        55 |     0.115s |       0.2% |
++----------------------------------+-----------+------------+------------+
+
+-----------------------------------------------------------------------------
+-- For information on how to cite ASPECT, see:
+--   https://aspect.geodynamics.org/citing.html?ver=2.2.0-pre&particles=1&sha=04ad7b5&src=code
+-----------------------------------------------------------------------------
