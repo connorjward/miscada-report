@@ -8,11 +8,11 @@ import pandas as pd
 import myutils.mpl
 
 
-FIN_CONTROL = ["data/control{}.txt".format(n) for n in range(1, 13)]
 FIN_TEST = ["data/test{}.txt".format(n) for n in range(1, 13)]
+FIN_CTRL = ["data/ctrl{}.txt".format(n) for n in range(1, 13)]
 
-FOUT_PDF = "../../../figures/weak_scaling/batch.pdf"
-FOUT_PGF = "../../../figures/weak_scaling/batch.pgf"
+FOUT_PDF = "../../../figures/weak_scaling/particle_property.pdf"
+FOUT_PGF = "../../../figures/weak_scaling/particle_property.pgf"
 
 FIG_WIDTH = 0.45 * 681.159  # in pts
 
@@ -22,7 +22,8 @@ def parse_file(fname):
         s = f.read()
 
     match1 = re.search("running with (\d+) MPI process", s)
-    match2 = re.search("Total wallclock time elapsed since start\s+\|\s+(\S+)s", s)
+    match2 = re.search("Total wallclock time elapsed since start"
+                       "\s+\|\s+(\S+)s", s)
 
     nproc = int(match1.group(1))
     time = float(match2.group(1))
@@ -45,15 +46,15 @@ fig,ax = plt.subplots(figsize=myutils.mpl.figsize_from_width(FIG_WIDTH),
 
 xs = np.empty(12)
 ys = np.empty(12)
-for i,fname in enumerate(FIN_CONTROL):
+for i,fname in enumerate(FIN_TEST):
     xs[i],ys[i] = parse_file(fname)
-ax.plot(xs, ys[0]/ys, label="Control")
+ax.plot(xs, ys[0]/ys, label="With Perple\_X")
 
 xs = np.empty(12)
 ys = np.empty(12)
-for i,fname in enumerate(FIN_TEST):
+for i,fname in enumerate(FIN_CTRL):
     xs[i],ys[i] = parse_file(fname)
-ax.plot(xs, ys[0]/ys, label="Test")
+ax.plot(xs, ys[0]/ys, label="Without Perple\_X")
 
 ax.set_xlabel("Number of processors")
 ax.set_ylabel("Speedup")
@@ -61,5 +62,4 @@ ax.legend(frameon=False)
 
 plt.savefig(FOUT_PDF, bbox_inches="tight")
 plt.savefig(FOUT_PGF, bbox_inches="tight")
-
 
