@@ -3,8 +3,9 @@
 set Additional shared libraries            = ./libperplexaspect.so
 set Adiabatic surface temperature          = 2000
 set Dimension                              = 2
-set End time                               = 3e6
+set End time                               = 1e6
 set Maximum time step                      = 1e5
+set Use years in output instead of seconds = true
 
 
 #################### Solver parameters #################### 
@@ -69,7 +70,7 @@ subsection Melt settings
 end
 
 
-#################### Geometry model ####################
+#################### Model geometry ####################
 
 subsection Geometry model
   set Model name = box
@@ -101,7 +102,7 @@ subsection Initial temperature model
 end
 
 
-#################### Gravity and material model ####################
+#################### Gravity and material properties ####################
 
 subsection Gravity model
   set Model name = vertical
@@ -115,10 +116,10 @@ subsection Material model
   set Model name = perplex melt simple
 
   subsection Melt simple
-    set Reference bulk viscosity                  = 1e18
-    set Reference shear viscosity                 = 1e18
-    set Thermal viscosity exponent                = 4
-    set Thermal bulk viscosity exponent           = 4
+    set Reference bulk viscosity        = 1e18
+    set Reference shear viscosity       = 1e18
+    set Thermal viscosity exponent      = 4
+    set Thermal bulk viscosity exponent = 4
   end
 end
 
@@ -156,6 +157,6 @@ end
 #################### Postprocessing ####################
 
 subsection Postprocess
-  set List of postprocessors = perplex cache statistics
+  set List of postprocessors = load balance statistics, perplex cache statistics
 end
 

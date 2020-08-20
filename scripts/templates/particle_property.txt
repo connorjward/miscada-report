@@ -3,7 +3,7 @@
 set Additional shared libraries            = ./libperplexaspect.so
 set Adiabatic surface temperature          = 2000
 set Dimension                              = 2
-set End time                               = 3e6
+set End time                               = 1e6
 set Maximum time step                      = 1e5
 set Use years in output instead of seconds = true
 
@@ -39,7 +39,7 @@ subsection Initial temperature model
   set Model name = function
 
   subsection Function
-    set Function constants  = h=120000, T_bottom=1873, T_top=293, dT=30, r=10000
+    set Function constants  = h=120000, T_bottom=1773, T_top=293, dT=30, r=10000
     set Function expression = \
       T_bottom - (T_bottom-T_top) * y / h \
       + if((x-40000)*(x-40000) + y*y < r*r, dT, 0) \
@@ -62,12 +62,15 @@ subsection Material model
   set Model name = melt simple
 
   subsection Melt simple
-    set Reference bulk viscosity = 1e18
-    set Reference shear viscosity = 1e18
-    set Thermal viscosity exponent = 4
+    set Reference bulk viscosity        = 1e18
+    set Reference shear viscosity       = 1e18
+    set Thermal viscosity exponent      = 4
     set Thermal bulk viscosity exponent = 4
   end
 end
+
+
+#################### Mesh refinement ####################
 
 subsection Mesh refinement
   set Initial adaptive refinement        = 0
