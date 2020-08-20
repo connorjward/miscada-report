@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export CACHE_TOL=0.0001
+. ../../templates/material_model_defaults.sh
 
 for n in {1..12}; do
   export N_REPS=$n

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export N_PARTICLES=1000
+. ../../templates/particle_property_defaults.sh
 
 for pow in {2..5}; do
   export CACHE_TOL=1e-$pow

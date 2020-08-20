@@ -19,8 +19,8 @@ mpirun -np 12 ./aspect inputs/test1.prm > /dev/null
 
 # Execute.
 for n in {1..12}; do
-  mpirun -np $n ./aspect inputs/test$n.prm | tee data/test$n.txt
-  mpirun -np $n ./aspect inputs/ctrl$n.prm | tee data/ctrl$n.txt
+  mpirun -np $n ./aspect inputs/test${n}.prm | tee data/test${n}.txt
+  mpirun -np $n ./aspect inputs/ctrl${n}.prm | tee data/ctrl${n}.txt
 done
 
 # Clean up.

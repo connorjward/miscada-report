@@ -3,7 +3,7 @@
 set Additional shared libraries            = ./libperplexaspect.so
 set Adiabatic surface temperature          = 2000
 set Dimension                              = 2
-set End time                               = 1.5e6
+set End time                               = ${END_TIME}
 set Maximum time step                      = 1e5
 set Use years in output instead of seconds = true
 
@@ -74,7 +74,7 @@ end
 
 subsection Mesh refinement
   set Initial adaptive refinement        = 0
-  set Initial global refinement          = 5
+  set Initial global refinement          = ${INITIAL_GLOBAL_REFINEMENT}
   set Time steps between mesh refinement = 0
 end
 

@@ -17,9 +17,9 @@ rm data/*.txt
 # Avoid cold start effects.
 mpirun -np 12 ./aspect inputs/test.prm > /dev/null
 
-for i in {1..12}; do
-  mpirun -np ./aspect inputs/test.prm | tee data/test$n.txt
-  mpirun -np ./aspect inputs/ctrl.prm | tee data/ctrl$n.txt
+for n in {1..12}; do
+  mpirun -np $n ./aspect inputs/test.prm | tee data/test${n}.txt
+  mpirun -np $n ./aspect inputs/ctrl.prm | tee data/ctrl${n}.txt
 done
 
 # Clean up.
