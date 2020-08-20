@@ -8,26 +8,19 @@ import pandas as pd
 import myutils.mpl
 
 
-FIN_CONTROL = ["data/control{}.txt".format(n) for n in range(1, 13)]
-FIN_TEST = ["data/test{}.txt".format(n) for n in range(1, 13)]
+CACHE_TOLS = ["1e-{}".format(n) for n in range(2, 6)]
 
-FOUT_PDF = "../../../figures/weak_scaling/batch.pdf"
-FOUT_PGF = "../../../figures/weak_scaling/batch.pgf"
+FOUT_PDF = "../../../figures/cache_usage/particle_property.pdf"
+FOUT_PGF = "../../../figures/cache_usage/particle_property.pgf"
 
 FIG_WIDTH = 0.45 * 681.159  # in pts
 
 
 def parse_file(fname):
     with open(fname) as f:
-        s = f.read()
-
-    match1 = re.search("running with (\d+) MPI process", s)
-    match2 = re.search("Total wallclock time elapsed since start\s+\|\s+(\S+)s", s)
-
-    nproc = int(match1.group(1))
-    time = float(match2.group(1))
+        cols = re.findall("# \d+: (.*)", f.read())
         
-    return nproc,time
+    return pd.read_table(fname, names=cols, comment="#", delim_whitespace=True)
 
 
 mpl.use('pgf')  # this disables plt.show()
@@ -43,20 +36,15 @@ mpl.rcParams.update({
 fig,ax = plt.subplots(figsize=myutils.mpl.figsize_from_width(FIG_WIDTH),
                       dpi=200)
 
-xs = np.empty(12)
-ys = np.empty(12)
-for i,fname in enumerate(FIN_CONTROL):
-    xs[i],ys[i] = parse_file(fname)
-ax.plot(xs, ys[0]/ys, label="Control")
+for tol in CACHE_TOLS:
+    df = parse_file("data/{}.txt".format(tol))
+    xs = df["Time (years)"]
+    ys = df["Cache hit rate"]
 
-xs = np.empty(12)
-ys = np.empty(12)
-for i,fname in enumerate(FIN_TEST):
-    xs[i],ys[i] = parse_file(fname)
-ax.plot(xs, ys[0]/ys, label="Test")
+    ax.plot(xs, ys, label=tol)
 
-ax.set_xlabel("Number of processors")
-ax.set_ylabel("Speedup")
+ax.set_xlabel("Time (years)")
+ax.set_ylabel("Hit rate")
 ax.legend(frameon=False)
 
 plt.savefig(FOUT_PDF, bbox_inches="tight")
