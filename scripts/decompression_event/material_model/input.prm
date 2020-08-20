@@ -6,7 +6,6 @@ set Additional shared libraries            = ./libperplexaspect.so
 set Adiabatic surface temperature          = 2000
 set Dimension                              = 2
 set End time                               = 90000
-set Output directory                       = output-decompression_2pp
 set Use years in output instead of seconds = true
 
 
@@ -127,22 +126,13 @@ subsection Mesh refinement
   set Initial adaptive refinement = 0
   set Initial global refinement   = 1
   set Time steps between mesh refinement = 0
-  # set Strategy = composition threshold, minimum refinement function
-
-  # subsection Minimum refinement function
-  #   set Function expression = 1
-  # end
-
-  # subsection Composition threshold
-  #   set Compositional field thresholds = 1e-2, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0
-  # end
 end
 
 
 #################### Perple_X settings ####################
 
 subsection Perple_X settings
-  set Data directory   = ../data/perplex/simple
+  set Data directory   = ../../../data/perplex/simple
   set Problem filename = simple.dat
   set Cache capacity   = 1000
   set Cache tolerance  = 1e-3
@@ -163,7 +153,7 @@ subsection Postprocess
 
     subsection Generator
       subsection Ascii file
-	set Data directory = ../data/particle/generator/ascii/
+	set Data directory = ../../../data/aspect/particle/generator/ascii/
         set Data file name = decompression.dat
       end
     end

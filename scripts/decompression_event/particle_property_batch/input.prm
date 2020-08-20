@@ -2,7 +2,6 @@ set Additional shared libraries            = ./libperplexaspect.so
 set Adiabatic surface temperature          = 2000
 set Dimension                              = 2
 set End time                               = 100000
-set Output directory                       = output-decompression_batch
 set Use years in output instead of seconds = true
 
 subsection Boundary temperature model
@@ -68,7 +67,7 @@ subsection Mesh refinement
 end
 
 subsection Perple_X settings
-  set Data directory   = ../data/perplex/simple
+  set Data directory   = ../../../data/perplex/simple
   set Problem filename = simple.dat
 end
 
@@ -84,7 +83,7 @@ subsection Postprocess
 
     subsection Generator
       subsection Ascii file
-	set Data directory = ../data/particle/generator/ascii/
+	set Data directory = ../../../data/aspect/particle/generator/ascii/
 	set Data file name = decompression.dat
       end
     end
