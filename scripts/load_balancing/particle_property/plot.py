@@ -7,11 +7,11 @@ import pandas as pd
 import myutils.mpl
 
 
-FIN_BATCH = "batch_statistics"
-FIN_2PP = "2pp_statistics"
+FIN = "data/test.txt"
+FIN_CTRL = "data/ctrl.txt"
 
-FOUT_PDF = "../../figures/load_balancing.pdf"
-FOUT_PGF = "../../figures/load_balancing.pgf"
+FOUT_PDF = "../../../figures/load_balancing/particle_property.pdf"
+FOUT_PGF = "../../../figures/load_balancing/particle_property.pgf"
 
 FIG_WIDTH = 0.45 * 681.159  # in pts
 
@@ -36,18 +36,19 @@ mpl.rcParams.update({
 fig,ax = plt.subplots(figsize=myutils.mpl.figsize_from_width(FIG_WIDTH),
                       dpi=200)
 
-df = read_statistics(FIN_BATCH)
+df = read_statistics(FIN)
 xs = df["Time (years)"]
 ys = ((df["Maximal particles per process"] 
      - df["Minimal particles per process"])
      / df["Average particles per process"])
-ax.plot(xs, ys, label="Particle plugin")
+ax.plot(xs, ys, label="With Perple\_X")
 
-df = read_statistics(FIN_2PP)
+df = read_statistics(FIN_CTRL)
 xs = df["Time (years)"]
-ys = ((df["Maximal cells per process"] - df["Minimal cells per process"])
-        / df["Average cells per process"])
-ax.plot(xs, ys, label="Material model")
+ys = ((df["Maximal particles per process"] 
+     - df["Minimal particles per process"])
+     / df["Average particles per process"])
+ax.plot(xs, ys, label="Without Perple\_X")
 
 ax.set_xlabel("Time (years)")
 ax.set_ylabel("???")

@@ -7,11 +7,10 @@ import pandas as pd
 import myutils.mpl
 
 
-FIN_BATCH = "batch_statistics"
-FIN_2PP = "2pp_statistics"
+FIN = "data/test.txt"
 
-FOUT_PDF = "../../figures/load_balancing.pdf"
-FOUT_PGF = "../../figures/load_balancing.pgf"
+FOUT_PDF = "../../../figures/load_balancing/material_model.pdf"
+FOUT_PGF = "../../../figures/load_balancing/material_model.pgf"
 
 FIG_WIDTH = 0.45 * 681.159  # in pts
 
@@ -36,22 +35,15 @@ mpl.rcParams.update({
 fig,ax = plt.subplots(figsize=myutils.mpl.figsize_from_width(FIG_WIDTH),
                       dpi=200)
 
-df = read_statistics(FIN_BATCH)
+df = read_statistics(FIN)
 xs = df["Time (years)"]
-ys = ((df["Maximal particles per process"] 
-     - df["Minimal particles per process"])
-     / df["Average particles per process"])
-ax.plot(xs, ys, label="Particle plugin")
-
-df = read_statistics(FIN_2PP)
-xs = df["Time (years)"]
-ys = ((df["Maximal cells per process"] - df["Minimal cells per process"])
-        / df["Average cells per process"])
-ax.plot(xs, ys, label="Material model")
+ys = ((df["Maximal cells per process"] 
+     - df["Minimal cells per process"])
+     / df["Average cells per process"])
+ax.plot(xs, ys)
 
 ax.set_xlabel("Time (years)")
 ax.set_ylabel("???")
-ax.legend(frameon=False)
 
 plt.savefig(FOUT_PDF, bbox_inches="tight")
 plt.savefig(FOUT_PGF, bbox_inches="tight")
