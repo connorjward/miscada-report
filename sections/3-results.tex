@@ -1,3 +1,4 @@
+\begin{comment}
 \begin{table}[]
     \centering
     \begin{tabular}{c|c|c}
@@ -9,27 +10,9 @@
     \caption{Caption}
     \label{tab:decompression_params}
 \end{table}
+\end{comment}
 
-\begin{figure}
-    \centering
-    \input{figures/decompression_batch.pgf}
-    \caption{}
-    \label{fig:decompression_batch}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \input{figures/decompression_frac.pgf}
-    \caption{Caption}
-    \label{fig:decompression_frac}
-\end{figure}
-
-\begin{figure}
-    \centering
-    \input{figures/decompression_2pp.pgf}
-    \caption{Caption}
-    \label{fig:decompression_2pp}
-\end{figure}
+\subsection{Closed box}
 
 \begin{figure}
     \centering
@@ -75,8 +58,30 @@
         \label{fig:my_label}
     \end{subfigure}
 \end{figure}
+\subsection{Decompression event}
 
-\subsection{Performance}
+\begin{figure}
+    \centering
+    \input{figures/decompression_batch.pgf}
+    \caption{}
+    \label{fig:decompression_batch}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \input{figures/decompression_frac.pgf}
+    \caption{Caption}
+    \label{fig:decompression_frac}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \input{figures/decompression_2pp.pgf}
+    \caption{Caption}
+    \label{fig:decompression_2pp}
+\end{figure}
+
+\subsection{Performance analysis}
 
 \begin{figure}
     \centering
@@ -119,10 +124,55 @@
 \end{figure}
 
 \subsubsection{Load balancing}
+\begin{figure}
+    \centering
+    \input{figures/load_balancing/particle_property.pgf}
+    \caption{Caption}
+    \label{fig:load_balancing}
+\end{figure}
 
 \begin{figure}
     \centering
-    \input{figures/load_balancing.pgf}
+    \input{figures/load_balancing/material_model.pgf}
     \caption{Caption}
-    \label{fig:load_balancing}
+    \label{fig:load_balancing_material_model}
+\end{figure}
+
+\subsubsection{Scaling}
+
+\begin{figure}
+    \centering
+    \input{figures/strong_scaling/particle_property.pgf}
+    \caption{Caption}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \input{figures/weak_scaling/particle_property.pgf}
+    \caption{Caption}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \input{figures/strong_scaling/material_model.pgf}
+    \caption{Caption}
+    \label{fig:my_label}
+\end{figure}
+
+\subsubsection{Cache usage}
+
+\begin{figure}
+    \centering
+    \input{figures/cache_usage/particle_property.pgf}
+    \caption{Caption}
+    \label{fig:my_label}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \input{figures/cache_usage/material_model.pgf}
+    \caption{Caption}
+    \label{fig:my_label}
 \end{figure}
