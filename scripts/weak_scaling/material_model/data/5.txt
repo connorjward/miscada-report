@@ -12827,27 +12827,27 @@ Number of degrees of freedom: 22,353 (2,754+1,329+2,754+369+1,377+1,377+1,377+1,
 
 
 +----------------------------------------------+------------+------------+
-| Total wallclock time elapsed since start     |       562s |            |
+| Total wallclock time elapsed since start     |       565s |            |
 |                                              |            |            |
 | Section                          | no. calls |  wall time | % of total |
 +----------------------------------+-----------+------------+------------+
 | Assemble Stokes system           |       710 |      21.3s |       3.8% |
-| Assemble composition system      |      7100 |       269s |        48% |
+| Assemble composition system      |      7100 |       270s |        48% |
 | Assemble temperature system      |       710 |      26.5s |       4.7% |
-| Build Stokes preconditioner      |       710 |      20.9s |       3.7% |
-| Build composition preconditioner |      6108 |      4.07s |      0.72% |
-| Build temperature preconditioner |       710 |      0.48s |         0% |
-| Initialization                   |         1 |      2.88s |      0.51% |
-| Postprocessing                   |       101 |    0.0243s |         0% |
+| Build Stokes preconditioner      |       710 |      21.1s |       3.7% |
+| Build composition preconditioner |      6108 |      4.04s |      0.71% |
+| Build temperature preconditioner |       710 |     0.473s |         0% |
+| Initialization                   |         1 |      2.89s |      0.51% |
+| Postprocessing                   |       101 |     0.025s |         0% |
 | Refine mesh structure, part 1    |        10 |     0.112s |         0% |
-| Refine mesh structure, part 2    |        10 |    0.0634s |         0% |
-| Setup dof systems                |        11 |     0.134s |         0% |
-| Setup initial conditions         |         1 |     0.175s |         0% |
+| Refine mesh structure, part 2    |        10 |    0.0636s |         0% |
+| Setup dof systems                |        11 |     0.135s |         0% |
+| Setup initial conditions         |         1 |     0.174s |         0% |
 | Setup matrices                   |        58 |       8.4s |       1.5% |
-| Solve Stokes system              |       710 |       100s |        18% |
-| Solve composition reactions      |       100 |      69.5s |        12% |
+| Solve Stokes system              |       710 |       102s |        18% |
+| Solve composition reactions      |       100 |      69.4s |        12% |
 | Solve composition system         |      6108 |      18.1s |       3.2% |
-| Solve temperature system         |       710 |      2.09s |      0.37% |
+| Solve temperature system         |       710 |       2.1s |      0.37% |
 +----------------------------------+-----------+------------+------------+
 
 *** Timestep 101:  t=1.5e+06 years
@@ -12912,27 +12912,27 @@ Termination requested by criterion: end time
 
 
 +----------------------------------------------+------------+------------+
-| Total wallclock time elapsed since start     |       565s |            |
+| Total wallclock time elapsed since start     |       567s |            |
 |                                              |            |            |
 | Section                          | no. calls |  wall time | % of total |
 +----------------------------------+-----------+------------+------------+
 | Assemble Stokes system           |       713 |      21.4s |       3.8% |
-| Assemble composition system      |      7130 |       270s |        48% |
-| Assemble temperature system      |       713 |      26.6s |       4.7% |
-| Build Stokes preconditioner      |       713 |        21s |       3.7% |
-| Build composition preconditioner |      6138 |      4.09s |      0.72% |
-| Build temperature preconditioner |       713 |     0.482s |         0% |
-| Initialization                   |         1 |      2.88s |      0.51% |
-| Postprocessing                   |       102 |    0.0246s |         0% |
+| Assemble composition system      |      7130 |       271s |        48% |
+| Assemble temperature system      |       713 |      26.7s |       4.7% |
+| Build Stokes preconditioner      |       713 |      21.1s |       3.7% |
+| Build composition preconditioner |      6138 |      4.06s |      0.72% |
+| Build temperature preconditioner |       713 |     0.475s |         0% |
+| Initialization                   |         1 |      2.89s |      0.51% |
+| Postprocessing                   |       102 |    0.0252s |         0% |
 | Refine mesh structure, part 1    |        10 |     0.112s |         0% |
-| Refine mesh structure, part 2    |        10 |    0.0634s |         0% |
-| Setup dof systems                |        11 |     0.134s |         0% |
-| Setup initial conditions         |         1 |     0.175s |         0% |
+| Refine mesh structure, part 2    |        10 |    0.0636s |         0% |
+| Setup dof systems                |        11 |     0.135s |         0% |
+| Setup initial conditions         |         1 |     0.174s |         0% |
 | Setup matrices                   |        59 |      8.55s |       1.5% |
-| Solve Stokes system              |       713 |       100s |        18% |
-| Solve composition reactions      |       101 |        70s |        12% |
+| Solve Stokes system              |       713 |       102s |        18% |
+| Solve composition reactions      |       101 |      69.9s |        12% |
 | Solve composition system         |      6138 |      18.2s |       3.2% |
-| Solve temperature system         |       713 |       2.1s |      0.37% |
+| Solve temperature system         |       713 |      2.11s |      0.37% |
 +----------------------------------+-----------+------------+------------+
 
 -----------------------------------------------------------------------------

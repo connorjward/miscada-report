@@ -7486,27 +7486,27 @@ Termination requested by criterion: end time
 
 
 +----------------------------------------------+------------+------------+
-| Total wallclock time elapsed since start     |       246s |            |
+| Total wallclock time elapsed since start     |       247s |            |
 |                                              |            |            |
 | Section                          | no. calls |  wall time | % of total |
 +----------------------------------+-----------+------------+------------+
-| Assemble Stokes system           |       416 |      9.28s |       3.8% |
+| Assemble Stokes system           |       416 |      9.32s |       3.8% |
 | Assemble composition system      |      4160 |       133s |        54% |
-| Assemble temperature system      |       416 |        13s |       5.3% |
+| Assemble temperature system      |       416 |      13.1s |       5.3% |
 | Build Stokes preconditioner      |       416 |      10.6s |       4.3% |
-| Build composition preconditioner |      3453 |       2.1s |      0.85% |
-| Build temperature preconditioner |       416 |     0.257s |       0.1% |
-| Initialization                   |         1 |      2.71s |       1.1% |
+| Build composition preconditioner |      3453 |      2.11s |      0.86% |
+| Build temperature preconditioner |       416 |      0.26s |      0.11% |
+| Initialization                   |         1 |      2.58s |         1% |
 | Postprocessing                   |        54 |    0.0115s |         0% |
-| Refine mesh structure, part 1    |         5 |    0.0525s |         0% |
-| Refine mesh structure, part 2    |         5 |    0.0149s |         0% |
+| Refine mesh structure, part 1    |         5 |     0.051s |         0% |
+| Refine mesh structure, part 2    |         5 |    0.0146s |         0% |
 | Setup dof systems                |         6 |    0.0527s |         0% |
-| Setup initial conditions         |         1 |     0.163s |         0% |
+| Setup initial conditions         |         1 |     0.155s |         0% |
 | Setup matrices                   |        30 |      2.15s |      0.87% |
 | Solve Stokes system              |       416 |      21.7s |       8.8% |
-| Solve composition reactions      |        53 |      39.1s |        16% |
+| Solve composition reactions      |        53 |        39s |        16% |
 | Solve composition system         |      3453 |      4.95s |         2% |
-| Solve temperature system         |       416 |     0.605s |      0.25% |
+| Solve temperature system         |       416 |     0.644s |      0.26% |
 +----------------------------------+-----------+------------+------------+
 
 -----------------------------------------------------------------------------

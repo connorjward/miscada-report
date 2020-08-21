@@ -12,14 +12,11 @@ module load use.own aspect/release
 module load gsl/gcc/64/1.15 # required to avoid dynamic library error
 
 # Remove old data
-rm data/*.txt
+rm -f data.txt
 
 # Execute.
-mpirun -np 12 ./aspect inputs/test.prm
-mv output/statistics data/test.txt
-
-mpirun -np 12 ./aspect inputs/ctrl.prm
-mv output/statistics data/ctrl.txt
+mpirun -np 12 ./aspect tmp/input.prm
+mv output/statistics data.txt
 
 # Clean up.
 rm -r output

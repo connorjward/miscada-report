@@ -7,7 +7,7 @@ output/
 *.pvsm
 
 # Hamilton files
-inputs/
+tmp/
 aspect
 libperplexaspect.so
 slurm*.err

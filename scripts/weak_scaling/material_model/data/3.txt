@@ -8416,23 +8416,23 @@ Termination requested by criterion: end time
 |                                              |            |            |
 | Section                          | no. calls |  wall time | % of total |
 +----------------------------------+-----------+------------+------------+
-| Assemble Stokes system           |       467 |      12.8s |         4% |
-| Assemble composition system      |      4670 |       165s |        51% |
-| Assemble temperature system      |       467 |      16.2s |         5% |
-| Build Stokes preconditioner      |       467 |      15.6s |       4.8% |
-| Build composition preconditioner |      3898 |      2.39s |      0.74% |
-| Build temperature preconditioner |       467 |     0.289s |         0% |
+| Assemble Stokes system           |       467 |      12.7s |       3.9% |
+| Assemble composition system      |      4670 |       166s |        51% |
+| Assemble temperature system      |       467 |      16.3s |         5% |
+| Build Stokes preconditioner      |       467 |      15.5s |       4.8% |
+| Build composition preconditioner |      3898 |       2.4s |      0.74% |
+| Build temperature preconditioner |       467 |     0.291s |         0% |
 | Initialization                   |         1 |      2.72s |      0.84% |
-| Postprocessing                   |        62 |    0.0139s |         0% |
+| Postprocessing                   |        62 |    0.0141s |         0% |
 | Refine mesh structure, part 1    |         6 |    0.0644s |         0% |
-| Refine mesh structure, part 2    |         6 |    0.0303s |         0% |
+| Refine mesh structure, part 2    |         6 |    0.0302s |         0% |
 | Setup dof systems                |         7 |    0.0767s |         0% |
-| Setup initial conditions         |         1 |     0.163s |         0% |
+| Setup initial conditions         |         1 |     0.173s |         0% |
 | Setup matrices                   |        34 |      3.98s |       1.2% |
 | Solve Stokes system              |       467 |      38.8s |        12% |
-| Solve composition reactions      |        61 |      44.8s |        14% |
-| Solve composition system         |      3898 |      9.51s |       2.9% |
-| Solve temperature system         |       467 |      1.14s |      0.35% |
+| Solve composition reactions      |        61 |      44.3s |        14% |
+| Solve composition system         |      3898 |      9.52s |       2.9% |
+| Solve temperature system         |       467 |       1.2s |      0.37% |
 +----------------------------------+-----------+------------+------------+
 
 -----------------------------------------------------------------------------
