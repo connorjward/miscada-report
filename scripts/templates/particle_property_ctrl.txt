@@ -85,7 +85,7 @@ end
 #################### Postprocessing ####################
 
 subsection Postprocess
-  set List of postprocessors = particles
+  set List of postprocessors = load balance statistics, particles
 
   subsection Particles
     set Number of particles           = ${N_PARTICLES}
