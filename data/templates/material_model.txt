@@ -8,7 +8,40 @@ set Maximum time step                      = 1e5
 set Use years in output instead of seconds = true
 
 
+#################### Solver parameters #################### 
+
+set Nonlinear solver scheme    = iterated Advection and Stokes
+set Max nonlinear iterations   = 10
+set Nonlinear solver tolerance = 1e-5
+set Use operator splitting     = true
+
+subsection Solver parameters
+  subsection Operator splitting parameters
+    set Reaction time step                     = 2e2
+    set Reaction time steps per advection step = 10
+  end
+
+  subsection Stokes solver parameters
+    set GMRES solver restart length                     = 200
+    set Linear solver tolerance                         = 1e-5
+    set Maximum number of expensive Stokes solver steps = 1500
+  end
+end
+
+
 #################### Boundary conditions #################### 
+
+subsection Boundary composition model
+  set Fixed composition boundary indicators = bottom
+  set List of model names                   = initial composition
+end
+
+subsection Boundary fluid pressure model
+  set Plugin name = density
+  subsection Density
+    set Density formulation = fluid density
+  end
+end
 
 subsection Boundary temperature model
   set Fixed temperature boundary indicators = bottom
@@ -20,6 +53,23 @@ subsection Boundary velocity model
 end
 
 
+#################### Melt settings ####################
+
+subsection Compositional fields
+  set Compositional field methods = \
+    melt field, field, melt field, melt field, melt field, melt field, \
+    field, field, field, field
+  set Names of fields = \
+    porosity, peridotite, melt_SiO2, melt_CaO, melt_MgO, melt_FeO, \
+    residue_SiO2, residue_CaO, residue_MgO, residue_FeO
+  set Number of fields = 10
+end
+
+subsection Melt settings
+  set Include melt transport = true
+end
+
+
 #################### Model geometry ####################
 
 subsection Geometry model
@@ -27,13 +77,17 @@ subsection Geometry model
 
   subsection Box
     set X extent      = 300000
-    set X repetitions = 3
+    set X repetitions = ${N_REPS}
     set Y extent      = 120000
   end
 end
 
 
 #################### Initial conditions ####################
+
+subsection Initial composition model
+  set List of model names = porosity, perplex composition
+end
 
 subsection Initial temperature model
   set Model name = function
@@ -59,7 +113,7 @@ subsection Gravity model
 end
 
 subsection Material model
-  set Model name = melt simple
+  set Model name = perplex melt simple
 
   subsection Melt simple
     set Reference bulk viscosity        = 1e18
@@ -73,9 +127,16 @@ end
 #################### Mesh refinement ####################
 
 subsection Mesh refinement
-  set Initial adaptive refinement        = 0
-  set Initial global refinement          = ${INITIAL_GLOBAL_REFINEMENT}
-  set Time steps between mesh refinement = 0
+  set Initial global refinement   = ${INITIAL_GLOBAL_REFINEMENT}
+  set Strategy                    = composition threshold, minimum refinement function
+
+  subsection Minimum refinement function
+    set Function expression = 3
+  end
+
+  subsection Composition threshold
+    set Compositional field thresholds = 1e-4, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0
+  end
 end
 
 subsection Heating model
@@ -86,7 +147,7 @@ end
 #################### Perple_X settings ####################
 
 subsection Perple_X settings
-  set Data directory   = ../../../data/perplex/simple
+  set Data directory   = ../../../data/input/perplex/simple
   set Problem filename = simple.dat
   set Cache capacity   = 1000
   set Cache tolerance  = ${CACHE_TOL}
@@ -96,18 +157,6 @@ end
 #################### Postprocessing ####################
 
 subsection Postprocess
-  set List of postprocessors = load balance statistics, perplex cache statistics, particles
-
-  subsection Particles
-    set Number of particles           = ${N_PARTICLES}
-    set Allow cells without particles = true
-    set Data output format            = ascii
-    set List of particle properties   = perplex composition
-    set Time between data output      = 1e3
-
-    subsection Perple_X composition
-      set List of phase properties  = composition
-    end
-  end
+  set List of postprocessors = load balance statistics, perplex cache statistics
 end
 

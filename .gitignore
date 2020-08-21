@@ -7,11 +7,13 @@ output/
 *.pvsm
 
 # Hamilton files
-tmp/
-aspect
-libperplexaspect.so
-slurm*.err
-slurm*.out
+/figures/
+/var/
+/scripts/**/aspect
+/scripts/**/libperplexaspect.so
+/scripts/**/tmp/
+/scripts/**/slurm*.err
+/scripts/**/slurm*.out
 
 # Temporary files
 .*.swp
