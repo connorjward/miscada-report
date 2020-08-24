@@ -147,7 +147,7 @@ end
 #################### Perple_X settings ####################
 
 subsection Perple_X settings
-  set Data directory   = ../../../data/input/perplex/simple
+  set Data directory   = ../../../data/perplex/simple
   set Problem filename = simple.dat
   set Cache capacity   = 1000
   set Cache tolerance  = ${CACHE_TOL}

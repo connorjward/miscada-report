@@ -11,16 +11,19 @@ module purge
 module load use.own aspect/release
 module load gsl/gcc/64/1.15 # required to avoid dynamic library error
 
+OUTPUT_DIR=../../../var/load_balancing/particle_property
+
+mkdir -p $OUTPUT_DIR
+
 # Remove old data
-mkdir -p data
-rm -f data/*.txt
+rm -f $OUTPUT_DIR/*.txt
 
 # Execute.
 mpirun -np 12 ./aspect tmp/test.prm
-mv output/statistics data/test.txt
+mv output/statistics $OUTPUT_DIR/test.txt
 
 mpirun -np 12 ./aspect tmp/ctrl.prm
-mv output/statistics data/ctrl.txt
+mv output/statistics $OUTPUT_DIR/ctrl.txt
 
 # Clean up.
 rm -r output
