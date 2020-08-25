@@ -11,17 +11,16 @@ module purge
 module load use.own aspect/release
 module load gsl/gcc/64/1.15 # required to avoid dynamic library error
 
-# Create data directory if it does not exist.
-mkdir -p data
+DATA_DIR=../../../var/strong_scaling/material_model
 
-# Remove old data
-rm -f data/*.txt
+mkdir -p $DATA_DIR
+rm -f $DATA_DIR/*.txt
 
 # Avoid cold start effects.
 mpirun -np 12 ./aspect tmp/input.prm
 
 for n in {1..12}; do
-  mpirun -np $n ./aspect tmp/input.prm | tee data/${n}.txt
+  mpirun -np $n ./aspect tmp/input.prm | tee $DATA_DIR/${n}.txt
 done
 
 # Clean up.

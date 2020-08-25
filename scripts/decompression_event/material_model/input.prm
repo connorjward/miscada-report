@@ -1,11 +1,9 @@
-# ...
-
 #################### General settings #################### 
 
 set Additional shared libraries            = ./libperplexaspect.so
 set Adiabatic surface temperature          = 2000
 set Dimension                              = 2
-set End time                               = 90000
+set End time                               = 100000
 set Use years in output instead of seconds = true
 
 
@@ -13,7 +11,7 @@ set Use years in output instead of seconds = true
 
 set Nonlinear solver scheme    = iterated Advection and Stokes
 set Max nonlinear iterations   = 10
-set Nonlinear solver tolerance = 1e-3
+set Nonlinear solver tolerance = 1e-5
 set Use operator splitting     = true
 
 subsection Solver parameters
@@ -59,6 +57,9 @@ subsection Boundary velocity model
   end
 end
 
+
+#################### Melt settings ####################
+
 subsection Compositional fields
   set Compositional field methods = \
     melt field, field, melt field, melt field, melt field, melt field, \
@@ -69,27 +70,25 @@ subsection Compositional fields
   set Number of fields = 10
 end
 
+subsection Melt settings
+  set Include melt transport = true
+end
+
+
+#################### Model geometry ####################
+
 subsection Geometry model
   set Model name = box
 
   subsection Box
     set X extent      = 1000
-    set Y extent      = 100000
+    set Y extent      = 120000
     set Y repetitions = 50
   end
 end
 
-subsection Gravity model
-  set Model name = vertical
 
-  subsection Vertical
-    set Magnitude = 10.0
-  end
-end
-
-subsection Heating model
-  set List of model names = adiabatic heating
-end
+#################### Initial conditions ####################
 
 subsection Initial composition model
   set List of model names = porosity, perplex composition
@@ -99,8 +98,19 @@ subsection Initial temperature model
   set Model name = function
 
   subsection Function
-    set Function constants  = h=100000, T_bottom=1873, T_top=293
+    set Function constants  = h=120000, T_bottom=1873, T_top=293
     set Function expression = T_bottom - (T_bottom-T_top) * y / h
+  end
+end
+
+
+#################### Gravity and material properties ####################
+
+subsection Gravity model
+  set Model name = vertical
+
+  subsection Vertical
+    set Magnitude = 10.0
   end
 end
 
@@ -115,17 +125,17 @@ subsection Material model
   end
 end
 
-subsection Melt settings
-  set Include melt transport = true
-end
-
 
 #################### Mesh refinement ####################
 
 subsection Mesh refinement
-  set Initial adaptive refinement = 0
-  set Initial global refinement   = 1
+  set Initial adaptive refinement        = 0
+  set Initial global refinement          = 1
   set Time steps between mesh refinement = 0
+end
+
+subsection Heating model
+  set List of model names = adiabatic heating
 end
 
 
@@ -135,19 +145,18 @@ subsection Perple_X settings
   set Data directory   = ../../../data/perplex/simple
   set Problem filename = simple.dat
   set Cache capacity   = 1000
-  set Cache tolerance  = 1e-3
+  set Cache tolerance  = 1e-4
 end
 
 
 #################### Postprocessing ####################
 
 subsection Postprocess
-  set List of postprocessors = \
-    composition statistics, perplex cache statistics, particles, visualization
+  set List of postprocessors = particles
 
   subsection Particles
     set Data output format          = vtu
-    set List of particle properties = composition, pT path
+    set List of particle properties = composition
     set Particle generator name     = ascii file
     set Time between data output    = 1e3
 
@@ -157,10 +166,6 @@ subsection Postprocess
         set Data file name = decompression.dat
       end
     end
-  end
-
-  subsection Visualization
-    set Time between graphical output = 1e3
   end
 end
 
