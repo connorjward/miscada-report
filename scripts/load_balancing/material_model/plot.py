@@ -7,10 +7,13 @@ import pandas as pd
 import myutils.mpl
 
 
-FIN = "data/test.txt"
+DATA_DIR = "../../../var/load_balancing/material_model/"
+FIG_DIR = "../../../figures/load_balancing/"
 
-FOUT_PDF = "../../../figures/load_balancing/material_model.pdf"
-FOUT_PGF = "../../../figures/load_balancing/material_model.pgf"
+FIN = DATA_DIR + "test.txt"
+
+FOUT_PDF = FIG_DIR + "material_model.pdf"
+FOUT_PGF = FIG_DIR + "material_model.pgf"
 
 FIG_WIDTH = 0.45 * 681.159  # in pts
 
@@ -34,7 +37,6 @@ mpl.rcParams.update({
 
 fig,ax = plt.subplots(figsize=myutils.mpl.figsize_from_width(FIG_WIDTH),
                       dpi=200)
-
 df = read_statistics(FIN)
 xs = df["Time (years)"]
 ys = ((df["Maximal cells per process"] 
@@ -43,7 +45,7 @@ ys = ((df["Maximal cells per process"]
 ax.plot(xs, ys)
 
 ax.set_xlabel("Time (years)")
-ax.set_ylabel("???")
+ax.set_ylabel("Normalised range")
 
 plt.savefig(FOUT_PDF, bbox_inches="tight")
 plt.savefig(FOUT_PGF, bbox_inches="tight")

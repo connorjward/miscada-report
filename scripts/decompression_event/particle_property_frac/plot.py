@@ -6,9 +6,13 @@ import pandas as pd
 import myutils.mpl
 
 
-FIN = "../data/decompression_frac/particles.csv"
-FOUT_PDF = "../figures/decompression_frac.pdf"
-FOUT_PGF = "../figures/decompression_frac.pgf"
+DATA_DIR = "../../../var/decompression_event/particle_property_frac/"
+FIG_DIR = "../../../figures/decompression_event/"
+
+FIN = DATA_DIR + "particles.csv"
+FOUT_PDF = FIG_DIR + "particle_property_frac.pdf"
+FOUT_PGF = FIG_DIR + "particle_property_frac.pgf"
+
 FIG_WIDTH = 0.45 * 681.159  # in pts
 
 CNAMES = ["CaO","FeO","MgO","SiO2"]
@@ -29,7 +33,7 @@ df = pd.read_csv(FIN)
 fig,ax = plt.subplots(dpi=200, figsize=myutils.mpl.figsize_from_width(FIG_WIDTH))
 
 # First plot the melt amount.
-ax.plot("Time", "avg(extracted melt n moles)", data=df, 
+ax.plot(df["Time"], df["avg(extracted melt n moles)"],
         color="black", label="_nolegend_")
 
 xs = []
@@ -39,7 +43,7 @@ for i,row in df.iterrows():
 
     if sum(row[COLUMNS]) > 0:
         ys = (row[COLUMNS] / sum(row[COLUMNS]) 
-              * row["avg(extracted melt n moles)"])
+             * row["avg(extracted melt n moles)"])
     else:
         ys = [0.0 for _ in row[COLUMNS]]
 
@@ -51,7 +55,7 @@ ax.stackplot(np.array(xs), np.array(yss).swapaxes(0, 1), labels=CNAMES)
 ax.legend(frameon=False)
 ax.set_xlabel("Time (yr)")
 ax.set_ylabel("Melt amount (mol)")
-ax.set_xlim(1, 100000)
+ax.set_xlim(40000, 100000)
 
 plt.savefig(FOUT_PDF, bbox_inches="tight")
 plt.savefig(FOUT_PGF, bbox_inches="tight")

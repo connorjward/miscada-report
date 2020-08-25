@@ -8,11 +8,14 @@ import pandas as pd
 import myutils.mpl
 
 
-FIN_TEST = ["data/test{}.txt".format(n) for n in range(1, 13)]
-FIN_CTRL = ["data/ctrl{}.txt".format(n) for n in range(1, 13)]
+DATA_DIR = "../../../var/strong_scaling/particle_property/"
+FIG_DIR = "../../../figures/strong_scaling/"
 
-FOUT_PDF = "../../../figures/strong_scaling/particle_property.pdf"
-FOUT_PGF = "../../../figures/strong_scaling/particle_property.pgf"
+FIN_TEST = [DATA_DIR + "test{}.txt".format(n) for n in range(1, 13)]
+FIN_CTRL = [DATA_DIR + "ctrl{}.txt".format(n) for n in range(1, 13)]
+
+FOUT_PDF = FIG_DIR + "particle_property.pdf"
+FOUT_PGF = FIG_DIR + "particle_property.pgf"
 
 FIG_WIDTH = 0.45 * 681.159  # in pts
 

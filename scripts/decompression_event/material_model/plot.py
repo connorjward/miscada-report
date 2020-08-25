@@ -6,9 +6,13 @@ import pandas as pd
 import myutils.mpl
 
 
-FIN = "../data/decompression_2pp/particles.csv"
-FOUT_PDF = "../figures/decompression_2pp.pdf"
-FOUT_PGF = "../figures/decompression_2pp.pgf"
+DATA_DIR = "../../../var/decompression_event/material_model/"
+FIG_DIR = "../../../figures/decompression_event/"
+
+FIN = DATA_DIR + "particles.csv"
+FOUT_PDF = FIG_DIR + "material_model.pdf"
+FOUT_PGF = FIG_DIR + "material_model.pgf"
+
 FIG_WIDTH = 0.45 * 681.159  # in pts
 
 CNAMES = ["CaO","FeO","MgO","SiO2"]
@@ -29,7 +33,7 @@ df = pd.read_csv(FIN)
 fig,ax = plt.subplots(dpi=200, figsize=myutils.mpl.figsize_from_width(FIG_WIDTH))
 
 # First plot the melt amount.
-ax.plot("Time", "avg(porosity)", data=df, 
+ax.plot(df["Time"], df["avg(porosity)"]*100,
         color="black", label="_nolegend_")
 
 # Then the composition.
@@ -47,12 +51,12 @@ for i,row in df.iterrows():
     xs.append(x)
     yss.append(ys)
 
-ax.stackplot(np.array(xs), np.array(yss).swapaxes(0, 1), labels=CNAMES)
+ax.stackplot(np.array(xs), np.array(yss).swapaxes(0, 1)*100, labels=CNAMES)
 
 ax.legend(frameon=False)
 ax.set_xlabel("Time (yr)")
-ax.set_ylabel("Melt volume fraction")
-ax.set_xlim(1, 100000)
+ax.set_ylabel("Melt volume (%)")
+ax.set_xlim(40000, 100000)
 
 plt.savefig(FOUT_PDF, bbox_inches="tight")
 plt.savefig(FOUT_PGF, bbox_inches="tight")

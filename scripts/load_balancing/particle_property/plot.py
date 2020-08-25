@@ -7,11 +7,13 @@ import pandas as pd
 import myutils.mpl
 
 
-FIN = "data/test.txt"
-FIN_CTRL = "data/ctrl.txt"
+DATA_DIR = "../../../var/load_balancing/particle_property/"
+FIG_DIR = "../../../figures/load_balancing/"
 
-FOUT_PDF = "../../../figures/load_balancing/particle_property.pdf"
-FOUT_PGF = "../../../figures/load_balancing/particle_property.pgf"
+FIN = DATA_DIR + "test.txt"
+
+FOUT_PDF = FIG_DIR + "particle_property.pdf"
+FOUT_PGF = FIG_DIR + "particle_property.pgf"
 
 FIG_WIDTH = 0.45 * 681.159  # in pts
 
@@ -37,22 +39,19 @@ fig,ax = plt.subplots(figsize=myutils.mpl.figsize_from_width(FIG_WIDTH),
                       dpi=200)
 
 df = read_statistics(FIN)
-xs = df["Time (years)"]
-ys = ((df["Maximal particles per process"] 
-     - df["Minimal particles per process"])
-     / df["Average particles per process"])
-ax.plot(xs, ys, label="With Perple\_X")
+ax.plot(df["Time (years)"], 
+        df["Average particles per process"],
+        label="Average")
+ax.fill_between(df["Time (years)"], 
+                df["Minimal particles per process"], 
+                df["Maximal particles per process"],
+                label="Range",
+                alpha=0.3)
 
-df = read_statistics(FIN_CTRL)
-xs = df["Time (years)"]
-ys = ((df["Maximal particles per process"] 
-     - df["Minimal particles per process"])
-     / df["Average particles per process"])
-ax.plot(xs, ys, label="Without Perple\_X")
-
-ax.set_xlabel("Time (years)")
-ax.set_ylabel("???")
-ax.legend(frameon=False)
+ax.set_xlabel("Time (yr)")
+ax.set_ylabel("Number of particles")
+ax.legend(frameon=False, loc="upper left")
+ax.set_xlim(0, 1500000)
 
 plt.savefig(FOUT_PDF, bbox_inches="tight")
 plt.savefig(FOUT_PGF, bbox_inches="tight")

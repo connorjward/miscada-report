@@ -8,10 +8,13 @@ import pandas as pd
 import myutils.mpl
 
 
-FIN = ["data/{}.txt".format(n) for n in range(1, 13)]
+DATA_DIR = "../../../var/strong_scaling/material_model/"
+FIG_DIR = "../../../figures/strong_scaling/"
 
-FOUT_PDF = "../../../figures/strong_scaling/material_model.pdf"
-FOUT_PGF = "../../../figures/strong_scaling/material_model.pgf"
+FIN = [DATA_DIR + "{}.txt".format(n) for n in range(1, 13)]
+
+FOUT_PDF = FIG_DIR + "material_model.pdf"
+FOUT_PGF = FIG_DIR + "material_model.pgf"
 
 FIG_WIDTH = 0.45 * 681.159  # in pts
 
@@ -47,11 +50,10 @@ xs = np.empty(12)
 ys = np.empty(12)
 for i,fname in enumerate(FIN):
     xs[i],ys[i] = parse_file(fname)
-ax.plot(xs, ys[0]/ys, label="With Perple\_X")
+ax.plot(xs, ys[0]/ys)
 
 ax.set_xlabel("Number of processors")
 ax.set_ylabel("Speedup")
-ax.legend(frameon=False)
 
 plt.savefig(FOUT_PDF, bbox_inches="tight")
 plt.savefig(FOUT_PGF, bbox_inches="tight")
