@@ -7,13 +7,15 @@ import pandas as pd
 
 import myutils.mpl
 
+DATA_DIR = "../../../var/cache_usage/material_model/"
+FIG_DIR = "../../../figures/cache_usage/"
 
 CACHE_TOLS = ["1e-{}".format(n) for n in range(2, 6)]
 
-FOUT_PDF = "../../../figures/cache_usage/material_model.pdf"
-FOUT_PGF = "../../../figures/cache_usage/material_model.pgf"
+FOUT_PDF = FIG_DIR + "material_model.pdf"
+FOUT_PGF = FIG_DIR + "material_model.pgf"
 
-FIG_WIDTH = 0.45 * 681.159  # in pts
+FIG_WIDTH = 0.49 * 416.13188  # in pts
 
 
 def parse_file(fname):
@@ -28,7 +30,7 @@ mpl.rcParams.update({
     'font.family': 'serif', 
     'text.usetex': True,
     'axes.labelsize': 8, 'font.size': 8,
-    'legend.fontsize': 8,
+    'legend.fontsize': 7,
     'xtick.labelsize': 8,
     'ytick.labelsize': 8 
 })
@@ -37,15 +39,17 @@ fig,ax = plt.subplots(figsize=myutils.mpl.figsize_from_width(FIG_WIDTH),
                       dpi=200)
 
 for tol in CACHE_TOLS:
-    df = parse_file("data/{}.txt".format(tol))
+    df = parse_file(DATA_DIR + "{}.txt".format(tol))
     xs = df["Time (years)"]
     ys = df["Cache hit rate"]
 
-    ax.plot(xs, ys, label=tol)
+    ax.plot(xs, ys*100, label="{}%".format(float(tol)*100))
 
 ax.set_xlabel("Time (years)")
-ax.set_ylabel("Hit rate")
+ax.set_ylabel("Hit rate (%)")
 ax.legend(frameon=False)
+ax.set_ylim(98.5, 100.05)
+ax.set_yticks(np.arange(98.5, 100.5, 0.5))
 
 plt.savefig(FOUT_PDF, bbox_inches="tight")
 plt.savefig(FOUT_PGF, bbox_inches="tight")
