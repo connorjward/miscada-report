@@ -16,6 +16,8 @@ FOUT_PDF = FIG_DIR + "material_model.pdf"
 FOUT_PGF = FIG_DIR + "material_model.pgf"
 
 FIG_WIDTH = 0.49 * 416.13188  # in pts
+FIG_HEIGHT = FIG_WIDTH*1.4
+FIG_SIZE = myutils.mpl.figsize_from_width(FIG_WIDTH, FIG_HEIGHT)
 
 
 def parse_file(fname):
@@ -35,23 +37,29 @@ mpl.rcParams.update({
     'ytick.labelsize': 8 
 })
 
-fig,ax = plt.subplots(figsize=myutils.mpl.figsize_from_width(FIG_WIDTH),
-                      dpi=200)
+fig = plt.figure(figsize=FIG_SIZE, dpi=200)
+ax1 = fig.add_axes((0.1,0.42,0.8,0.6))
+ax2 = fig.add_axes((0.1,0.1,0.8,0.25), sharex=ax1)
 
-for tol in CACHE_TOLS:
+for i,tol in enumerate(CACHE_TOLS):
     df = parse_file(DATA_DIR + "{}.txt".format(tol))
-    xs = df["Time (years)"]
-    ys = df["Cache hit rate"]
+    ts = df["Time (years)"].to_numpy()
 
-    ax.plot(xs, ys*100, label="{}%".format(float(tol)*100))
+    ax1.plot(ts, df["Cache hit rate"]*100, 
+             label="{}%".format(float(tol)*100))
 
-ax.set_xlabel("Time (years)")
-ax.set_ylabel("Hit rate (%)")
-ax.legend(frameon=False)
-ax.set_ylim(98.5, 100.05)
-ax.set_yticks(np.arange(98.5, 100.5, 0.5))
+    if i == 0:
+        ax2.plot(ts[:-1], ts[1:]-ts[:-1])
+            
+
+ax1.set_ylabel("Hit rate (%)")
+ax1.legend(frameon=False)
+ax1.set_ylim(98.5, 100.05)
+ax1.set_yticks(np.arange(98.5, 100.5, 0.5))
+
+ax2.set_xlabel("Time (years)")
+ax2.set_ylabel("Timestep size (years)")
 
 plt.savefig(FOUT_PDF, bbox_inches="tight")
 plt.savefig(FOUT_PGF, bbox_inches="tight")
-
 
