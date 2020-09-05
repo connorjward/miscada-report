@@ -1,0 +1,7 @@
+In this work, we have described our interface code permitting Perple\_X to be integrated into other C++ programs, and we have demonstrated the code through implementing both particle property and material model plugins within ASPECT.
+Some example scenarios have been investigated and the code's performance has been measured to determine its viability for increasing levels of computational complexity and parallelism.
+
+We have identified that the particle property plugin scales excellently with increasing parallelism and runs comparatively quickly with simple but powerful options for controlling performance.
+In contrast, the material model plugin, whilst permitting a study of two-phase flow, suffers from dramatic amounts of overhead and scales poorly with increasing parallelism.
+
+Finally, several suggestions have been made to improve the code both in performance and accuracy and some useful extension work has been explained.

@@ -1,0 +1,126 @@
+\subsection{Perple\_X data file accuracy}
+\label{sec:discussion_perplexdata}
+
+For the Perple\_X problem definition file it was important to use a close approximation of the chemical composition of the upper mantle.
+The file initially selected was created by Debaditya Bandyopadhyay and modelled KLB-1 peridotite~\parencite{takahashi_melting_1986} in order to reproduce the results from~\textcite{hollandMeltingPeridotitesGranites2018}.
+Unfortunately, the problem file is fairly complex so any single minimisation takes several seconds to complete, posing problems for running many such simulations in ASPECT.
+The complexity is due to there being many chemical components used in the file, and these massively increase the number of pseudocompounds used by the linear solving algorithm.
+In addition, a further, more critical, problem was encountered when we tried running the material model with this data set.
+It turns out that, every time MEEMUM is called, data is added to a static array which slowly fills up\footnote{The array causing the overflow error is called \texttt{sco} and is defined inside of \texttt{perplex\_parameters.h}.}.
+The array fills up much faster for the complex KLB-1 data file than for simpler problems and so after a short while the array overflows and the program crashes.
+
+\begin{table}[htb]
+    \centering
+    \begin{tabular}{c|c|c}
+        \textit{Chemical component} & \textit{KLB-1} (\si{\mol}) & \textit{Simplified KLB-1} (\si{\mol}) \\
+        \hline
+        \ce{K2O} & 0.01 & - \\
+        \ce{Na2O} & 0.25 & - \\
+        \ce{SiO2} & 38.46 & 38.50 \\ 
+        \ce{Al2O3} & 1.77 & - \\
+        \ce{CaO} & 2.82 & 2.82 \\
+        \ce{MgO} & 50.53 & 50.50 \\
+        \ce{FeO} & 5.88 & 5.88 \\
+        \ce{TiO2} & 0.07 & - \\
+        \ce{Cr2O3} & 0.11 & - \\
+        \ce{O2} & 0.05 & -
+    \end{tabular}
+    \caption{
+        Bulk composition of the KLB-1 and simplified KLB-1 data files.
+        Only the four most abundant components are used in the latter.
+    }
+    \label{tab:perplex_models}
+\end{table}
+
+No fix could be found for this problem within the time constraints of the project, so we were forced to perform the experiments using a simpler data file, initially intended just for testing (see Table~\ref{tab:perplex_models} for a comparison of bulk compositions of the two).
+This simpler file was based upon the KLB-1 data set, so as to remain as consistent as possible with the mantle region of interest, but the composition components with the lowest concentrations, including water, were omitted.
+This resulted in a data file that could be solved by MEEMUM in a fraction of the time and was also free from the array overflow error.
+Unfortunately, having constructed the file out of a desire for fast performance rather than scientific validity, the results reported above cannot be considered particularly realistic.
+
+To improve the accuracy we present three options: 
+(a) use a slightly more accurate data file that still has relatively few pseudocompounds; 
+(b) use an advanced data set such as KLB-1 but limit the number of calls to Perple\_X to restrict the rate at which the array fills up; 
+or (c) alter either the C++/Fortran interface code or the Perple\_X source directly to avoid the overflow issue entirely.
+We propose option (b) as the best solution.
+Option (a), while improving the results, will still lead to an inaccurate solution and is fundamentally limited.
+Option (c) is highly complex and it is preferable not to alter the original Perple\_X source code (as discussed in Section~\ref{sec:solution_perplexcpp_orig}).
+By comparison, option (b) will not affect the validity of the results, assuming that the rate of evaluations is not too coarse, and has the potential to dramatically increase the performance by reducing the number of calls to Perple\_X.
+
+Some specific examples of how this could be achieved are: 
+(a) introduce a $p$-$T$ threshold, that may be a function, that only asks to evaluate Perple\_X when there is likely to be melt present; or
+(b) add an additional option to the material model so that Perple\_X is evaluated at specified times, for example every \num{10000} years.
+Option (b) mirrors the approach taken by the particle property plugin although such an approach could cause numerical instabilities with the continuous compositional fields, which are designed to accommodate small, smooth changes rather than large jumps in value.
+
+\vspace{5mm}
+
+Also of concern regarding the accuracy of the phase information reported is the validity of the cache implementation.
+The relative tolerances investigated were chosen arbitrarily to demonstrate the various rates of cache utilisation and the actual effect of the cache on the results is unknown.
+To have more confidence in the results, it would be useful to investigate the variations between the actual and reused results with a varying tolerance to ensure that they converge.
+Also, the actual logic involved in determining a cache hit is extremely basic and there is a lot of scope for possible improvements.
+This could involve, for instance, having different tolerances for each of $p$, $T$ and $X$ as the phase functions are likely to have greater sensitivities to some of these conditions than others.
+Another point of consideration is the fact that, as the number of chemical components increases, the likelihood of a cache hit will decrease, making the results in Figure~\ref{fig:cache_usage} problem-dependent rather than general.
+ 
+\subsection{Particle property plugin performance}
+
+Performance with the particle property plugin is generally excellent.
+Figure~\ref{fig:runtime_pie_particle_property} shows that the majority of the runtime is spent in the ``Update particle properties" phase.
+This is good because it implies that most of the computation time is spent solving Perple\_X calculations which, given that the Perple\_X performance has not been optimised and that the rest of the ASPECT simulation is intended to be quick-to-run, is where the bulk of the computation time is expected to be.
+The scalability of the code is also very good.
+The fraction of the code that must be run sequentially (Figure~\ref{fig:scaling_particle_property}) is tiny, meaning that adding additional processors is highly effective at increasing performance.
+
+Despite this, the load balancing is a concern.
+Figure~\ref{fig:load_balancing_particle_property} shows that the longer a simulation runs, the greater the imbalance in load between processors, potentially reducing the program's efficiency.
+A possible solution to this would be to modify the mesh refinement criteria used by ASPECT.
+To do this one can specify \texttt{particle density} as one of the options to the mesh refinement \texttt{Strategy} option inside the input parameter file.
+This will refine the mesh in regions with a high particle density, increasing the number of degrees of freedom in those regions, and thus ensuring that they are spread more evenly across processors.
+
+Implicit in our approach to the load balancing is the assumption that the distribution of particles is proportional to the distribution of the computational workload and that therefore an imbalanced number of particles handled by each process will lead to a reduction in performance.
+This was the reasoning used to justify reporting the number of particles per process instead of the number of cells.
+Given that the majority of the time spent in the simulation is in solving for the particle properties (Figure~\ref{fig:runtime_pie_particle_property}), this would seem to be a reasonable assumption.
+
+However, the presence of the cache is likely to have a large impact on this.
+If there are many particles in one cell then they are more likely to make use of the cache, in fact increasing performance.
+It would be straightforward to investigate the effect of the cache on the load balancing.
+At present, the \texttt{perplex cache statistics} postprocessor simply sums the number of cache hits and misses across processors, but this could easily be adapted to report statistics on a per-processor basis.
+
+\subsection{Material model plugin performance}
+
+In stark contrast to the particle property plugin, the material model plugin is plagued by poor performance and scalability.
+The runtime breakdown (Figure~\ref{fig:runtime_pie_material_model}) shows that much more time is spent in the ``Assemble composition system" stage rather than in the next largest ``Solve composition reactions" stage.
+Since Perple\_X should not be involved in the former stage, this suggests that there is a significant overhead with this plugin, likely due to the added complexity resulting from dealing with large numbers of compositional fields.
+Furthermore, if one also looks at Figure~\ref{fig:scaling_material_model}, one can see that over half the code is estimated to be running serially and this means that it experiences low levels of speedup with increasing parallelism.
+Put together, these results suggest that the material model plugin is not a serious candidate for further research with ASPECT when modelling more complex compositions or at a higher resolution, either of which would increase the aforementioned overhead.
+
+However, the plugin is the only truly accurate way of modelling two-phase flow and as such should not be discarded.
+One simple thing that could be done to possibly improve performance would be to average the evaluations over the quadrature points of each cell. 
+This would potentially reduce the number of calculations necessary by a factor of \num{4} or more, but given the high cache utilisation would likely have a negligible impact.
+It would also have no impact on the most expensive serial component of the code.
+Another thing to look at is the number of Perple\_X evaluations that are being made.
+Figure~\ref{fig:cache_usage_material_model} shows that the cache utilisation is extremely high.
+This suggests that: 
+(a) the cache is essential to the performance of the material model; 
+and (b) there are a lot of unnecessary calculations being done.
+The number of evaluations could be brought down by increasing the size of the time steps used in the operator splitting scheme.
+
+\subsection{Next steps}
+
+Thus far we have focused on the issues existing in the code and their solutions.
+We will now present our suggestions for ways in which the code could be meaningfully extended and improved.
+
+Starting with the Perple\_X wrapper, one meaningful improvement would be to add robustness to the code.
+Currently, only very basic checks (e.g. that the temperature is non-negative) are performed when the code is executed, but the code still occasionally fails and, because standard output is disabled, gives no explanation as to why.
+This is obviously problematic and reduces the likelihood of the software receiving widespread use in the academic community.
+
+Another problem facing the code is the lack of rigorous testing.
+At present the code only `seems' to work and produces results that at first glance look to be reasonable (e.g. partial melting occurring as the material depressurises).
+In order to have confidence in the accuracy of the results, we recommend that several benchmark model setups be created verifying that the code reproduces results found in the literature.
+The decompression event model setup, being a straightforward, discrete event, might serve as a good starting point for such analysis.
+
+In order to resolve the performance issues present in the material model plugin, we recommend the creation of an entirely new one.
+Rather than tracking all of the chemical components as distinct compositional fields this plugin would use just a single dynamic compositional field, the porosity, in order to track the flow of the melt.
+The value of the porosity would be calculated by the Perple\_X wrapper and the composition, rather than being advected with the melt, should be either read from the Perple\_X data file, or declared as static compositional fields.
+The latter would be advantageous as it would permit a changing composition through the domain.
+This suggested method will unfortunately no longer perfectly model the changing melt composition, but it is still clearly improved from any parametrised melt function and the performance should be sufficient for more detailed investigations.
+
+Finally, we encourage that the code be shared with the developers of ASPECT who may find it useful in their work.
+In particular it would be helpful to contact R. Myhill and J. Dannberg because they are involved with the existing Perple\_X integration and two-phase flow implementation in ASPECT respectively.
