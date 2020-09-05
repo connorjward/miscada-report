@@ -39,19 +39,19 @@ fig,ax = plt.subplots(figsize=myutils.mpl.figsize_from_width(FIG_WIDTH),
                       dpi=200)
 
 df = read_statistics(FIN)
-ax.plot(df["Time (years)"], 
+ax.plot(df["Time (years)"]/1e6, 
         df["Average particles per process"],
         label="Average")
-ax.fill_between(df["Time (years)"], 
+ax.fill_between(df["Time (years)"]/1e6, 
                 df["Minimal particles per process"], 
                 df["Maximal particles per process"],
                 label="Range",
                 alpha=0.3)
 
-ax.set_xlabel("Time (yr)")
+ax.set_xlabel(r"Time ($\times 10^6 \, \mathrm{yr}$)")
 ax.set_ylabel("Number of particles")
 ax.legend(frameon=False, loc="upper left")
-ax.set_xlim(0, 1500000)
+ax.set_xlim(0, 1.5)
 
 plt.savefig(FOUT_PDF, bbox_inches="tight")
 plt.savefig(FOUT_PGF, bbox_inches="tight")

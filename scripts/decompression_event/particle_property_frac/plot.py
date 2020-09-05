@@ -13,7 +13,7 @@ FIN = DATA_DIR + "particles.csv"
 FOUT_PDF = FIG_DIR + "particle_property_frac.pdf"
 FOUT_PGF = FIG_DIR + "particle_property_frac.pgf"
 
-FIG_WIDTH = 0.45 * 681.159  # in pts
+FIG_WIDTH = 0.49 * 416.13188  # in pts
 
 CNAMES = ["CaO","FeO","MgO","SiO2"]
 COLUMNS = ["avg(extracted melt composition {})".format(cname) for cname in CNAMES]
@@ -24,7 +24,7 @@ mpl.rcParams.update({'font.family': 'serif',
     'text.usetex': True,
     'axes.labelsize': 8,
     'font.size': 8,
-    'legend.fontsize': 8,
+    'legend.fontsize': 7,
     'xtick.labelsize': 8,
     'ytick.labelsize': 8 })
 
@@ -33,7 +33,7 @@ df = pd.read_csv(FIN)
 fig,ax = plt.subplots(dpi=200, figsize=myutils.mpl.figsize_from_width(FIG_WIDTH))
 
 # First plot the melt amount.
-ax.plot(df["Time"], df["avg(extracted melt n moles)"],
+ax.plot(df["Time"]/1e3, df["avg(extracted melt n moles)"],
         color="black", label="_nolegend_")
 
 xs = []
@@ -50,12 +50,13 @@ for i,row in df.iterrows():
     xs.append(x)
     yss.append(ys)
 
-ax.stackplot(np.array(xs), np.array(yss).swapaxes(0, 1), labels=CNAMES)
+ax.stackplot(np.array(xs)/1e3, np.array(yss).swapaxes(0, 1), labels=CNAMES)
 
 ax.legend(frameon=False)
-ax.set_xlabel("Time (yr)")
-ax.set_ylabel("Melt amount (mol)")
-ax.set_xlim(40000, 100000)
+ax.set_xlabel(r"Time ($\times 10^3 \, \mathrm{yr}$)")
+ax.set_ylabel("Melt volume (%)")
+ax.set_xlim(40, 100)
+ax.set_ylim(0, 5.3)
 
 plt.savefig(FOUT_PDF, bbox_inches="tight")
 plt.savefig(FOUT_PGF, bbox_inches="tight")
