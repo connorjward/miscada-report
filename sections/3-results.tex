@@ -1,178 +1,375 @@
-\begin{comment}
-\begin{table}[]
+\begin{figure}
     \centering
     \begin{tabular}{c|c|c}
-        Model & Decompression event & Closed box  \\
-        Width ($\mathrm{km}$) & 1 & 300 \\
-        Height ($\mathrm{km}$) & 120 & 120 \\
-         & 
+        \textit{Time} (\si{\year}) & \textit{Particle property plugin} & \textit{Material model plugin} \\
+        \hline
+        \num{677115} & \parbox[c][75pt]{0.38\textwidth}{
+            \includegraphics[
+                trim={0 180pt 0 180pt}, 
+                clip, 
+                width=0.38\textwidth
+            ]{figures/closed_box/particle_property/677115}
+        } & \parbox[c][75pt]{0.38\textwidth}{
+            \includegraphics[
+                trim={0 180pt 0 180pt}, 
+                clip, 
+                width=0.38\textwidth
+            ]{figures/closed_box/material_model/677115}
+        } \\
+        \hline
+        \num{800992} & \parbox[c][75pt]{0.38\textwidth}{
+            \includegraphics[
+                trim={0 180pt 0 180pt}, 
+                clip, 
+                width=0.38\textwidth
+            ]{figures/closed_box/particle_property/800992}
+        } & \parbox[c][75pt]{0.38\textwidth}{
+            \includegraphics[
+                trim={0 180pt 0 180pt}, 
+                clip, 
+                width=0.38\textwidth
+            ]{figures/closed_box/material_model/800992}
+        } \\
+        \hline
+        \num{958796} & \parbox[c][75pt]{0.38\textwidth}{
+            \includegraphics[
+                trim={0 180pt 0 180pt}, 
+                clip, 
+                width=0.38\textwidth
+            ]{figures/closed_box/particle_property/958796}
+        } & \parbox[c][75pt]{0.38\textwidth}{
+            \includegraphics[
+                trim={0 180pt 0 180pt}, 
+                clip, 
+                width=0.38\textwidth
+            ]{figures/closed_box/material_model/958796}
+        } \\
+        \hline
+        \num{1.0513e+06} & \parbox[c][75pt]{0.38\textwidth}{
+            \includegraphics[
+                trim={0 180pt 0 180pt}, 
+                clip, 
+                width=0.38\textwidth
+            ]{figures/closed_box/particle_property/1.0513e+06}
+        } & \parbox[c][75pt]{0.38\textwidth}{
+            \includegraphics[
+                trim={0 180pt 0 180pt}, 
+                clip, 
+                width=0.38\textwidth
+            ]{figures/closed_box/material_model/1.0513e+06}
+        } \\
+        \hline
+        \num{1.28082e+06} & \parbox[c][75pt]{0.38\textwidth}{
+            \includegraphics[
+                trim={0 180pt 0 180pt}, 
+                clip, 
+                width=0.38\textwidth
+            ]{figures/closed_box/particle_property/1.28082e+06}
+        } & \parbox[c][75pt]{0.38\textwidth}{
+            \includegraphics[
+                trim={0 180pt 0 180pt}, 
+                clip, 
+                width=0.38\textwidth
+            ]{figures/closed_box/material_model/1.28082e+06}
+        }
     \end{tabular}
-    \caption{Caption}
-    \label{tab:decompression_params}
+    \caption{
+        Example runs of the closed box model setup with both plugin types.
+        \num{2000} particles were used when using the particle property plugin and none were used in the material model one.
+        The temperature is represented by the red to blue colour map and the melt is yellow and white.
+        Whilst the simulation was run for 3 million years, only the period of \num{600000} years is shown because it shows the principal behaviour.
+        Before this the velocities of the particle property plugin are too low to show any dispersion behaviour, and at later times the plumes disperse and the melt disappears.
+    }
+    \label{fig:closed_box}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \begin{subfigure}{0.49\textwidth}
+        \centering
+        \input{figures/decompression_event/particle_property_batch.pgf}
+        \caption{Particle property plugin with batch melting.}
+        \label{fig:decompression_event_particle_plugin_batch}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.49\textwidth}
+        \centering
+        \input{figures/decompression_event/particle_property_frac.pgf}
+        \caption{
+            Particle property plugin with fractional melting.
+        }
+        \label{fig:decompression_event_particle_plugin_frac}
+    \end{subfigure}
+    %
+    \begin{subfigure}{0.49\textwidth}
+        \centering
+        \input{figures/decompression_event/material_model.pgf}
+        \caption{Material model plugin.}
+        \label{fig:decompression_event_material_model}
+    \end{subfigure}
+    \caption{
+        Average melt amount and compositional information recorded by the particles during the decompression event model setup for the different plugin types.
+        The first \num{40000} years are omitted because no melt is present.
+        Note that subfigure~(\subref{fig:decompression_event_particle_plugin_frac}) the extracted melt and the melt amount are recorded instead of melt volume because the melt volume is unknown for the extracted melt.
+    }
+    \label{fig:decompression_event}
+\end{figure}
+
+\begin{table}
+    \centering
+    \begin{tabular}{c|c|c}
+        \textit{Parameter} & 
+            \textit{Closed box} & 
+            \textit{Decompression event} \\
+        \hline
+        Height (\si{\km}) & 120 & 120 \\
+        Width (\si{\km}) & 300 & 1 \\
+        \hline
+        Surface pressure (\si{\Pa}) & 0 & 0 \\
+        \hline
+        Surface temperature (\si{\kelvin}) & 293 & 293 \\
+        Bottom temperature (\si{\kelvin}) & 1873 & 1873 \\
+        Temperature profile & Linear & Linear \\
+        Temperature boundary conditions & Fixed at base & Fixed at base \\
+        Temperature perturbations at base & Present & Not present \\
+        \hline
+        Boundary velocities & Tangential & \SI{1}{\m\per\year} upwards \\
+        \hline
+        Reference bulk viscosity (\si{\Pa\s}) & \num{1e18} & \num{1e18} \\
+        Reference shear viscosity (\si{\Pa\s}) & \num{1e18} & \num{1e18} \\
+        Thermal viscosity exponent & 4 & 4 \\
+        Thermal bulk viscosity exponent & 4 & 4 \\
+        \hline
+        Perple\_X data file & Simplified KLB-1 & Simplified KLB-1 \\
+    \end{tabular}
+    \caption{
+        Parameter values used in the two model setups.
+        A detailed description of the meaning of the different parameters may be found in the ASPECT manual.
+        More information regarding the Perple\_X data file may be found in Section~\ref{sec:discussion}\ref{sec:discussion_perplexdata}.
+    }
+    \label{tab:model_params}
 \end{table}
-\end{comment}
 
-\subsection{Closed box}
+In the following, the functionality and performance of the libraries will be demonstrated using two model setups run in ASPECT (Table~\ref{tab:model_params}).
+The scripts necessary to reproduce the results, including the plotting ones, are available at \url{http://github.com/cward97/miscada-report}.
 
-\begin{figure}
-    \centering
-    \begin{subfigure}{0.49\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/box_batch0.png}
-        \caption{Caption}
-        \label{fig:my_label}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.49\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/box_2pp0.png}
-        \caption{Caption}
-        \label{fig:my_label}
-    \end{subfigure}
-    %
-    \begin{subfigure}{0.49\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/box_batch38.png}
-        \caption{Caption}
-        \label{fig:my_label}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.49\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/box_2pp38.png}
-        \caption{Caption}
-        \label{fig:my_label}
-    \end{subfigure}
-    %
-    \begin{subfigure}{0.49\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/box_batch79.png}
-        \caption{Caption}
-        \label{fig:my_label}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.49\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{figures/box_2pp77.png}
-        \caption{Caption}
-        \label{fig:my_label}
-    \end{subfigure}
-\end{figure}
-\subsection{Decompression event}
+\vspace{5mm}
 
-\begin{figure}
-    \centering
-    \input{figures/decompression_batch.pgf}
-    \caption{}
-    \label{fig:decompression_batch}
-\end{figure}
+The first model setup to be investigated was a generic scenario  (henceforth referred to as the ``closed box" scenario) in which an enclosed amount of material advects inside a box.
+Temperature fluctuations at the base of the model, specified in the parameter file, create convection currents transporting hot plumes of mantle material upwards.
+As they rise towards the surface, the reduction in pressure causes partial melting.
+Some screenshots of the setup running with both plugin types are shown in Figure~\ref{fig:closed_box}.
+They show melt forming at the head of the two mantle plumes where the temperature is greatest and also disappearing as the plume disperses and the temperature drops.
+At the end of the simulation, the temperature field is mostly mixed and the hot material has almost entirely risen above the colder material that was initially at the surface.
 
-\begin{figure}
-    \centering
-    \input{figures/decompression_frac.pgf}
-    \caption{Caption}
-    \label{fig:decompression_frac}
-\end{figure}
+When implemented using the particle property plugin, particles were added to the simulation tracking the melt volume.
+Since batch melting was used, the chemical composition that matched the bulk composition in the Perple\_X data file stayed fixed throughout.
+An initial mesh refinement level of 5 was used and adaptive mesh refinement was disabled.
 
-\begin{figure}
-    \centering
-    \input{figures/decompression_2pp.pgf}
-    \caption{Caption}
-    \label{fig:decompression_2pp}
-\end{figure}
+For the material model plugin, no particles were required and instead the melt volume could be plotted directly from the porosity compositional field.
+The composition initially also matched that found in the Perple\_X data file, but was able to change over time as the melt and residue advected separately.
+An initial mesh refinement level of 4 was used, but adaptive mesh refinement was included in order to better resolve the areas where melt is present.
+
+\vspace{5mm}
+
+The second scenario is a less general model aimed at modelling individual ``decompression events" during which a single hot column of material rises and begins to melt.
+The amount of melt is tracked by 11 particles, initially placed at the base of the model, that move upwards at the same velocity as the temperature field (specified as \SI{1}{\meter\per\year}) and keep track of the melt amount and composition that forms as the pressure reduces. 
+The simulation ran for \num{100000} years as this was enough time for the particles, moving at \SI{1}{\meter\per\year} in a column \SI{120}{\km} high, to approach the surface without being removed.
+
+An advantage to this model setup is that it is a more intuitive way to study the impact of fractional melting.
+The closed box setup is designed to run continuously, and so frequently removing the melt from the simulation will quickly make the results unrealistic because the extracted melt is never reintroduced.
+In contrast, the decompression event setup has a fixed endpoint so the fact that the melt is not reintroduced is not an issue.
+
+The results are displayed in Figure~\ref{fig:decompression_event}.
+In all cases, as the particles migrate upwards and the pressure decreases, the material begins to partially melt leading to an increase in the melt volume.
+The chemical composition of the melt is also shown and appears to be similar between the various models tested.
+
+Interestingly, only about half as much melt is formed by the material model plugin compared to the particle property one.
+One possible explanation for this effect would be depletion.
+Since in the material model the melt advects separately to the residue (and the particles advect with the residue), the bulk composition changes over time, taking away the more volatile components and reducing its melt productivity.
 
 \subsection{Performance analysis}
 
 \begin{figure}
     \centering
-    \begin{subfigure}{0.49\columnwidth}
+    \begin{subfigure}{\textwidth}
         \centering
         \begin{tikzpicture}
-            \pie[hide number, radius=1.3, rotate=45, text=legend] {
-                83/ \footnotesize{Update particle properties},
-                5.2/ \footnotesize{Assemble temperature system},
-                2.8/ \footnotesize{Assemble Stokes system},
-                2.3/ \footnotesize{Postprocessing},
-                6.7/ \footnotesize{Other}
+            \pie[radius=2, text=pin] {
+                93/ Update particle properties,
+                7/ Other
             }
         \end{tikzpicture}
-        \caption{A breakdown of the runtime for the particle property plugin.}
-        \label{fig:perf_batch_pie}
+        \caption{Particle property plugin.}
+        \label{fig:runtime_pie_particle_property}
+        \vspace{5mm}
     \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.49\columnwidth}
+    %
+    \begin{subfigure}{\textwidth}
         \centering
         \begin{tikzpicture}
-            \pie[hide number, radius=1.3, rotate=45, text=legend] {
-                65/ \footnotesize{Assemble composition system},
-                6.6/ \footnotesize{Assemble temperature system},
-                4.8/ \footnotesize{Solve Stokes system},
-                3.9/ \footnotesize{Solve composition reactions},
-                19.7/ \footnotesize{Other}
+            \pie[radius=2, text=pin] {
+                27/ Solve Stokes system,
+                22/ Build Stokes preconditioner,
+                20/ Assemble temperature system,
+                19/ Assemble Stokes system,
+                12/ Other
             }
         \end{tikzpicture}
-        \caption{A breakdown of the runtime for the material model plugin.}
-        \label{fig:perf_2pp_pie}
+        \caption{Particle property plugin control.}
+        \label{fig:runtime_pie_particle_property_ctrl}
+        \vspace{5mm}
+    \end{subfigure}
+    %
+    \begin{subfigure}{\textwidth}
+        \centering
+        \begin{tikzpicture}
+            \pie[radius=2, text=pin] {
+                46/ Assemble composition system,
+                28/ Solve composition reactions,
+                8/ Solve Stokes system,
+                18/ Other
+            }
+        \end{tikzpicture}
+        \caption{Material model plugin.}
+        \label{fig:runtime_pie_material_model}
     \end{subfigure}
     %
     \caption{
         A comparison of the breakdown of runtime spent in the different elements of ASPECT between the particle property and material model approaches to tracking the composition.
-        In both cases the \texttt{simple.dat} data set for Perple\_X has been used and the analysis has been drawn from the closed box experiments.
-        The actual runtime comparison between the two approaches is discussed in Section~\ref{sec:???}.
     }
-    \label{fig:perf_pie}
+    \label{fig:runtime_pie}
 \end{figure}
 
-\subsubsection{Load balancing}
-\begin{figure}
-    \centering
-    \input{figures/load_balancing/particle_property.pgf}
-    \caption{Caption}
-    \label{fig:load_balancing}
-\end{figure}
+Having proved the feasibility of the code to make physically sensible results, the next stage is to measure the performance of the two plugins.
+In order to do this, the closed box model setup was used with varying parameters.
+This model was selected instead of the decompression event model because it was simpler, since it would not need to deal with particles or material being removed from the simulation.
 
-\begin{figure}
-    \centering
-    \input{figures/load_balancing/material_model.pgf}
-    \caption{Caption}
-    \label{fig:load_balancing_material_model}
-\end{figure}
+A control setup was used for the particle property plugin, in which the same number of particles was tracked by the simulation but the specific Perple\_X properties were not tracked.
+Unfortunately, no control scenario could be created for the material model plugin.
+This was because the parametrised melt fraction equation in \texttt{melt simple} produced a lot more melt than observed in Perple\_X for the same initial conditions.
+This resulted in much more adaptive mesh refinement and also the solvers took a lot longer to converge to the correct value making any sort of run time comparison impossible.
+
+\vspace{5mm}
+
+In the following analyses, only a single run was used rather than the average of multiple runs.
+This approach was chosen because this report only aims to identify general trends in the data and not make precise performance measurements.
+In all cases though, care was taken to ``hot-start" every calculation whereby a dummy run was done before taking any measurements to try and mitigate library load times and other similar effects.
+
+\subsubsection{Run time}
+
+An accurate comparison of the run times for the particle property and material model plugins is difficult to achieve because they work in totally different ways.
+That notwithstanding, it is certainly the case that the particle property plugin runs more quickly than the material model plugin.
+Running both plugins with the same input files reveals that the latter plugin takes roughly twice as long to run as the former.
+Breakdowns of the various parts of the runtime are displayed in Figure~\ref{fig:runtime_pie}.
 
 \subsubsection{Scaling}
 
 \begin{figure}
     \centering
-    \input{figures/strong_scaling/particle_property.pgf}
-    \caption{Caption}
-    \label{fig:my_label}
+    \begin{subfigure}{0.49\textwidth}
+        \centering
+        \input{figures/strong_scaling/particle_property.pgf}
+        \caption{Particle property plugin.}
+        \label{fig:scaling_particle_property}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.49\textwidth}
+        \centering
+        \input{figures/strong_scaling/material_model.pgf}
+        \caption{Material model plugin.}
+        \label{fig:scaling_material_model}
+    \end{subfigure}
+    \caption{
+        Speedup of the plugins compared with theoretical constraints. 
+        Note that the problem size has remained fixed for each run.
+    }
+    \label{fig:scaling}
 \end{figure}
+
+Of primary importance to the performance of the plugins is how well they scale with the number of processors.
+The greatest number of processors that was used in this work was \num{12}, but geodynamical simulations have processor counts that often run into the thousands of cores and good scaling performance is essential in order to take advantage of them.
+
+A common metric for measuring scaling performance is the \textit{speedup} $S$. This is defined as:
+
+\begin{equation*}
+    S(p) = \frac{t(1)}{t(p)},
+\end{equation*}
+
+where $t(1)$ is the runtime for the problem on a single processor and $t(p)$ the runtime on $p$ processors. 
+Naturally the optimal speedup achievable as $p$ increases is $p$ itself (i.e. doubling the number of cores should halve the compute time).
+However, this is never achievable in reality as some parts of the code will always need to be run sequentially rather than in parallel.
+There will also be additional overhead to consider that derives from increasing parallelism and this often scales with $p$.
+
+Speedup curves may be predicted with Amdahl's Law~\parencite{amdahl_validity_1967}:
+
+\begin{equation*}
+    t(p) = f t(1) + (1 - f) \frac{t(1)}{p}.
+\end{equation*}
+
+It simply states that the fraction of the code that must be run sequentially, $f$, will experience no speedup and the fraction of the code that can be run in parallel, $1-f$, will experience the optimal speedup of $p$.
+The `law' is a major simplification and does not account for any parallel-induced overhead, but it serves as a useful technique for modelling $f$.
+
+The speedups for each plugin are shown in Figure~\ref{fig:scaling} and they are plotted against the curves predicted by Amdahl's Law for given values of $f$.
+For the particle property plugin (Figure~\ref{fig:scaling_particle_property}) one sees that $f$ lies between \num{0.01} and \num{0.1}, which is very near optimal and means that significant speedup is observed as the number of processors increases.
+Conversely, the control model setup shown in the same plot has $f$ roughly equal to \num{0.5}.
+
+Turning our attention to the material model plugin (Figure~\ref{fig:scaling_material_model}), the speedup is much less pronounced and $f$ is shown to lie approximately between \num{0.5} and \num{0.6}.
+
+\subsubsection{Load balancing}
 
 \begin{figure}
     \centering
-    \input{figures/weak_scaling/particle_property.pgf}
-    \caption{Caption}
-    \label{fig:my_label}
+    \input{figures/load_balancing/particle_property.pgf}
+    \caption{
+        Load balancing across processors for the particle property plugin.
+        The data shown reflect the number of particles per process and the range indicates the maximum and minimum number of particles for each.
+        The data were collected using 2000 particles on 12 MPI processes.
+    }
+    \label{fig:load_balancing_particle_property}
 \end{figure}
 
-\begin{figure}
-    \centering
-    \input{figures/strong_scaling/material_model.pgf}
-    \caption{Caption}
-    \label{fig:my_label}
-\end{figure}
+When running a program in parallel, it is important not only that the code be divided into pieces that can run on each processor, but also that the divisions be made equally in order to avoid processors idling unnecessarily.
+
+The load balancing information for the particle property plugin is shown in Figure~\ref{fig:load_balancing_particle_property}.
+At first the particles are almost perfectly uniformly distributed about the domain and have very low velocities, leading to a very small difference between the maximum and minimum number of particles per process.
+However, as the plumes begin to form at around \num{500000} years (see Figure~\ref{fig:closed_box} for screenshots), the particle velocities increase and the uniformity breaks down.
+At the end of the simulation there is an imbalance of approximately \SI{30}{\percent} between the number of particles per processor.
+The particle distribution will follow a normal distribution and so this increase is simply a consequence of the normal curve gradually smoothing out.
+Due to the fact that the model setup does not permit material to leave the simulation, the number of particles was unchanged and so the average number of particles per process was constant.
+
+No results were reported for the material model plugin because, as no adaptive mesh refinement was found to have occurred during the simulation, the load was perfectly balanced between the cells throughout.
 
 \subsubsection{Cache usage}
 
-\begin{figure}
-    \centering
-    \input{figures/cache_usage/particle_property.pgf}
-    \caption{Caption}
-    \label{fig:my_label}
-\end{figure}
+Cache utilisation for the Perple\_X wrapper was recorded for both plugins over a range of tolerances and the results are shown in Figure~\ref{fig:cache_usage}. 
+In all cases, the first time step has a significantly lower hit rate due to mandatory misses (i.e. the cache is empty so there are no results to reuse).
+This is followed by a spike to a peak value for that tolerance, likely caused by the fact that the initial velocity in the entire domain is close to zero and therefore the $p$-$T$-$X$ conditions are unchanged between time steps resulting in a cache hit.
+Around \num{500000} years drops in the hit rate can be observed.
+This time corresponds with the point where turbulent flow becomes more obvious and the particle velocities increase leading to greater variation in the pressure and temperature causing cache misses.
 
-\begin{figure}
+Although this general trend may be observed for both plots, the hit rate for the material model plugin is extremely high at around \SI{99.5}{\percent}.
+This is due to the large number of iterations as a consequence of using the operator splitting method.
+At each time step, so as to effectively model the rapid reaction rate of the partially melting substance, a great many evaluations are made of the material model with very tiny variations in the $p$-$T$-$X$ conditions, leading to a very high rate of cache reuse, even for high tolerances.
+
+A final observation from the figure may be made regarding the particle property plugin.
+Right at the end of the simulation a jump can be seen in the cache hit rate.
+This may be explained by observing that there is also a sudden drop in the time step duration, meaning that the particles have displaced less and their respective $p$-$T$-$X$ conditions will not have changed much.
+
+\begin{figure}[htb]
     \centering
-    \input{figures/cache_usage/material_model.pgf}
-    \caption{Caption}
-    \label{fig:my_label}
+    \begin{subfigure}{0.49\textwidth}
+        \input{figures/cache_usage/particle_property.pgf}
+        \caption{Particle property plugin.}
+        \label{fig:cache_usage_particle_property}
+        \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.49\textwidth}
+        \centering
+        \input{figures/cache_usage/material_model.pgf}
+        \caption{Material model plugin.}
+        \label{fig:cache_usage_material_model}
+    \end{subfigure}
+    \caption{Cache utilisation and time step size against time.}
+    \label{fig:cache_usage}
 \end{figure}
